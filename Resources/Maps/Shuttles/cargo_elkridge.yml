@@ -968,13 +968,6 @@ entities:
     - type: Transform
       pos: -0.5,-4.5
       parent: 1
-- proto: HolopadCargoShuttle
-  entities:
-  - uid: 177
-    components:
-    - type: Transform
-      pos: -1.5,0.5
-      parent: 1
 - proto: PlasticFlapsAirtightClear
   entities:
   - uid: 118
