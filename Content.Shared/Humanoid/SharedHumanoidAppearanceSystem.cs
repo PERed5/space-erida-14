@@ -306,7 +306,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         var baseScale = _scaleVisuals.GetSpriteScale(uid);
-        var resultScale = new Vector2(width * baseScale.X, height * baseScale.Y)
+        var resultScale = new Vector2(width * baseScale.X, height * baseScale.Y);
 
         if (resultScale.X <= 0 || resultScale.Y <= 0) // Shitcode, but idk why he dont work correct
             return;
