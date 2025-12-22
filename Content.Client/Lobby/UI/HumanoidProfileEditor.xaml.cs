@@ -1794,8 +1794,8 @@ namespace Content.Client.Lobby.UI
             HeightLabel.Text = $"{(int)(profileHeight * 100)}%";
             WidthLabel.Text = $"{(int)(profileWidth * 100)}%";
 
-            HeightSlider.Value = profileHeight * 100;
-            WidthSlider.Value = profileWidth * 100;
+            HeightSlider.Value = Profile.Height == 0 ? 100 : profileHeight * 100;
+            WidthSlider.Value = Profile.Width == 0 ? 100 : profileWidth * 100;
         }
         // Erida-end
 
