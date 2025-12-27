@@ -42,5 +42,5 @@
     speechVerb: Robotic
   - type: CkeyCode
     ckeys:
-    - localhost@HorrorBSweet
+    - HorrorBSweet
 
