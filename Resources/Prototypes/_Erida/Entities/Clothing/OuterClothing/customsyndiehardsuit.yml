@@ -38,3 +38,9 @@
     - WhitelistChameleon
   - type: StaticPrice
     price: 1337
+  - type: Speech
+    speechVerb: Robotic
+  - type: CkeyCode
+    ckeys:
+    - localhost@HorrorBSweet
+
