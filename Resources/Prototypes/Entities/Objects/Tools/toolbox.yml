@@ -7,14 +7,14 @@
     layers:
       - map: [ base ]
         state: icon
-  # backmen edit start
+  # handling sounds edit start
   - type: EmitSoundOnPickup
     sound:
       path: /Audio/_Erida/Items/handling/toolbox_pickup.ogg
   - type: EmitSoundOnDrop
     sound:
       path: /Audio/Items/toolbox_drop.ogg
-  # backmen edit end
+  # handling sounds edit end
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/toolbox_drop.ogg
