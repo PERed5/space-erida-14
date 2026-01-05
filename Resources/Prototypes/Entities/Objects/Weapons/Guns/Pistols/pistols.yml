@@ -5,6 +5,17 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: PistolsPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: PistolsDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: PistolsDrop
+  # handling sounds edit start
   - type: Sprite
     layers:
       - state: base

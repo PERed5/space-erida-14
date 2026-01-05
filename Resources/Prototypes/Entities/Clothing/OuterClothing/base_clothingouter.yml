@@ -3,9 +3,28 @@
   parent: Clothing
   id: ClothingOuterBase
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: GenericPickup
+      params:
+        volume: -9
+  - type: EmitSoundOnDrop
+    sound:
+      collection: GenericDrop
+      params:
+        volume: -9
+  - type: EmitSoundOnLand
+    sound:
+      collection: GenericDrop
+      params:
+        volume: -9
   - type: Clothing
     slots:
     - outerClothing
+    equipSound:
+      collection: GenericEquip
+  # handling sounds edit end
   - type: Sprite
     state: icon
 

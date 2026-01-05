@@ -6,6 +6,10 @@
   - type: Clothing
     slots:
     - HEAD
+  # handling sounds edit start
+    equipSound:
+      collection: GenericEquip
+  # handling sounds edit end
   - type: Sprite
     state: icon
   - type: Item

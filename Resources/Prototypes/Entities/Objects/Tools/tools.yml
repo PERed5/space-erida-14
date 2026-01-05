@@ -4,6 +4,14 @@
   id: Wirecutter
   description: This kills the wire.
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/wirecutter_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/Items/wirecutter_drop.ogg
+  # handling sounds edit end
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/wirecutter_drop.ogg
@@ -50,6 +58,14 @@
   id: Screwdriver
   description: Industrial grade torque in a small screwdriving package.
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/screwdriver_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/Items/screwdriver_drop.ogg
+  # handling sounds edit end
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/screwdriver_drop.ogg
@@ -94,6 +110,14 @@
   id: Wrench
   description: 'A common tool for assembly and disassembly. Remember: lefty latchy, righty removey.'
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/wrench_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/Items/wrench_drop.ogg
+  # handling sounds edit end
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/wrench_drop.ogg
@@ -136,6 +160,14 @@
   id: Multitool
   description: An advanced tool to copy, store, and send electrical pulses and signals through wires and machines.
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/multitool_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/Items/multitool_drop.ogg
+  # handling sounds edit end
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/multitool_drop.ogg

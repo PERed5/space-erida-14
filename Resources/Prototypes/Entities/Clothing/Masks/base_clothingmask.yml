@@ -9,6 +9,16 @@
     size: Small
   - type: Clothing
     slots: [mask]
+  # handling sounds edit start
+    equipSound:
+      collection: GenericEquip
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/generic_small_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Erida/Items/handling/generic_small_drop.ogg
+  # handling sounds edit end
   - type: StaticPrice
     price: 25
 

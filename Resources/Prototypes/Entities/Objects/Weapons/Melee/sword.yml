@@ -74,6 +74,11 @@
   id: CaptainSabre
   description: A ceremonial weapon belonging to the captain of the station.
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Erida/Items/handling/sabre_drop.ogg
+  # handling sounds edit start
   - type: Sprite
     sprite: Objects/Weapons/Melee/captain_sabre.rsi
   - type: MeleeWeapon
