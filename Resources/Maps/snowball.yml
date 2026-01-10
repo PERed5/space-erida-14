@@ -12903,6 +12903,8 @@ entities:
     - type: Transform
       pos: 44.5,60.5
       parent: 1
+    - type: TechnologyDatabase
+      supportedDisciplines:
       - Scientific
       - Service
 - proto: BanjoInstrument

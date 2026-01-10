@@ -1579,9 +1579,9 @@
   productEntity: VoiceMaskImplanter
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 1
+    TelecrystalRed: 1
   cost:
-    Telecrystal: 2
+    TelecrystalRed: 2
   categories:
   - UplinkImplants
 
@@ -2041,10 +2041,6 @@
     TelecrystalRed: 4
   categories:
     - UplinkJob
-  conditions:
-    - !type:BuyerJobCondition
-      whitelist:
-        - Boxer
 
 - type: listing
   id: uplinkNecronomicon

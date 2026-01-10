@@ -663,7 +663,6 @@
   - Glasses
   - Survival
   - Trinkets
-  - ZookeeperJobTrinkets
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -704,13 +703,10 @@
   - Niz-Boxer #erida
   - Socks-Boxer #erida
   - GroupTankHarness
-  - BoxerJumpsuit
-  - BoxerGloves
   - CommonBackpack
   - Glasses
   - Survival
   - Trinkets
-  - BoxerJobTrinkets
   - GroupSpeciesBreathTool
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
