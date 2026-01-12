@@ -35,6 +35,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Content.Shared._Erida.Preference;
 
 namespace Content.Client.Lobby.UI
 {
@@ -422,6 +423,19 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion SpawnPriority
+
+            // Erida start
+            foreach (var value in Enum.GetValues<CorporationPreference>())
+            {
+                CorporationButton.AddItem(Loc.GetString($"humanoid-profile-editor-preference-corporation-{value.ToString().ToLower()}"), (int)value);
+            }
+
+            CorporationButton.OnItemSelected += args =>
+            {
+                CorporationButton.SelectId(args.Id);
+                SetCorporationPriority((CorporationPreference)args.Id);
+            };
+            // Erida end
 
             #region Eyes
 
@@ -982,11 +996,12 @@ namespace Content.Client.Lobby.UI
 
             UpdateNameEdit();
             UpdateFlavorTextEdit();
-             // Orion
+            // Orion
             UpdateSexControls();
             UpdateGenderControls();
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
+            UpdateCorporationControls(); // Erida edit
             UpdateAgeEdit();
             // Erida-start
             UpdateCustomSpeciesEdit();
@@ -1606,6 +1621,14 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
+        // Erida start
+        private void SetCorporationPriority(CorporationPreference newCorporation)
+        {
+            Profile = Profile?.WithCorporationPreference(newCorporation);
+            SetDirty();
+        }
+        // Erida end
+
         public bool IsDirty
         {
             get => _isDirty;
@@ -1856,6 +1879,18 @@ namespace Content.Client.Lobby.UI
 
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
+
+        // Erida start
+        private void UpdateCorporationControls()
+        {
+            if (Profile == null)
+            {
+                return;
+            }
+
+            CorporationButton.SelectId((int)Profile.Corporation);
+        }
+        // Erida end
 
         private void UpdateHairPickers()
         {

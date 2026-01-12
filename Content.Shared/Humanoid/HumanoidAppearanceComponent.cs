@@ -8,6 +8,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 using Content.Shared.Corvax.TTS;
+using Content.Shared._Erida.Preference;
 
 namespace Content.Shared.Humanoid;
 
@@ -29,6 +30,11 @@ public sealed partial class HumanoidAppearanceComponent : Component
 
     [DataField, AutoNetworkedField]
     public Gender Gender;
+
+    // Erida start
+    [DataField, AutoNetworkedField]
+    public CorporationPreference Corporation;
+    // Erida end
 
     [DataField, AutoNetworkedField]
     public int Age = 18;

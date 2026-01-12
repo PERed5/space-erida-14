@@ -24,10 +24,9 @@
       time: 14400
     - !type:OverallPlaytimeRequirement
       time: 86400
-    - !type:TraitsRequirement
-      traits:
-      - SyndicateEmployee
-      inverted: true
+    - !type:CorporationRequirement
+      corporations:
+      - NanoTrasen
   special:
     - !type:AddImplantSpecial
       implants: [ MindShieldImplant ]

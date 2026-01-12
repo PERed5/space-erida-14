@@ -1,5 +1,5 @@
 - type: language
-  id: CorporateCodespeak
+  id: CodespeakNanoTrasen
   speech:
     fontId: Supernatural
     color: "#0066ff"

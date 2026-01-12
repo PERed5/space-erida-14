@@ -22,6 +22,10 @@ using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using Content.Shared.Sprite;
+using Content.Shared._Erida.Preference;
+using Content.Shared.Backmen.Language.Components;
+using Content.Shared.Backmen.Language.Systems;
+using Content.Shared.Backmen.Language.Events;
 
 namespace Content.Shared.Humanoid;
 
@@ -454,6 +458,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         // Erida-start
         SetCustomSpecies(uid, profile.CustomSpecies, false, humanoid);
         SetSizes(uid, profile.Height, profile.Width);
+        SetCorporation(uid, profile.Corporation, humanoid);
         // Erida-end
         SetSex(uid, profile.Sex, false, humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
@@ -604,6 +609,25 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         comp.VoicePrototypeId = voiceId;
     }
     // Corvax-TTS-End
+
+    // Erida start
+    public void SetCorporation(EntityUid uid, CorporationPreference corporation, HumanoidAppearanceComponent humanoid)
+    {
+        humanoid.Corporation = corporation;
+
+        if (!TryComp<LanguageKnowledgeComponent>(uid, out var comp))
+            return;
+
+        if (corporation == CorporationPreference.NanoTrasen || corporation == CorporationPreference.Syndicate) {
+            var languageName = "Codespeak" + $"{corporation}";
+
+            comp.SpokenLanguages.Add(languageName);
+            comp.UnderstoodLanguages.Add(languageName);
+
+            RaiseLocalEvent(uid, new LanguageListUpdated());
+        }
+    }
+    // Erida end
 
     /// <summary>
     /// Takes ID of the species prototype, returns UI-friendly name of the species.

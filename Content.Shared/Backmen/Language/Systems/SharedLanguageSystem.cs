@@ -1,6 +1,7 @@
 using System.Text;
 using Content.Shared.GameTicking;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Backmen.Language.Systems;
 
@@ -66,3 +67,8 @@ public abstract class SharedLanguageSystem : EntitySystem
         return min + Math.Abs(random) % (max - min + 1);
     }
 }
+
+// Erida start
+[Serializable, NetSerializable]
+public sealed class LanguageListUpdated : EntityEventArgs { }
+// Erida end

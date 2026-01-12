@@ -12,6 +12,7 @@ general-station-record-for-filter-line-placeholder = Введите текст..
 general-station-record-name-filter = Имя сотрудника
 general-station-record-job-filter = Должность
 general-station-record-species-filter = Вид
+general-station-record-console-record-corporation = Корпорация: { $corporation }
 general-station-record-prints-filter = Отпечатки пальцев
 general-station-record-dna-filter = ДНК
 general-station-record-console-search-records = Поиск

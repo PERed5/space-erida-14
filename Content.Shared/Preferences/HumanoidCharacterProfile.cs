@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Erida.Preference;
 using Content.Shared.CCVar;
 using Content.Shared.Corvax.TTS;
 using Content.Shared.GameTicking;
@@ -134,6 +135,11 @@ namespace Content.Shared.Preferences
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
 
+        // Erida start
+        [DataField]
+        public CorporationPreference Corporation { get; private set; } = CorporationPreference.Outsource;
+        // Erida end
+
         /// <summary>
         /// <see cref="Appearance"/>
         /// </summary>
@@ -203,6 +209,7 @@ namespace Content.Shared.Preferences
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
+            CorporationPreference corporationPreference,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
@@ -238,6 +245,7 @@ namespace Content.Shared.Preferences
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
+            Corporation = corporationPreference; // Erida edit
             _jobPriorities = jobPriorities;
             PreferenceUnavailable = preferenceUnavailable;
             _antagPreferences = antagPreferences;
@@ -290,6 +298,7 @@ namespace Content.Shared.Preferences
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
+                other.Corporation, // Erida edit
                 new Dictionary<ProtoId<JobPrototype>, JobPriority>(other.JobPriorities),
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
@@ -508,6 +517,12 @@ namespace Content.Shared.Preferences
             return new(this) { SpawnPriority = spawnPriority };
         }
 
+        // Erida start
+        public HumanoidCharacterProfile WithCorporationPreference(CorporationPreference corporationPriority)
+        {
+            return new(this) { Corporation = corporationPriority };
+        }
+        // Erida end
         public HumanoidCharacterProfile WithJobPriorities(IEnumerable<KeyValuePair<ProtoId<JobPrototype>, JobPriority>> jobPriorities)
         {
             var dictionary = new Dictionary<ProtoId<JobPrototype>, JobPriority>(jobPriorities);
@@ -670,6 +685,7 @@ namespace Content.Shared.Preferences
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
+            if (Corporation != other.Corporation) return false; // Erida edit
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
@@ -912,6 +928,16 @@ namespace Content.Shared.Preferences
                 _ => SpawnPriorityPreference.None // Invalid enum values.
             };
 
+            // Erida start
+            var corporation = Corporation switch
+            {
+                CorporationPreference.NanoTrasen => CorporationPreference.NanoTrasen,
+                CorporationPreference.Syndicate => CorporationPreference.Syndicate,
+                CorporationPreference.Outsource => CorporationPreference.Outsource,
+                _ => CorporationPreference.Outsource
+            };
+            // Erida end
+
             var priorities = new Dictionary<ProtoId<JobPrototype>, JobPriority>(JobPriorities
                 .Where(p => prototypeManager.TryIndex<JobPrototype>(p.Key, out var job) && job.SetPreference && p.Value switch
                 {
@@ -963,6 +989,7 @@ namespace Content.Shared.Preferences
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
+            Corporation = corporation; // Erida edit
 
             _jobPriorities.Clear();
 
@@ -1113,6 +1140,7 @@ namespace Content.Shared.Preferences
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);
+            hashCode.Add((int)Corporation); // Erida edit
             hashCode.Add((int)PreferenceUnavailable);
             return hashCode.ToHashCode();
         }
