@@ -175,6 +175,10 @@
     understands:
     - Carp
     - Dragon
+  # Erida-start
+  - type: ProRottingContainer
+    decayModifier: 0
+  # Erida-end
 
 - type: entity
   parent: BaseMobDragon

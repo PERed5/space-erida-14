@@ -63,8 +63,8 @@
   - type: Perishable
     # raw meat rots in 5 minutes, get it into the freezer fast
     rotAfter: 300
-    # don't want meat giving off ammonia only bodies
-    molsPerSecondPerUnitMass: 0
+    # don't want meat giving off ammonia only bodies # No, I want, but 2x less # Erida-edit
+    molsPerSecondPerUnitMass: 0.00125 # Erida-edit
   - type: RotInto
     entity: FoodMeatRotten
     # once it would say bloated, turn into the rotten prototype
