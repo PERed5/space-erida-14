@@ -967,6 +967,10 @@ namespace Content.Client.Lobby.UI
                 return;
 
             PreviewDummy = _controller.LoadProfileEntity(Profile, JobOverride, ShowClothes.Pressed);
+            // Erida-start
+            if (_entManager.TryGetComponent<SpriteComponent>(PreviewDummy, out var spriteComponent))
+                _sprite.SetScale((PreviewDummy, spriteComponent), new Vector2(Profile.Width, Profile.Height));
+            // Erida-end
             SpriteView.SetEntity(PreviewDummy);
             _entManager.System<MetaDataSystem>().SetEntityName(PreviewDummy, Profile.Name);
 
@@ -1038,7 +1042,13 @@ namespace Content.Client.Lobby.UI
             if (Profile == null || !_entManager.EntityExists(PreviewDummy))
                 return;
 
+            // Erida-start
+            if (_entManager.TryGetComponent<SpriteComponent>(PreviewDummy, out var spriteComponent))
+                _sprite.SetScale((PreviewDummy, spriteComponent), new Vector2(Profile.Width, Profile.Height));
+            // Erida-end
+
             _entManager.System<HumanoidAppearanceSystem>().LoadProfile(PreviewDummy, Profile);
+
 
             // Check and set the dirty flag to enable the save/reset buttons as appropriate.
             SetDirty();
@@ -1504,7 +1514,7 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithHeight(HeightSlider.Value / 100);
             HeightLabel.Text = $"{(int)HeightSlider.Value}%";
 
-            IsDirty = true;
+            ReloadProfilePreview();
         }
 
         private void OnWidthValueChanged()
@@ -1512,7 +1522,7 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithWidth(WidthSlider.Value / 100);
             WidthLabel.Text = $"{(int)WidthSlider.Value}%";
 
-            IsDirty = true;
+            ReloadProfilePreview();
         }
         // Erida-end
 
