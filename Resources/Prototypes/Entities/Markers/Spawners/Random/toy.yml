@@ -14,6 +14,7 @@
         - PlushieGhost
       rareChance: 0.03
       prototypes:
+        - AnnaOrlovaPlushie #Erida-sponsor
         - PlushieBee
         - PlushieAtmosian
         - PlushieNuke

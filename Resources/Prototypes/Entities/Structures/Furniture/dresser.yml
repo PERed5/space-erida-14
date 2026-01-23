@@ -339,6 +339,8 @@
       weight: 0.03
     - id: ClothingHeadHatBeret
       weight: 0.03
+    - id: AnnaOrlovaPlushie #Erida-sponsor
+      weight: 0.03 #Erida-sponsor
     - id: PlushieLizard
       weight: 0.03
     - id: ClothingHeadHatXmasCrown

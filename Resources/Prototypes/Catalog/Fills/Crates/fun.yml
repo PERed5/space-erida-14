@@ -4,6 +4,7 @@
     children:
     - !type:NestedSelector
       tableId: AllLizardPlushieTable
+    - id: AnnaOrlovaPlushie #Erida-sponsor
     - id: PlushieNuke
     - id: PlushieSlime
     - id: PlushieSnake
