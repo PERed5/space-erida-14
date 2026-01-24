@@ -19,6 +19,7 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
+  - type: DualWeaponsBonus # Erida-edit
 
 - type: entity
   name: china lake

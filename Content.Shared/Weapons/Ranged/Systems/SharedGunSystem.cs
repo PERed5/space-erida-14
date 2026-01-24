@@ -10,6 +10,7 @@ using Content.Shared.Damage;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Examine;
 using Content.Shared.Hands;
+using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Projectiles;
@@ -139,19 +140,39 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         if (ent != GetEntity(msg.Gun))
             return;
+        // Erida-start
+        if (!GetAllGuns(user.Value, ent, out var allGuns))
+        {
+            gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
+            gun.Target = GetEntity(msg.Target);
+            AttemptShoot(user.Value, ent, gun);
+            return;
+        }
 
-        gun.ShootCoordinates = GetCoordinates(msg.Coordinates);
-        gun.Target = GetEntity(msg.Target);
-        AttemptShoot(user.Value, ent, gun);
+        foreach (var weapon in allGuns)
+        {
+            if (TryComp<DualWeaponsBonusComponent>(weapon, out var dual))
+            {
+                dual.DualCurrent = true;
+                RefreshModifiers((weapon, weapon));
+            }
+
+            weapon.Comp.ShootCoordinates = GetCoordinates(msg.Coordinates);
+            weapon.Comp.Target = GetEntity(msg.Target);
+            AttemptShoot(user.Value, weapon.Owner, weapon.Comp);
+        }
+        // Erida-end
     }
 
     private void OnStopShootRequest(RequestStopShootEvent ev, EntitySessionEventArgs args)
     {
+        var user = args.SenderSession.AttachedEntity; // Erida-edit
+
         var gunUid = GetEntity(ev.Gun);
 
-        if (args.SenderSession.AttachedEntity == null ||
+        if (user == null || // Erida-edit
             !TryComp<GunComponent>(gunUid, out var gun) ||
-            !TryGetGun(args.SenderSession.AttachedEntity.Value, out _, out var userGun))
+            !TryGetGun(user.Value, out var ent, out var userGun)) //Erida-edit
         {
             return;
         }
@@ -159,7 +180,23 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (userGun != gun)
             return;
 
-        StopShooting(gunUid, gun);
+        // Erida-start
+        if (!GetAllGuns(user.Value, ent, out var allGuns))
+        {
+            StopShooting(gunUid, gun);
+            return;
+        }
+
+        foreach (var weapon in allGuns)
+        {
+            if (TryComp<DualWeaponsBonusComponent>(weapon, out var dual))
+            {
+                dual.DualCurrent = false;
+                RefreshModifiers((weapon, weapon));
+            }
+            StopShooting(weapon.Owner, weapon.Comp);
+        }
+        // Erida-end
     }
 
     public bool CanShoot(GunComponent component)
@@ -169,6 +206,28 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         return true;
     }
+
+    // Erida-start
+    private bool GetAllGuns(EntityUid entity, EntityUid activeGun, out List<Entity<GunComponent>> weaponsList)
+    {
+        weaponsList = new List<Entity<GunComponent>>();
+
+        if (!TryComp<HandsComponent>(entity, out var handsComp))
+            return false;
+
+        foreach (var (handString, handClass) in handsComp.Hands)
+        {
+            if (!_hands.TryGetHeldItem(entity, handString, out var heldItem))
+                continue;
+            if (TryComp<GunComponent>(heldItem.Value, out var gunComp))
+            {
+                weaponsList.Add((heldItem.Value, gunComp));
+            }
+        }
+
+        return weaponsList.Count > 1;
+    }
+    // Erida-end
 
     public bool TryGetGun(EntityUid entity, out EntityUid gunEntity, [NotNullWhen(true)] out GunComponent? gunComp)
     {
@@ -251,7 +310,9 @@ public abstract partial class SharedGunSystem : EntitySystem
             User = user,
             Used = (gunUid, gun)
         };
+
         RaiseLocalEvent(gunUid, ref prevention);
+
         if (prevention.Cancelled)
             return false;
 
