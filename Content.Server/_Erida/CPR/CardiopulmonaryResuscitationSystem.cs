@@ -1,27 +1,25 @@
 using Content.Server.DoAfter;
-using Content.Shared.CRP;
+using Content.Shared._Erida.CRP;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.FixedPoint;
 using Content.Shared.IdentityManagement;
-using Content.Shared.Interaction.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition.EntitySystems;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Player;
-using Robust.Shared.Profiling;
-using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 
-namespace Content.Shared.Interaction;
+namespace Content.Server._Erida.CPR;
 
 public sealed class CardiopulmonaryResuscitationSystem : EntitySystem
 {
     [Dependency] protected readonly EntityManager _entityManager = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly Damage.Systems.DamageableSystem _damageable = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly IngestionSystem _ingestionSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
