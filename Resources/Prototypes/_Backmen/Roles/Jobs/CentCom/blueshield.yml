@@ -27,6 +27,8 @@
     - !type:CorporationRequirement
       corporations:
       - NanoTrasen
+    - !type:AgeRequirement
+      requiredAge: 23
   special:
     - !type:AddImplantSpecial
       implants: [ MindShieldImplant ]
