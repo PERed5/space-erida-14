@@ -22,7 +22,6 @@
     - AnomalyFlora
     - AnomalyShadow
     - AnomalyTech
-    - AnomalySanta
     rareChance: 0.3
     rarePrototypes:
     - RandomAnomalyInjectorSpawner

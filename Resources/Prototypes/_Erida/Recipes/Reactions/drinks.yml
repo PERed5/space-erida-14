@@ -282,3 +282,55 @@
       amount: 2
   products:
     BloomLight: 5
+
+- type: reaction
+  id: BleedingJaneWithSynthetic
+  reactants:
+    Karmotrine:
+      amount: 3
+    SyntheticBlood:
+      amount: 1
+    CapsaicinOil:
+      amount: 1
+  products:
+    BleedingJane: 5
+
+- type: reaction
+  id: DemonsBloodSynthetic
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Rum:
+      amount: 1
+    SyntheticBlood:
+      amount: 1
+    DrGibb:
+      amount: 1
+    SpaceMountainWind:
+      amount: 1
+  products:
+    DemonsBlood: 4
+
+- type: reaction
+  id: DevilsKissSynthetic
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Rum:
+      amount: 1
+    SyntheticBlood:
+      amount: 1
+    CoffeeLiqueur:
+      amount: 1
+  products:
+    DevilsKiss: 3
+
+- type: reaction
+  id: RedMeadSynthetic
+  reactants:
+    Mead:
+      amount: 1
+    SyntheticBlood:
+      amount: 1
+  products:
+    RedMead: 2
