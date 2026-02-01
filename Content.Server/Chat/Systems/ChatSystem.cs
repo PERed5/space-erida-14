@@ -954,11 +954,18 @@ private void SendEntityWhisper(
 
     public string TransformSpeech(EntityUid sender, string message, LanguagePrototype language)
     {
-        if (!language.SpeechOverride.RequireSpeech)
-            return message; // Do not apply speech accents if there's no speech involved.
-
         var ev = new TransformSpeechEvent(sender, message);
         RaiseLocalEvent(ev);
+
+        // start-backmen: language
+        if (ev.Language is { } replaceLanguage)
+        {
+            language = replaceLanguage;
+        }
+
+        if (!language.SpeechOverride.RequireSpeech)
+            return message; // Do not apply speech accents if there's no speech involved.
+        // end-backmen: language
 
         return ev.Message;
     }

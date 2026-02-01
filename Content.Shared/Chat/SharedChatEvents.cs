@@ -32,6 +32,7 @@ public sealed class TransformSpeechEvent : EntityEventArgs
 {
     public EntityUid Sender;
     public string Message;
+    public LanguagePrototype? Language; // backmen
 
     public TransformSpeechEvent(EntityUid sender, string message)
     {
@@ -59,13 +60,13 @@ public sealed class EntitySpokeEvent : EntityEventArgs
 {
     public readonly EntityUid Source;
     public readonly string Message;
-    public readonly string OriginalMessage;
+    public readonly string OriginalMessage; // backmen
     public readonly string? ObfuscatedMessage; // not null if this was a whisper
-    public readonly LanguagePrototype? Language;
+    public readonly LanguagePrototype? Language; // backmen
 
     /// <summary>
-    ///     If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
-    ///     message gets sent on this channel, this should be set to null to prevent duplicate messages.
+    /// If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
+    /// message gets sent on this channel, this should be set to null to prevent duplicate messages.
     /// </summary>
     public RadioChannelPrototype? Channel;
 
@@ -76,6 +77,6 @@ public sealed class EntitySpokeEvent : EntityEventArgs
         OriginalMessage = originalMessage; // Corvax-TTS: Spec symbol sanitize
         Channel = channel;
         ObfuscatedMessage = obfuscatedMessage;
-        Language = language;
+        Language = language; // backmen
     }
 }
