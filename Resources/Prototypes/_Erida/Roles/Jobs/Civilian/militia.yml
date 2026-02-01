@@ -5,7 +5,8 @@
   playTimeTracker: JobMilitia
   startingGear: PassengerGear
   icon: "JobIconMilitia"
-  setPreference: true
+  setPreference: false
+  overrideConsoleVisibility: true
   supervisors: job-supervisors-security
   access:
   - Command
