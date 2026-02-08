@@ -49,11 +49,7 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
-  - type: ApcPowerReceiver
-    powerLoad: 150
-  - type: PowerState
-    idlePowerDraw: 150
-    workingPowerDraw: 1000
+  - type: UpgradeStorage
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -124,6 +120,8 @@
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
+        - MaterialsStatic
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - ToolsStatic
     - PartsStatic
     - AtmosStatic
@@ -131,7 +129,6 @@
     - PaperworkStatic
     - TowelsStatic
     - CargoStatic
-    - MaterialsStatic
     - BasicChemistryStatic
     - RollerBedsStatic
     - LightsStatic
@@ -195,10 +192,10 @@
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
-    staticPacks:
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - ChemistryStatic
     - SurgeryStatic
-    dynamicPacks:
+    # dynamicPacks: # Backmen-EDIT
     - AdvancedTools
     - ScienceEquipment
     - ScienceExplosives
@@ -212,6 +209,7 @@
     - Janitor
     - Instruments
     - Equipment
+
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -254,12 +252,15 @@
     idleState: icon
     runningState: building
     staticPacks:
+    - CircuitFloorsStatic
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - ScienceBoardsStatic
     - ServiceBoardsStatic
+    - Botany
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
-    dynamicPacks:
+    # dynamicPacks: # Backmen-EDIT
     - EngineeringBoards
     - CargoBoards
     - MedicalBoards
@@ -268,6 +269,7 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - SyndieCircuitboards # Erida edit
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -307,11 +309,11 @@
   - type: Lathe
     idleState: fab-idle
     runningState: fab-active
-    staticPacks:
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - RoboticsStatic
     - BorgModulesStatic
     - BorgLimbsStatic
-    dynamicPacks:
+    # dynamicPacks: # Backmen-EDIT
     - Robotics
     - BorgModules
     - MechParts
@@ -386,12 +388,12 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
-    dynamicPacks:
+    # dynamicPacks: # Backmen-EDIT
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
     - SecurityEquipment
@@ -464,7 +466,7 @@
   - type: Lathe
     idleState: icon
     runningState: icon
-    staticPacks:
+    dynamicPacks: # Static > Dynamic | Backmen-EDIT
     - TopicalsStatic
     - ChemistryStatic
     - MedicalStatic
@@ -472,7 +474,7 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
-    dynamicPacks:
+    # dynamicPacks: # Backmen-EDIT
     - Chemistry
   - type: Machine
     board: MedicalTechFabCircuitboard
@@ -517,6 +519,10 @@
     - Scarves
     - Carpets
     - Bedsheets
+    # Erida start
+    dynamicPacks:
+    - SyndicateClothing
+    # Erida end
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
@@ -604,6 +610,7 @@
       staticPacks:
       - OreSmelting
       - RGlassSmelting
+    - type: MaterialStorageMagnetPickup # Frontier
 
 - type: entity
   parent: OreProcessor

@@ -13333,12 +13333,12 @@ entities:
     - type: Transform
       pos: -3.5,-57.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
   - uid: 18290
     components:
     - type: Transform
@@ -94334,12 +94334,12 @@ entities:
     - type: Transform
       pos: -4.5,-19.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: ProximitySensor
   entities:
   - uid: 4726
@@ -98089,12 +98089,12 @@ entities:
     - type: Transform
       pos: 67.5,-32.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: SecurityWhistle
   entities:
   - uid: 7104
@@ -109236,12 +109236,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 15.5,-57.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: UniformScrubsColorBlue
   entities:
   - uid: 19025

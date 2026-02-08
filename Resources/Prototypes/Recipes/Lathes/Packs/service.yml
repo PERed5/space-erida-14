@@ -1,4 +1,4 @@
-## Static
+## Dynamic
 
 - type: latheRecipePack
   id: ServiceStatic
@@ -39,12 +39,22 @@
   - SodaDispenserMachineCircuitboard
   - SmartFridgeCircuitboard
   - PrinterDocMachineCircuitboard # DS-14
+  - SmartFridgeCircuitboard
 
-## Dynamic
+- type: latheRecipePack
+  id: Botany
+  recipes:
+  - HydroponicsToolMiniHoe
+  - HydroponicsToolHatchet
+  - HydroponicsToolScythe
+  - HydroponicsToolClippers
+  - ClothingBeltPlant
+  - PlantBag
 
 - type: latheRecipePack
   id: Janitor
   recipes:
+  - TrashBag # Backmen
   - AdvMopItem
   - WeaponSprayNozzle
   - ClothingBackpackWaterTank
@@ -61,9 +71,11 @@
   recipes:
   - BiofabricatorMachineCircuitboard
   - FatExtractorMachineCircuitboard
-  - HydroponicsTrayMachineCircuitboard # roundstart gear being unlocked roundstart when
-  - SeedExtractorMachineCircuitboard # ^
   - MassMediaCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
   - JukeboxCircuitBoard
   - DawInstrumentMachineCircuitboard
+  # Erida-start
+  - HydroponicsTrayMachineCircuitboard
+  - SeedExtractorMachineCircuitboard
+  # Erida-end

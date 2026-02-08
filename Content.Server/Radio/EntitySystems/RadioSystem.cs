@@ -13,8 +13,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
-using Content.Shared.Backmen.Language;
-using Content.Server.Backmen.Language;
+using Content.Shared._Backmen.Language;
+using Content.Server._Backmen.Language;
 
 namespace Content.Server.Radio.EntitySystems;
 

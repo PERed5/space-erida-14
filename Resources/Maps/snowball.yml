@@ -12986,12 +12986,12 @@ entities:
     - type: Transform
       pos: 18.5,79.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: BananaPhoneInstrument
   entities:
   - uid: 18234
@@ -13360,12 +13360,12 @@ entities:
     - type: Transform
       pos: 61.5,70.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
   - uid: 14382
     components:
     - type: Transform
@@ -42682,12 +42682,12 @@ entities:
     - type: Transform
       pos: 15.5,87.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: CleanerDispenser
   entities:
   - uid: 9611
@@ -43881,35 +43881,35 @@ entities:
     - type: Transform
       pos: 15.5,90.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
   - uid: 15918
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 17.5,87.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
   - uid: 15920
     components:
     - type: Transform
       pos: 21.5,83.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: ComputerRoboticsControl
   entities:
   - uid: 16051
@@ -52308,12 +52308,12 @@ entities:
     - type: Transform
       pos: 18.5,71.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: ExtinguisherCabinetFilled
   entities:
   - uid: 1222
@@ -85842,12 +85842,12 @@ entities:
     - type: Transform
       pos: 55.5,52.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: MedkitBruteFilled
   entities:
   - uid: 10956
@@ -89499,12 +89499,12 @@ entities:
     - type: Transform
       pos: 17.5,90.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: ProtolatheMachineCircuitboard
   entities:
   - uid: 9852
@@ -93089,12 +93089,12 @@ entities:
     - type: Transform
       pos: 33.5,30.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 1340
@@ -100742,12 +100742,12 @@ entities:
     - type: Transform
       pos: 33.5,63.5
       parent: 1
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: Vaccinator
   entities:
   - uid: 17643

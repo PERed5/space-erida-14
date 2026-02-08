@@ -16602,12 +16602,12 @@ entities:
     - type: Transform
       pos: -12.5,-11.5
       parent: 60
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
   - uid: 16143
     components:
     - type: Transform
@@ -126905,12 +126905,12 @@ entities:
     - type: Transform
       pos: -27.5,-9.5
       parent: 60
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 149
@@ -140946,12 +140946,12 @@ entities:
     - type: Transform
       pos: 4.5,-27.5
       parent: 60
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
     - type: MaterialStorage
       materialWhiteList:
       - Cloth

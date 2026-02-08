@@ -22382,12 +22382,12 @@ entities:
     - type: Transform
       pos: -10.5,-27.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: BlastDoor
   entities:
   - uid: 1159
@@ -100022,12 +100022,12 @@ entities:
     - type: Transform
       pos: 3.5,-29.5
       parent: 2
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 2127

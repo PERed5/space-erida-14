@@ -22292,12 +22292,12 @@ entities:
     - type: Transform
       pos: -27.5,40.5
       parent: 8364
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: BlastDoor
   entities:
   - uid: 46
@@ -147956,12 +147956,12 @@ entities:
     - type: Transform
       pos: -13.5,44.5
       parent: 8364
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
 - proto: SeedExtractor
   entities:
   - uid: 8685
@@ -161410,12 +161410,12 @@ entities:
     - type: Transform
       pos: -11.5,-24.5
       parent: 8364
-    - type: TechnologyDatabase
-      supportedDisciplines:
-      - Industrial
-      - Arsenal
-      - Experimental
-      - CivilianServices
+    # - type: TechnologyDatabase
+    #   supportedDisciplines:
+    #   - Industrial
+    #   - Arsenal
+    #   - Experimental
+    #   - CivilianServices
     - type: MaterialStorage
       materialWhiteList:
       - Cloth

@@ -304,4 +304,18 @@ public abstract class SharedResearchSystem : EntitySystem
         var ev = new TechnologyDatabaseModifiedEvent(new List<string> { recipe });
         RaiseLocalEvent(uid, ref ev);
     }
+
+    // Goobstation start
+    public int GetTierCompletionPercentage(TechnologyDatabaseComponent component, TechDisciplinePrototype techDiscipline)
+    {
+        var allTech = PrototypeManager.EnumeratePrototypes<TechnologyPrototype>()
+            .Where(p => p.Discipline == techDiscipline.ID && !p.Hidden).ToList();
+
+        var percentage = (float)component.UnlockedTechnologies
+            .Where(x => PrototypeManager.Index<TechnologyPrototype>(x).Discipline == techDiscipline.ID)
+            .Count() / (float)allTech.Count * 100f;
+
+        return (int)Math.Clamp(percentage, 0, 100);
+    }
+    // Goobstation end
 }
