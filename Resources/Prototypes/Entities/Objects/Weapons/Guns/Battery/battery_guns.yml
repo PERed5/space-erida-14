@@ -182,6 +182,12 @@
     tags:
     - Sidearm
     - LaserWeapon
+  # Erida-start
+  - type: DualWeaponsBonus
+    minAngle: 0
+    maxAngle: 0
+    angleIncrease: 0
+  # Erida-end
 
 - type: entity
   name: retro laser blaster
