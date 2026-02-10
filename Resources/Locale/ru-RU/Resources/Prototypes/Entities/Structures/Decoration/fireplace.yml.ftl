@@ -1,0 +1,3 @@
+<#-- Auto generated file -->
+ent-Fireplace = камин
+    .desc = Очаг, в котором горит огонь. Уютно!

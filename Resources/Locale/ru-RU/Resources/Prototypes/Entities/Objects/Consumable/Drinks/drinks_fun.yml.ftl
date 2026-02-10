@@ -1,0 +1,16 @@
+<#-- Auto generated file -->
+ent-DrinkSpaceGlue = тюбик космического клея
+    .desc = Высокоэффективный клей, предназначенный для обслуживания чрезвычайно сложного механического оборудования. НЕ ПИТЬ!
+
+ent-DrinkSpaceLube = тюбик космической смазки
+    .desc = Высокоэффективный лубрикант, предназначенный для обслуживания чрезвычайно сложного механического оборудования.
+
+ent-BottomlessLube = bottomless lube beaker
+    .desc = This anomalous beaker infinitely produces space lube and as such is to be closely guarded such that it doesn't fall in the wrong hands.
+    .suffix = DEBUG
+
+ent-DrinkJarWhat = банка чего-то
+    .desc = Вы не можете точно сказать, что это такое.
+
+ent-DrinkMopwataBottleRandom = вкуснейшая швабода
+    .desc = Мутная коричневая бутылка с выцветшей этикеткой, на которой изображена швабра. Она наполнена мутным... винтажём.

@@ -1,0 +1,3 @@
+<#-- Auto generated file -->
+ent-CargoMailTeleporter = почтовый телепортер
+    .desc = Периодически телепортирует почту для доставки по станции.

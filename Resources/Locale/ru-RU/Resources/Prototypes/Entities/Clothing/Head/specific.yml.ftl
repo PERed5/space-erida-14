@@ -1,0 +1,7 @@
+<#-- Auto generated file -->
+ent-ClothingHeadHatChameleon = берет
+    .desc = Берет, любимый головной убор творцов.
+    .suffix = Хамелеон
+
+ent-ClothingHeadHatDetGadget = гаджет-шляпа
+    .desc = Инновационная шляпа со встроенным набором инструментов. Автоматически хранит и извлекает предметы по одной фразе!

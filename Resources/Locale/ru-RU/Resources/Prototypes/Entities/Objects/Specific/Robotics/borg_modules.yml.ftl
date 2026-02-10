@@ -1,0 +1,135 @@
+<#-- Auto generated file -->
+ent-ActionBorgSwapModule = Сменить модуль
+    .desc = Выбор этого модуля позволит вам использовать предоставляемые им инструменты.
+
+ent-BorgModuleCable = кабельный модуль киборга
+    .desc = Универсальный модуль киборга, позволяющий юниту прокладывать и манипулировать электрическими системами.
+
+ent-BorgModuleFireExtinguisher = огнетушащий модуль киборга
+    .desc = Пакт назначил команду для разработки джетпака для киборгов, но у них кончилось финансирование и они просто сделали большую версию огнетушителя. Зато он идёт вместе с GPS и сканером масс!
+
+ent-BorgModuleTool = инструментальный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleAppraisal = оценочный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleMining = шахтёрский модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleAdvancedMining = продвинутый шахтёрский модуль киборга
+    .desc = Продвинутый модуль снабжения, содержащий продвинутое шахтёрское снаряжение. Исследования показали, что с ним продуктивность борга повышается на 150%.
+
+ent-BorgModuleTraversal = поперечный модуль киборга
+    .desc = { ent-BaseBorgModuleCargo }
+
+ent-BorgModuleAdvancedTool = продвинутый инструментальный модуль киборга
+    .desc = Продвинутый инженерный модуль, содержащий передовые инструменты.
+
+ent-BorgModuleConstruction = строительный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleRCD = инженерный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleCustodial = уборочный модуль киборга
+    .desc = { ent-BaseBorgModuleJanitor }
+
+ent-BorgModuleCleaning = чистящий модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleAdvancedCleaning = продвинутый чистящий модуль киборга
+    .desc = Продвинутый уборочный модуль, содержащий, ну... продвинутое уборочное снаряжение. Чего вы ещё ожидали?
+
+ent-BorgModuleDiagnosis = диагностический модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleTopicals = модуль киборга наружных препаратов
+    .desc = { ent-BaseBorgModuleMedical }
+
+ent-BorgModuleRescue = спасательный модуль киборга
+    .desc = { ent-BaseBorgModuleMedical }
+
+ent-BorgModuleChemical = химический модуль киборга
+    .desc = { ent-BaseBorgModuleMedical }
+
+ent-BorgModuleArtifact = артефактный модуль киборга
+    .desc = { ent-BaseBorgModuleScience }
+
+ent-BorgModuleAnomaly = аномальный модуль киборга
+    .desc = { ent-BaseBorgModuleScience }
+
+ent-BorgModuleService = сервисный модуль киборга
+    .desc = { ent-BaseBorgModuleService }
+
+ent-BorgModuleMusique = музыкальный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleGardening = садовый модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleHarvesting = урожайный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleClowning = клоунский модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleAdvancedClowning = продвинутый клоунский модуль киборга
+    .desc = Продвинутый сервисный модуль только для самых смешных киборгов! В комплекте со встроенной духовкой, которая автоматически выпекает пироги со временем, проектором голокожурки и толкающим клаксоном.
+
+ent-BorgModuleSyndicateWeapon = оружейный модуль киборга
+    .desc = { ent-BaseBorgModule }
+
+ent-BorgModuleOperative = оперативный модуль киборга
+    .desc = Модуль, в который входят монтировка,"Емаг", взломщик доступа и пинпоинтер Синдиката.
+
+ent-BorgModuleEsword = модуль киборга c двухклинковым энергомечом
+    .desc = Модуль, в который входит двухклинковый энергетический меч.
+
+ent-BorgModuleL6C = модуль киборга с L6C ROW
+    .desc = Модуль, в который входит пулемёт L6C.
+
+ent-BorgModuleMartyr = модуль киборга Мученик
+    .desc = Модуль, поставляемый со взрывчаткой, с которой вы, скорее всего, не захотите связываться сами.
+
+ent-XenoborgModuleBasic = базовый модуль ксеноборга
+    .desc = Необходимые вещи для любого ксеноборга.
+
+ent-XenoborgModuleTool = инструментальный модуль ксеноборга
+    .desc = Простые инструменты для большинства ксеноборгов.
+
+ent-XenoborgModuleAccessBreaker = модуль ксеноборга с взломщиком доступа
+    .desc = Модуль с разрушителем аутентификации.
+
+ent-XenoborgModuleFireExtinguisher = огнетушащий модуль ксеноборга
+    .desc = Модуль с самозаполняющимся огнетушителем.
+
+ent-XenoborgModuleJammer = глушащий модуль ксеноборга
+    .desc = Модуль с глушителем связи.
+
+ent-XenoborgModuleLaser = модуль ксеноборга с лазером
+    .desc = Модуль с лазерной пушкой.
+
+ent-XenoborgModuleHeavyLaser = модуль ксеноборга с тяжёлым лазером
+    .desc = Модуль с тяжёлой лазерной пушкой.
+
+ent-XenoborgModuleSpaceMovement = модуль ксеноборга для движения в космосе
+    .desc = Модуль, который помогает ксеноборгу лучше передвигаться в космосе.
+
+ent-XenoborgModuleSword = модуль ксеноборга с мечом
+    .desc = Модуль с ножом кукри.
+
+ent-XenoborgModuleEnergySword = модуль ксеноборга с энергомечом
+    .desc = Модуль с энергокинжалом.
+
+ent-XenoborgModuleHypo = модуль ксеноборга с ноктюорин-гипо
+    .desc = Модуль с самозаполняющимся гипоспреем ноктюрина.
+
+ent-XenoborgModuleChameleonProjector = модуль ксеноборга с маскировочным проектором
+    .desc = Модуль с маскировочным проектором.
+
+ent-XenoborgModuleCloakDevice = модуль ксеноборга с устройством невидимости
+    .desc = Модуль с устройством, позволяющим ксеноборгам становиться невидимыми на некоторое время.
+
+ent-XenoborgModuleSuperCloakDevice = модуль ксеноборга с устройством продвинутым невидимости
+    .desc = Модуль с устройством, позволяющим ксеноборгам становиться по-настоящему невидимыми на меньшее время.

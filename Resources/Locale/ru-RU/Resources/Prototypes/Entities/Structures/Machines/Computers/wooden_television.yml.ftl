@@ -1,0 +1,3 @@
+<#-- Auto generated file -->
+ent-ComputerTelevision = деревянный телевизор
+    .desc = Наконец-то тут появился нормальный сигнал...

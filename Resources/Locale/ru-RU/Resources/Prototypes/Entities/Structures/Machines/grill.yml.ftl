@@ -1,0 +1,3 @@
+<#-- Auto generated file -->
+ent-KitchenElectricGrill = электрогриль
+    .desc = Микроволновка? Нет, настоящие мужики готовят стейки на гриле!

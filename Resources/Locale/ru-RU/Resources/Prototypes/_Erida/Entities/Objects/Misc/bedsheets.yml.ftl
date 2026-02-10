@@ -1,0 +1,3 @@
+<#-- Auto generated file -->
+ent-BedsheetInteQ = одеяло Интек
+    .desc = Одеяло с нашивкой в виде золотой эмблемы.

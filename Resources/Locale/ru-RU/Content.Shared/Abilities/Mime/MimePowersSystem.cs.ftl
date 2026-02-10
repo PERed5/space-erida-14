@@ -1,0 +1,8 @@
+<#-- Auto generated file -->
+mime-ready-to-repent = Вы чувствуете, что готовы снова дать обет молчания.
+
+mime-invisible-wall-failed = Вы не можете создать здесь невидимую стену.
+
+mime-invisible-wall-popup-others = { CAPITALIZE } наткнулся на невидимую стену!
+
+mime-not-ready-repent = Вы ещё не готовы покаяться за нарушенный обет.

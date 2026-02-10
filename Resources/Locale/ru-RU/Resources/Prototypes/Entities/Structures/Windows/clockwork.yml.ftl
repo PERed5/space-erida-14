@@ -1,0 +1,6 @@
+<#-- Auto generated file -->
+ent-ClockworkWindow = заводное окно
+    .desc = Смотри, не заляпай латунь.
+
+ent-WindowClockworkDirectional = направленное заводное окно
+    .desc = Смотри, не заляпай латунь.

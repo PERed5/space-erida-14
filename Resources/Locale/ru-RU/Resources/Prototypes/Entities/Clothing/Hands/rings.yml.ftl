@@ -1,0 +1,18 @@
+<#-- Auto generated file -->
+ent-GoldRing = золотое кольцо
+    .desc = Драгоценное кольцо.
+
+ent-SilverRing = серебряное кольцо
+    .desc = Выглядит немного дешевле золотого.
+
+ent-GoldRingDiamond = золотое кольцо с бриллиантом
+    .desc = Изготовлено из этично добытых космических алмазов.
+
+ent-SilverRingDiamond = серебряное кольцо с бриллиантом
+    .desc = { ent-GoldRingDiamond }
+
+ent-GoldRingGem = золотое кольцо с драгоценным камнем
+    .desc = Блестящее и дорогое!
+
+ent-SilverRingGem = серебряное кольцо с драгоценным камнем
+    .desc = Блестящее и не очень дорогое!

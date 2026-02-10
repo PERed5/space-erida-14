@@ -1,0 +1,6 @@
+<#-- Auto generated file -->
+borg-module-too-many = Для ещё одного модуля не хватает места...
+
+borg-module-whitelist-deny = Этот модуль не подходит для данного типа киборгов...
+
+borg-module-duplicate = Этот модуль уже установлен в этого киборга.
