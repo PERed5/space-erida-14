@@ -87,3 +87,5 @@ ent-MindRoleZombie = Роль зомби
     .desc = { ent-MindRoleGhostRoleTeamAntagonistFlock }
 
 ent-MindRoleChangeling = Роль свободного антагониста
+
+ent-MindRoleXenoborg = Роль ксеноборга

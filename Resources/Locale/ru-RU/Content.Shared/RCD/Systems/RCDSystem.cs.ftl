@@ -26,3 +26,5 @@ rcd-component-tile-obstructed-message = Вы не можете демонтир�
 rcd-component-tile-indestructible-message = Эта клетка не может быть демонтирова!
 
 rcd-component-deconstruct-target-not-on-whitelist-message = Вы не можете демонтировать это!
+
+rcd-component-cannot-build-identical-entity = Это уже существует там!

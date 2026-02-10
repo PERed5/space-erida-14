@@ -77,3 +77,5 @@ ent-MobCrabAtmos = Тропико
 
 ent-MobPollyParrot = Попугай Полли
     .desc = Специалист по квантовой теории.
+ent-MobHamsterHamletSlippery<NFD = <NFD
+    .suffix = Slippery

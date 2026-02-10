@@ -22,3 +22,7 @@ ent-ActionRatKingOrderCheeseEm = Убить
 
 ent-ActionRatKingOrderLoose = Вольно
     .desc = Прикажите своей армии действовать на своё усмотрение.
+
+ent-MobRatKingBuff = {ent-MobRatKing}
+    .suffix = Качок
+    .desc = {ent-MobRatKing}

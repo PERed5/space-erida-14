@@ -45,3 +45,7 @@ ent-WeaponShotgunImprovisedLoaded = самодельный дробовик
 
 ent-WeaponShotgunHushpup = Тихий щенок
     .desc = Неизвестная модификация Enforcer, оснащенная экспериментальным глушителем. Отлично подходит для тех, кто придерживается строгих моральных принципов. Использует патроны калибра .50
+
+ent-WeaponShotgunEnforcerRubber = {ent-WeaponShotgunEnforcer}
+    .desc = {ent-WeaponShotgunEnforcer}
+    .suffix = Дробовик, Травматический

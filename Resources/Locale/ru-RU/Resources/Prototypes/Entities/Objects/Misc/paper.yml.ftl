@@ -41,3 +41,10 @@ ent-AllTraitorCodesPaper = реестр кодовых слов InteQ
 
 ent-Envelope = конверт
     .desc = Небольшой конверт для защиты от посторонних глаз ваших конфиденциальных документов.
+
+ent-PaperWritten = { ent-Paper }
+    .desc = { ent-Paper }
+
+ent-NukeCodePaperStation = {ent-NukeCodePaper}
+    .suffix = Только станция
+    .desc = {ent-NukeCodePaper}

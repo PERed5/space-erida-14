@@ -85,3 +85,9 @@ ent-ActionChameleonController = Управление одеждой
 
 ent-ActionIntrinsicStore = Магазин
     .desc = Открывает магазин
+
+ent-ActionCombatModeToggleOff = { ent-ActionCombatModeToggle }
+    .desc = { ent-ActionCombatModeToggle }
+
+ent-ActionChangeVoiceMaskImplant = { ent-ActionChangeVoiceMask }
+    .desc = { ent-ActionChangeVoiceMask }

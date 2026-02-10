@@ -7,3 +7,6 @@ ent-ActionCluwne = Проклятие клувня
 
 ent-ActionSlippery = Скользкая дорожка
     .desc = Сделайте кого-нибудь скользким!
+
+ent-ActionSmiteNoReq = {ent-ActionSmite}
+    .desc = {ent-ActionSmite}

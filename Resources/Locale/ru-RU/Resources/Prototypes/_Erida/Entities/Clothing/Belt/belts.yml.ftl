@@ -8,3 +8,7 @@ ent-ClothingBeltInteQDropPouch = боевая разгрузка
 ent-ClothingBeltInteQWebbingGrenadeFilled = тактический жилет медика
     .desc = Тактический жилет, который носят оперативники-медики Мародёров InteQ
     .suffix = Заполненный
+
+ent-ClothingBeltInteQWebbingMedFilled = тактический жилет гренадёра
+    .suffix = Заполненный
+    .desc = {ent-ClothingBeltMilitaryWebbing}

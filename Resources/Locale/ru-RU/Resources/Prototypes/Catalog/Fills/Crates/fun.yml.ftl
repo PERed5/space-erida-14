@@ -64,3 +64,11 @@ ent-CrateFunDartsSet = набор для дартса
 
 ent-CrateFunScurret = здоровый слизенёк
     .desc = Погоди, что?
+
+ent-CrateFunPirate = { ent-CratePirate }
+    .desc = { ent-CratePirate }
+    .suffix = Заполненный
+
+ent-CrateFunToyBox = {ent-CrateToyBox}
+    .suffix = Заполненный
+    .desc = {ent-CrateToyBox}

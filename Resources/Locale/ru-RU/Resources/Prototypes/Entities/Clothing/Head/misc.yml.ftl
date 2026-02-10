@@ -58,3 +58,7 @@ ent-ClothingHeadHatHairflower = цветок для волос
 
 ent-ClothingHeadPerformerWig = парик артиста
     .desc = При детальном рассмотрении оказывается, что он сделан из оптического волокна.
+
+ent-ClothingHeadHatCatEarsValid = {ent-ClothingHeadHatCatEars}
+    .suffix = Valid, НЕ МАППИТЬ!
+    .desc = {ent-ClothingHeadHatCatEars}

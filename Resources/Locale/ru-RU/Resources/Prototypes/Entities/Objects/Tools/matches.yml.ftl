@@ -10,3 +10,7 @@ ent-GorlexMatchbox = Gorlex match box
 
 ent-GorlexMatchstick = match stick
     .desc = A military grade match stick, used for lighting fine smokables and noncombatants alike.
+
+ent-MatchstickSpent = {ent-Matchstick}
+    .suffix = Использованный
+    .desc = {ent-Matchstick}

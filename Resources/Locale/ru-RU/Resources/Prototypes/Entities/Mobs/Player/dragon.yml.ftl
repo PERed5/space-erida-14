@@ -10,3 +10,10 @@ ent-ActionDevour = [color=red]Поглотить[/color]
 
 ent-ActionDragonsBreath = [color=orange]Дыхание дракона[/color]
     .desc = Извергайте пламя на всех, кто поимеет глупость напасть на вас!
+
+ent-MobDragon = { ent-BaseMobDragon }
+    .desc = { ent-BaseMobDragon }
+
+ent-MobDragonDungeon = {ent-BaseMobDragon}
+    .suffix = Подземелье
+    .desc = {ent-BaseMobDragon}

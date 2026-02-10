@@ -9,4 +9,6 @@ cargo-console-menu-populate-orders-cargo-order-row-product-name-text = { product
 
 cargo-console-menu-account-action-option-withdraw = Обналичить
 
-cargo-console-menu-account-action-transfer-limit = [bold]Лимит перевода:[/bold] ${limit}
+cargo-console-menu-account-action-transfer-limit = [bold]Лимит перевода:[/bold] ${ limit }
+
+cargo-console-menu-order-row-alerts-reason-absent = Причина не указана

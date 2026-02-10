@@ -139,3 +139,14 @@ ent-WallAndesiteCobblebrick = андезитовая булыжниковая с
 
 ent-Cardwall = картонная стена
     .desc = Сокращение бюджета наносит сильный удар.
+
+ent-WallReinforcedRust = { ent-WallReinforced }
+    .suffix = Ржавый
+    .desc = { ent-WallReinforced }
+
+ent-WallSolidRust = { ent-WallSolid }
+    .suffix = Ржавый
+    .desc = { ent-BaseWall }
+
+ent-WallIronsandCobblebrick =  железопесчаная кирпичная стена
+    .desc = Бледные, округлые формы, из которых состоит эта стена, выглядят поразительно иначе, чем железный песок, из которого они, как утверждается, были сделаны.

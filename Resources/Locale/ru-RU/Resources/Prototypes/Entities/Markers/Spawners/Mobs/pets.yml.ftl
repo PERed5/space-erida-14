@@ -81,4 +81,6 @@ ent-SpawnMobSmile = спавнер Смайл
 
 ent-SpawnMobWalter = спавнер Уолтер
     .suffix = питомец химия
-    .desc = {ent-MarkerBase}
+    .desc = { ent-MarkerBase }
+ent-SpawnMobPollyParrot<NFD = Polly the parrot Spawner
+    .suffix = CE Pet

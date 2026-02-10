@@ -463,3 +463,7 @@ ent-SignSurvival = знак "Выживание"
 
 ent-SignNTMine = знак "Шахта"
     .desc = Знак. На нём написано "Шахта".
+
+ent-SignCansScience = {ent-SignCans}
+    .suffix = научный
+    .desc = {ent-SignCans}

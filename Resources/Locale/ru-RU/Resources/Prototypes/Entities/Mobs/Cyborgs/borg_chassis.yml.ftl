@@ -44,3 +44,6 @@ ent-MiningBorgChassisDerelict = сбойный шахтёрский борг
 
 ent-SyndicateAssaultBorgChassisDerelict = сбойный штурмовой борг
     .desc = Машина убийца напичканная различными оружейными модулями. Покрыт ржавчиной
+
+ent-BorgChassisSelectable = {ent-BaseBorgChassisNT}
+    .desc = {ent-BaseBorgChassisNT}

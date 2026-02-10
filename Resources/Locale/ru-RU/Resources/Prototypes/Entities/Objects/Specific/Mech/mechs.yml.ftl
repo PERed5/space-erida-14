@@ -10,3 +10,19 @@ ent-MechHamtr = ХАМЯК
 
 ent-MechVim = ВИМ
     .desc = Миниатюрный экзокостюм компании Nanotrasen, разработанный для того, чтобы позволить незаменимым питомцам станции прожить немного дольше.
+
+ent-MechRipleyBattery = { ent-MechRipley }
+    .suffix = Батарея
+    .desc = { ent-MechRipley }
+
+ent-MechHonkerBattery = { ent-MechHonker }
+    .suffix = Батарея
+    .desc = { ent-MechHonker }
+
+ent-MechHamtrBattery = { ent-MechHamtr }
+    .suffix = Батарея
+    .desc = { ent-MechHamtr }
+
+ent-MechVimBattery = {ent-MechVim}
+    .suffix = Батарея
+    .desc = {ent-MechVim}

@@ -14,3 +14,19 @@ ent-XenoborgScout = разведчик ксеноборг
 ent-XenoborgStealth = стелс ксеноборг
     .desc = Гибрид машины и человека, стремящийся к самовоспроизведению. Они любят извлекать мозги и вставлять их в новые шасси ксеноборгов, чтобы пополнять свою армию. Это скрытый тип. Его броня переливается на свету, как никакой другой материал, который вы видели.
     .suffix = с мозгом
+
+ent-XenoborgEngiPrinted = { ent-XenoborgEngi }
+    .suffix = без мозга
+    .desc = { ent-XenoborgEngi }
+
+ent-XenoborgHeavyPrinted = { ent-XenoborgHeavy }
+    .suffix = без мозга
+    .desc = { ent-XenoborgHeavy }
+
+ent-XenoborgScoutPrinted = { ent-XenoborgScout }
+    .suffix = без мозга
+    .desc = { ent-XenoborgScout }
+
+ent-XenoborgStealthPrinted = {ent-XenoborgStealth}
+    .suffix = без мозга
+    .desc = {ent-XenoborgStealth}

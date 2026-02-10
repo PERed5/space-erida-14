@@ -21,4 +21,8 @@ ent-FoodTinMRE = мясная консерва
     .desc = Стандартное консервированное мясо с удобным кольцом.
 
 ent-FoodTinMRETrash = мясная консерва
-    .desc = {ent-FoodTinBaseTrash}
+    .desc = { ent-FoodTinBaseTrash }
+
+ent-FoodTinPeachesMaintOpen = {ent-FoodTinPeachesMaint}
+    .suffix = Открыт
+    .desc = {ent-FoodTinPeachesMaint}

@@ -25,3 +25,23 @@ ent-ImmovableRodGibstick = неподвижная гиб-палка
 
 ent-ImmovableRodWeh = неподвижный вех
     .desc = ВЕХ!
+
+ent-ImmovableRodDespawn = { ent-ImmovableRod }
+    .desc = { ent-ImmovableRod }
+    .suffix = Деспавн
+
+ent-ImmovableRodSlow = { ent-ImmovableRod }
+    .suffix = Медленный
+    .desc = { ent-ImmovableRod }
+
+ent-ImmovableRodKeepTiles = { ent-ImmovableRod }
+    .suffix = Оставляет пол
+    .desc = { ent-ImmovableRod }
+
+ent-ImmovableRodWizard = { ent-ImmovableRod }
+    .suffix = Волшебник
+    .desc = { ent-ImmovableRod }
+
+ent-ImmovableRodKeepTilesStill = {ent-ImmovableRodKeepTiles}
+    .suffix = Оставляет пол, Неподвижный
+    .desc = {ent-ImmovableRodKeepTiles}

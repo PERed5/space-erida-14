@@ -36,3 +36,5 @@ anomaly-behavior-title = Анализ отклонений поведения:
 anomaly-behavior-unknown = [color=red]ОШИБКА. Невозможно считать.[/color]
 
 anomaly-behavior-balanced = Отклонения поведения не обнаружены.
+
+anomaly-secret-admin = [color=red](ERROR)[/color]

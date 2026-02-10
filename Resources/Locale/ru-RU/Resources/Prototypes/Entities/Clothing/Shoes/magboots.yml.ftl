@@ -10,3 +10,11 @@ ent-ClothingShoesBootsMagSyndie = кроваво-красные магнитны
 
 ent-ActionToggleMagboots = Переключить магнитные сапоги
     .desc = Включает или выключает магнитные сапоги.
+
+ent-ClothingShoesBootsMag = { ent-ClothingShoesBootsMagBase }
+    .desc = { ent-ClothingShoesBootsMagBase }
+
+ent-ClothingShoesBootsMagSci = { ent-ClothingShoesBootsMag }
+    .desc = { ent-ClothingShoesBootsMag }
+ent-ClothingShoesBootsMagERT<NFD = ERT magboots
+    .desc = Upgraded magnetic boots utilized by Nanotrasen's Emergency Response Teams, they have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.

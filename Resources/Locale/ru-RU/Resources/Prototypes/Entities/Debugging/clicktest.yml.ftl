@@ -15,4 +15,8 @@ ent-ClickTestFixedCornerVisible = ClickTestFixedCornerVisible
     .desc = { ent-ClickTestBase }
 
 ent-ClickTestFixedCornerInvisible = ClickTestFixedCornerInvisible
-    .desc = {ent-ClickTestBase}
+    .desc = { ent-ClickTestBase }
+
+ent-ClickTestBase = 
+    .suffix = DEBUG
+    .desc = 

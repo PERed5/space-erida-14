@@ -37,4 +37,20 @@ ent-SalvageSpawnerMobShark = спавнер обломок Карпоакула
     .desc = { ent-MarkerBase }
 
 ent-SalvageSpawnerMobMiningAsteroid = спавнер моб шахтёрский астероид
-    .desc = {ent-MarkerBase}
+    .desc = { ent-MarkerBase }
+
+ent-SalvageSpawnerScrapCommon75 = { ent-SalvageSpawnerScrapCommon }
+    .suffix = Обычный, 75%
+    .desc = { ent-SalvageSpawnerScrapCommon }
+
+ent-SalvageSpawnerScrapValuable75 = { ent-SalvageSpawnerScrapValuable }
+    .suffix = Ценный, 75%
+    .desc = { ent-SalvageSpawnerScrapValuable }
+
+ent-SalvageSpawnerMobMagnet75 = { ent-SalvageSpawnerMobMagnet }
+    .suffix = 75%
+    .desc = { ent-SalvageSpawnerMobMagnet }
+
+ent-SalvageSpawnerMobMagnet100 = {ent-SalvageSpawnerMobMagnet}
+    .suffix = 100%
+    .desc = {ent-SalvageSpawnerMobMagnet}

@@ -73,3 +73,7 @@ ent-FoodDonutJellySweetpea = желейный пончик из душистог
 
 ent-FoodDonutJellyScurret = желейный слизеньковый пончик
     .desc = В этом пончике нет отверстий на случай, если появится подозрительный столб.
+
+ent-FoodDonutPoison = {ent-FoodDonutPink}
+    .desc = {ent-FoodDonutPink}
+    .suffix = Яд

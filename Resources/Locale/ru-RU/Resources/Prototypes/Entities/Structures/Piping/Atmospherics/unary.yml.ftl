@@ -25,3 +25,11 @@ ent-GasThermoMachineHellfireHeater = адский нагреватель
 
 ent-BaseGasCondenser = конденсатор газа
     .desc = Конденсирует газы в жидкости. Осталось только провести водопровод.
+
+ent-GasThermoMachineFreezerEnabled = { ent-GasThermoMachineFreezer }
+    .suffix = Включено
+    .desc = { ent-GasThermoMachineFreezer }
+
+ent-GasThermoMachineHeaterEnabled = {ent-GasThermoMachineHeater}
+    .suffix = Включено
+    .desc = {ent-GasThermoMachineHeater}

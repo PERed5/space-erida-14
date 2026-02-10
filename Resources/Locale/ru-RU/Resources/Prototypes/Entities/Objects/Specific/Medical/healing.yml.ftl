@@ -130,4 +130,88 @@ ent-PillAmbuzol = таблетка амбузола
     .desc = { ent-Pill }
 
 ent-PillAmbuzolPlus = таблетка амбузола плюс
-    .desc = {ent-Pill}
+    .desc = { ent-Pill }
+
+ent-Ointment1 = { ent-Ointment }
+    .desc = { ent-Ointment }
+    .suffix = Один
+
+ent-OintmentAdvanced1 = { ent-RegenerativeMesh }
+    .desc = { ent-RegenerativeMesh }
+    .suffix = Один
+
+ent-Brutepack1 = { ent-Brutepack }
+    .desc = { ent-Brutepack }
+    .suffix = Один
+
+ent-BrutepackAdvanced1 = { ent-MedicatedSuture }
+    .desc = { ent-MedicatedSuture }
+    .suffix = Один
+
+ent-Bloodpack1 = { ent-Bloodpack }
+    .suffix = Один
+    .desc = { ent-Bloodpack }
+
+ent-Gauze1 = { ent-Gauze }
+    .desc = { ent-Gauze }
+    .suffix = Один
+
+ent-PillCanisterRandom = { ent-PillCanister }
+    .suffix = Случайный
+    .desc = { ent-PillCanister }
+
+ent-SyringeEphedrine = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Эфедрин
+
+ent-SyringeInaprovaline = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Инапровалин
+
+ent-SyringeTranexamicAcid = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Транексамовая кислота
+
+ent-SyringeBicaridine = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Бикаридин
+
+ent-SyringeDermaline = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Дермалин
+
+ent-SyringeHyronalin = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Хироналин
+
+ent-SyringeIpecac = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Ипекак
+
+ent-SyringeAmbuzol = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Амбузол
+
+ent-SyringeSigynate = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Сигинат
+
+ent-SyringeEthylredoxrazine = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Этилредоксразин
+
+ent-SyringePhalanximine = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Фалангимин
+
+ent-SyringeSaline = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Физраствор
+
+ent-SyringeRomerol = { ent-PrefilledSyringe }
+    .desc = { ent-PrefilledSyringe }
+    .suffix = Ромерол
+
+ent-SyringeStimulants = {ent-PrefilledSyringe}
+    .desc = {ent-PrefilledSyringe}
+    .suffix = Стимулятор

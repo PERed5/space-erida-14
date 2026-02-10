@@ -44,5 +44,35 @@ ent-FrezonCanister = канистра фрезона
 ent-GasCanisterBrokenBase = разбитая канистра для газа
     .desc = Разбитая канистра для газа. Не совсем бесполезна, так как может быть разобрана для получения высококачественных материалов.
 
-ent-WaterVaporCanisterBroken = {ent-GasCanisterBrokenBase}
+ent-WaterVaporCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-StorageCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-AirCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-OxygenCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-NitrogenCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-CarbonDioxideCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-PlasmaCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-TritiumCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-AmmoniaCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-NitrousOxideCanisterBroken = { ent-GasCanisterBrokenBase }
+    .desc = { ent-GasCanisterBrokenBase }
+
+ent-FrezonCanisterBroken = {ent-GasCanisterBrokenBase}
     .desc = {ent-GasCanisterBrokenBase}

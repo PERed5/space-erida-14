@@ -17,3 +17,23 @@ ent-MemoryCell = ячейка памяти
 
 ent-RandomGate = ent-RandomGate = случайный логический элемент
     .desc = Логический элемент, который выдает случайный сигнал при изменении входного сигнала.
+
+ent-LogicGateAnd = { ent-LogicGateOr }
+    .suffix = And, И
+    .desc = { ent-LogicGateOr }
+
+ent-LogicGateXor = { ent-LogicGateOr }
+    .suffix = Xor, Исключающее ИЛИ
+    .desc = { ent-LogicGateOr }
+
+ent-LogicGateNor = { ent-LogicGateOr }
+    .suffix = Nor, ИЛИ-НЕ
+    .desc = { ent-LogicGateOr }
+
+ent-LogicGateNand = { ent-LogicGateOr }
+    .suffix = Nand, И-НЕ
+    .desc = { ent-LogicGateOr }
+
+ent-LogicGateXnor = {ent-LogicGateOr}
+    .suffix = Xnor, Исключающее ИЛИ-НЕ
+    .desc = {ent-LogicGateOr}

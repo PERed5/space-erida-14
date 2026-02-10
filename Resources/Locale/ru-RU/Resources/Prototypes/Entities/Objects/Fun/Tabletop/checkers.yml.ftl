@@ -12,4 +12,7 @@ ent-CheckerPieceBlack = чёрная шашка
     .desc = { ent-BaseTabletopPiece }
 
 ent-CheckerCrownBlack = чёрная дамка
-    .desc = {ent-BaseTabletopPiece}
+    .desc = { ent-BaseTabletopPiece }
+
+ent-CheckerBoardTabletop = шашки
+    .desc = 

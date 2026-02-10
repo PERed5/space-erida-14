@@ -106,3 +106,10 @@ ent-ToyIan = игрушечный иан
 
 ent-ToyAmongPequeno = маленький амонг
     .desc = Сас!
+
+ent-PlushieLizardMirrored = { ent-PlushieLizard }
+    .desc = { ent-PlushieLizard }
+    .suffix = Отзеркален
+
+ent-PlushieVulp = плюшевая вульпа
+    .desc = Очаровательная мягкая игрушка, напоминающая вульпанина. Йип! Яп!

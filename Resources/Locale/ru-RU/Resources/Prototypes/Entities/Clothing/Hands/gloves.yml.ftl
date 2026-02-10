@@ -83,3 +83,7 @@ ent-ClothingHandsKnuckleDustersStun = шок-кастеты
 
 ent-ClothingHandsKnuckleBoneCrushers = костекрушители
     .desc = Благословлены богами на сломление всех непокорных.
+
+ent-ThievingGloves = {ent-ClothingHandsGlovesColorBlack}
+    .desc = {ent-ClothingHandsGlovesColorBlack}
+    .suffix = Воровские

@@ -106,4 +106,36 @@ ent-LockerMime = шкаф мима
     .desc = { ent-LockerBaseSecure }
 
 ent-LockerRepresentative = шкаф представителя Nanotrasen
-    .desc = {ent-LockerBaseSecure}
+    .desc = { ent-LockerBaseSecure }
+
+ent-GunSafeBaseSecure = { ent-GunSafe }
+    .suffix = Оружейный, Закрыт
+    .desc = { ent-GunSafe }
+
+ent-LockerPrisoner2 = { ent-LockerPrisoner }
+    .suffix = 2
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner3 = { ent-LockerPrisoner }
+    .suffix = 3
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner4 = { ent-LockerPrisoner }
+    .suffix = 4
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner5 = { ent-LockerPrisoner }
+    .suffix = 5
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner6 = { ent-LockerPrisoner }
+    .suffix = 6
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner7 = { ent-LockerPrisoner }
+    .suffix = 7
+    .desc = { ent-LockerPrisoner }
+
+ent-LockerPrisoner8 = {ent-LockerPrisoner}
+    .suffix = 8
+    .desc = {ent-LockerPrisoner}

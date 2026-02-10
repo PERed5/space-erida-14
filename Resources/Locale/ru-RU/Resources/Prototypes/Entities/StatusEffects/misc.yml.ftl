@@ -12,3 +12,5 @@ ent-StatusEffectSeeingRainbow = галлюцинации
     .desc = { ent-MobStatusEffectBase }
 
 ent-StatusEffectDrunk = опьянение
+
+ent-StatusEffectWoozy = головокружение

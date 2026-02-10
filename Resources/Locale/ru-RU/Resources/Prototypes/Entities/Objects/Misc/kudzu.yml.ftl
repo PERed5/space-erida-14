@@ -13,4 +13,12 @@ ent-ShadowKudzu = тёмная дымка
     .desc = { ent-BaseKudzu }
 
 ent-ShadowKudzuWeak = дымка
-    .desc = {ent-ShadowKudzu}
+    .desc = { ent-ShadowKudzu }
+
+ent-WeakKudzu = { ent-Kudzu }
+    .suffix = Слабый
+    .desc = { ent-Kudzu }
+
+ent-KudzuFlowerAngry = {ent-KudzuFlowerFriendly}
+    .suffix = Аномалия Флора, Злой
+    .desc = {ent-KudzuFlowerFriendly}

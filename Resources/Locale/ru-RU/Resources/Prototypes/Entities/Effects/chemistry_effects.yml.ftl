@@ -25,3 +25,9 @@ ent-FoamedIronMetal = вспененное железо
 
 ent-FoamedAluminiumMetal = вспененный алюминий
     .desc = Остатки пены от алюминиевой пенной гранаты. Легко разрушается.
+
+ent-TearGasSmokeWhite = { ent-TearGasSmoke }
+    .desc = { ent-TearGasSmoke }
+
+ent-ReactionFlash = 
+    .desc = 

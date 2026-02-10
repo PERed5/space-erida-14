@@ -37,4 +37,12 @@ ent-SheetUranium1 = уран
 
 ent-MaterialSheetMeat = мясо
     .suffix = Полный
-    .desc = {ent-SheetOtherBase}
+    .desc = { ent-SheetOtherBase }
+
+ent-SheetPlasma10 = { ent-SheetPlasma }
+    .suffix = 10
+    .desc = { ent-SheetPlasma }
+
+ent-MaterialSheetMeat1 = {ent-MaterialSheetMeat}
+    .suffix = Один
+    .desc = {ent-MaterialSheetMeat}

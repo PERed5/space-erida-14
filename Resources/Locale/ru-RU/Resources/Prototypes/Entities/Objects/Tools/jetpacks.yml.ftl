@@ -52,4 +52,7 @@ ent-JetpackVoidFilled = пустотный джетпак
 
 ent-JetpackXenoborg = джетпак ксеноборга
     .suffix = Бесконечный
-    .desc = {ent-JetpackBlack}
+    .desc = { ent-JetpackBlack }
+
+ent-JetpackEffect = 
+    .desc = 

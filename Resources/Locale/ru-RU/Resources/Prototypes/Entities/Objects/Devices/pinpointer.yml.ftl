@@ -17,4 +17,6 @@ ent-PinpointerMothership = пинпоинтер ядра
     .suffix = Материнский корабль
 
 ent-PinpointerMothershipRepaired = Починенный пинпоинтер ядра
-    .desc =  Ручное устройство слежения, которое указывает направление к ядру материнского корабля. Это устройство видело лучшие дни.
+    .desc = Ручное устройство слежения, которое указывает направление к ядру материнского корабля. Это устройство видело лучшие дни.
+ent-PinpointerMothershipPiece<NFD = piece of core pinpointer
+    .desc = A piece of a core pinpointer. You need four pieces to repair it.

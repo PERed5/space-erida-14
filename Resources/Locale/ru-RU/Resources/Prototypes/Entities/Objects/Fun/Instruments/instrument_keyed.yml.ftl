@@ -10,3 +10,6 @@ ent-AccordionInstrument = аккордеон
 
 ent-KalimbaInstrument = калимба
     .desc = Мощь фортепиано прямо под вашими пальцами.
+
+ent-SuperSynthesizerNoLimitInstrument = { ent-SynthesizerInstrument }
+    .suffix = Безлимитный Admin

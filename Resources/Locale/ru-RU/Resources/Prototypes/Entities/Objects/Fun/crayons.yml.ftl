@@ -31,3 +31,6 @@ ent-CrayonPurple = фиолетовый мелок
 
 ent-CrayonBoxEmpty = коробка мелком
     .desc = Это коробка мелков.
+
+ent-CrayonBox = коробка для мелков
+    .desc = Это коробка с мелками.

@@ -12,3 +12,11 @@ ent-PaperRolling = сигаретная бумага
 ent-CigaretteFilter = сигаретный фильтр
     .desc = Полоска плотной бумаги, используемая в качестве фильтра для самокруток.
     .suffix = Полный
+
+ent-PaperRolling1 = { ent-PaperRolling }
+    .desc = { ent-PaperRolling }
+    .suffix = Один
+
+ent-CigaretteFilter1 = {ent-CigaretteFilter}
+    .desc = {ent-CigaretteFilter}
+    .suffix = Один

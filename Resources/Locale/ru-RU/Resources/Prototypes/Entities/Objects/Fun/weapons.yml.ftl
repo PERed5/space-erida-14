@@ -22,3 +22,10 @@ ent-CardSword = картонный меч
 
 ent-ToyHammer = резиновый молоток
     .desc = Ярко раскрашенный молоток из резины.
+
+ent-RevolverCapGunFake = { ent-RevolverCapGun }
+    .desc = { ent-RevolverCapGun }
+    .suffix = Боевой
+
+ent-WeaponStickyHand = липкая рука
+    .desc = Они говорят, что ты перегибаешь палку. Они говорят, что это преувеличение. Ты всем им покажешь и заставишь их замолчать.

@@ -19,5 +19,11 @@ ent-BorgMegaSprayBottle = продвинутый внутренний пульв
     .desc = Усовершенствованная версия встроенного распылителя, установленного непосредственно в уборочного уиборга. Обычно заполняется космическим очистителем для устранения неприятных луж.
     .suffix = Заполненный
 
-ent-Vapor = пар
-    .desc = 
+ent-SprayBottleSpaceCleaner = космический очиститель
+    .desc = Непенящийся очиститель бренда BLAM!
+
+ent-BigVapor = { ent-Vapor }
+    .desc = { ent-Vapor }
+
+ent-FlowerVapor =  { ent-Vapor }
+    .desc = { ent-Vapor }

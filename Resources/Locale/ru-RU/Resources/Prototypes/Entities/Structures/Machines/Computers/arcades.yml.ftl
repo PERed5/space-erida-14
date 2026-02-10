@@ -4,3 +4,7 @@ ent-SpaceVillainArcade = аркада Космический злодей
 
 ent-BlockGameArcade = аркада NT-блоки
     .desc = Игровой автомат со странно знакомой игрой.
+
+ent-SpaceVillainArcadeFilled = {ent-SpaceVillainArcade}
+    .suffix = Заполненный
+    .desc = {ent-SpaceVillainArcade}

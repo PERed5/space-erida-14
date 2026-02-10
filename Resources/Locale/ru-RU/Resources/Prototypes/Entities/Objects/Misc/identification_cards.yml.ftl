@@ -181,3 +181,14 @@ ent-CBURNIDcard = ID-карта РХБЗЗ
 ent-UniversalIDCard = универсальная ID-карта
     .desc = ID-карта, которая позволит вам осуществить свои самые сокровенные желания.
     .suffix = Админ
+
+ent-AgentIDCard = { ent-PassengerIDCard }
+    .suffix = Агентская
+    .desc = { ent-IDCardStandard }
+
+ent-NukieAgentIDCard = ID-карта пассажира
+    .suffix = Оперативники
+    .desc = { ent-AgentIDCard }
+
+ent-XenoborgIDCard =  ID-карта ксеноборга
+    .desc = { ent-IDCardStandard }

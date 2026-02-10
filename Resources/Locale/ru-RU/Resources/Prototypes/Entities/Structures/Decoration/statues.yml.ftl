@@ -11,3 +11,5 @@ ent-StatueBananiumClown = бананиумовая статуя спасител
     .desc = Бананиумовая статуя. Она символизирует пришествие спасителя, который восстанет и поведёт клоунов к великому хонку.
 
 ent-StatueIronsandTall2 = высокая железнопесчанная статуя
+
+ent-StatueIronsandTall = { ent-StatueIronsandTall2 }

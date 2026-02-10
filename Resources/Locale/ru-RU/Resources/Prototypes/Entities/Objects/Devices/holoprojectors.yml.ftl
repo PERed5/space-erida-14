@@ -17,3 +17,19 @@ ent-HoloprojectorField = проектор силового поля
 
 ent-HoloprojectorSecurity = проектор голобарьера
     .desc = Создаёт твёрдый, но хрупкий барьер.
+
+ent-HoloprojectorEmpty = { ent-Holoprojector }
+    .suffix = Пустой
+    .desc = { ent-Holoprojector }
+
+ent-HolofanProjectorEmpty = { ent-HolofanProjector }
+    .suffix = Пустой
+    .desc = { ent-HolofanProjector }
+
+ent-HoloprojectorFieldEmpty = { ent-HoloprojectorField }
+    .suffix = Пустой
+    .desc = { ent-HoloprojectorField }
+
+ent-HoloprojectorSecurityEmpty = {ent-HoloprojectorSecurity}
+    .suffix = Пустой
+    .desc = {ent-HoloprojectorSecurity}

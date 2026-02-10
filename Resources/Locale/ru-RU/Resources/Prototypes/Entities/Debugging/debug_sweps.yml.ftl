@@ -23,4 +23,5 @@ ent-MeleeDebug100 = bang stick 100dmg
     .desc = { ent-MeleeDebugGib }
 
 ent-MeleeDebug200 = bang stick 200dmg
-    .desc = {ent-MeleeDebugGib}
+    .desc = { ent-MeleeDebugGib }
+ent-WeaponHitscanDebugGib<NFD = bang hitscan gibber

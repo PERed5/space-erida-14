@@ -31,3 +31,15 @@ ent-DisposalBend = изгиб утилизационной трубы
 
 ent-DisposalSignalRouter = сигнальный утилизационный маршрутизатор
     .desc = Трёхсторонний маршрутизатор, управляемый сигналами.
+
+ent-DisposalRouterFlipped = { ent-DisposalRouter }
+    .suffix = Перевёрнутый
+    .desc = { ent-DisposalRouter }
+
+ent-DisposalJunctionFlipped = { ent-DisposalJunction }
+    .desc = { ent-DisposalJunction }
+    .suffix = Перевёрнутый
+
+ent-DisposalSignalRouterFlipped = {ent-DisposalSignalRouter}
+    .suffix = Перевёрнутый
+    .desc = {ent-DisposalSignalRouter}

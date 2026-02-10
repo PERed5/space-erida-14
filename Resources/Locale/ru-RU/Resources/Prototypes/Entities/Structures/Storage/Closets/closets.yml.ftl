@@ -36,3 +36,15 @@ ent-ClosetBluespace = подозрительный шкаф
 ent-ClosetBluespaceUnstable = подозрительный шкаф
     .desc = Это хранилище... правда же?
     .suffix = Блюспейс нестабильный
+
+ent-ClosetL3Science = { ent-ClosetL3 }
+    .desc = { ent-ClosetL3 }
+
+ent-ClosetL3Virology = { ent-ClosetL3 }
+    .desc = { ent-ClosetL3 }
+
+ent-ClosetL3Security = { ent-ClosetL3 }
+    .desc = { ent-ClosetL3 }
+
+ent-ClosetL3Janitor = {ent-ClosetL3}
+    .desc = {ent-ClosetL3}

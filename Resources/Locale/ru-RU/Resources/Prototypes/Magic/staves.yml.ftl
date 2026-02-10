@@ -4,3 +4,6 @@ ent-RGBStaff = RGB посох
 
 ent-AnimationStaff = посох оживления
     .desc = Оживите неодушевлённый предмет!
+
+ent-ActionRgbLight = {ent-BaseAction}
+    .desc = {ent-BaseAction}

@@ -25,3 +25,6 @@ ent-SolarAssembly = каркас солнечной панели
 
 ent-SolarTracker = солнечный трекер
     .desc = Солнечный трекер. Отслеживает ближайшую звезду.
+
+ent-SolarPanelBasePhysSprite = солнечная панель
+    .desc = 

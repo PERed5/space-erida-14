@@ -83,4 +83,8 @@ ent-CigaretteBanana = Бонус клоунского пристрастия
     .desc = { ent-SoakedCigarette }
 
 ent-CigaretteBlackPepper = Английская пряность
-    .desc = {ent-SoakedCigarette}
+    .desc = { ent-SoakedCigarette }
+
+ent-CigaretteSpent = {ent-Cigarette}
+    .suffix = Окурок
+    .desc = {ent-Cigarette}

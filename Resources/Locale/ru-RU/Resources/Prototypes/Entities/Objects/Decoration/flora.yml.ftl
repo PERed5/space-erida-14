@@ -36,3 +36,9 @@ ent-ShadowTree = тёмное дерево
 
 ent-LightTree = светящееся дерево
     .desc = Удивительное дерево, наполненное странной энергией.
+
+ent-FloraRockSolid = { ent-BaseRock }
+    .desc = { ent-BaseRock }
+
+ent-FloraGreyStalagmite = {ent-FloraStalagmite}
+    .desc = {ent-FloraStalagmite}

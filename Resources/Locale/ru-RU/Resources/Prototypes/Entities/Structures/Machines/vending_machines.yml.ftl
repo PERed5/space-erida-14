@@ -199,3 +199,31 @@ ent-VendingMachineWallMedicalCivilian = Гражданский НаноМед
 
 ent-VendingMachineWallMedical = НаноМед
     .desc = Это настенный раздатчик медицинского оборудования. Только натуральные химикаты!
+
+ent-VendingMachineColaBlack = { ent-VendingMachineCola }
+    .suffix = Чёрный
+    .desc = { ent-VendingMachineCola }
+
+ent-VendingMachineSoda = { ent-VendingMachineCola }
+    .suffix = Газировка
+    .desc = { ent-VendingMachineCola }
+
+ent-VendingMachineSeeds = { ent-VendingMachineSeedsUnlocked }
+    .desc = { ent-VendingMachineSeedsUnlocked }
+    .suffix = Гидропоника
+
+ent-VendingMachineSnackBlue = { ent-VendingMachineSnack }
+    .suffix = Синий
+    .desc = { ent-VendingMachineSnack }
+
+ent-VendingMachineSnackOrange = { ent-VendingMachineSnack }
+    .suffix = Оранжевый
+    .desc = { ent-VendingMachineSnack }
+
+ent-VendingMachineSnackGreen = { ent-VendingMachineSnack }
+    .suffix = Зелёный
+    .desc = { ent-VendingMachineSnack }
+
+ent-VendingMachineSnackTeal = {ent-VendingMachineSnack}
+    .suffix = Сине-зелёный
+    .desc = {ent-VendingMachineSnack}

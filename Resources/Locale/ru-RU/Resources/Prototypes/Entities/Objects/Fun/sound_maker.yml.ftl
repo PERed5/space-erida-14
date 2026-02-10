@@ -34,3 +34,9 @@ ent-WhoopieCushion = подушка-пердушка
 
 ent-Skub = скаб
     .desc = Скаб — это пятый Бог Хаоса.
+
+ent-Whistle = { ent-BaseWhistle }
+    .desc = { ent-BaseWhistle }
+
+ent-SecurityWhistle = {ent-BaseWhistle}
+    .desc = Его звук внушает вам ужас.

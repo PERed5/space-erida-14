@@ -16,3 +16,15 @@ ent-MeteorClown = Хонкстероид
 
 ent-MeteorPotato = Космокартошка
     .desc = Крахмалистая угроза из глубин космоса. Содержит 200% суточной нормы потребления натрия!
+
+ent-MeteorSmall = { ent-BaseMeteor }
+    .suffix = Маленький
+    .desc = { ent-BaseMeteor }
+
+ent-MeteorMedium = { ent-BaseMeteor }
+    .suffix = Средний
+    .desc = { ent-BaseMeteor }
+
+ent-MeteorLarge = {ent-BaseMeteor}
+    .suffix = Большой
+    .desc = {ent-BaseMeteor}

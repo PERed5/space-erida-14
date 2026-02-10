@@ -33,4 +33,6 @@ ent-DrinkShakeRobo = робо-коктейль
     .desc = { ent-DrinkGlassBase }
 
 ent-DrinkShakeWhite = белый коктейль
-    .desc = {ent-DrinkGlassBase}
+    .desc = { ent-DrinkGlassBase }
+ent-DrinkShakerGold<NFD = golden shaker
+    .desc = A gold-plated shaker given as a token of appreciation for years of service. It doesn't make the drinks taste any different.

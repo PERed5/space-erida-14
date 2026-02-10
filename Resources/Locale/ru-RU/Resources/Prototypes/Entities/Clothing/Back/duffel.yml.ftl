@@ -56,3 +56,9 @@ ent-ClothingBackpackDuffelHolding = бездонный вещмешок
 
 ent-ClothingBackpackDuffelCBURN = вещмешок отряда РХБЗЗ
     .desc = Вещмешок, содержащий различное оборудование для сдерживания биологической угрозы.
+
+ent-ClothingBackpackDuffelSyndicateAmmo = { ent-ClothingBackpackDuffelSyndicate }
+    .desc = { ent-ClothingBackpackDuffelSyndicate }
+
+ent-ClothingBackpackDuffelSyndicateMedical = {ent-ClothingBackpackDuffelSyndicate}
+    .desc = {ent-ClothingBackpackDuffelSyndicate}

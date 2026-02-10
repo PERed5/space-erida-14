@@ -13,3 +13,15 @@ ent-BlastDoorXenoFrame = каркас ксеногермозатора
 
 ent-BlastDoorXenoborg = Гермозатвор ксеноборгов
     .desc = Не теряйте голову!
+
+ent-BlastDoorOpen = { ent-BlastDoor }
+    .suffix = Открытый
+    .desc = { ent-BlastDoor }
+
+ent-BlastDoorXenoOpen = { ent-BlastDoorXeno }
+    .suffix = Открытый
+    .desc = { ent-BlastDoorXeno }
+
+ent-BlastDoorXenoborgOpen = {ent-BlastDoorXenoborg}
+    .desc = {ent-BlastDoorXenoborg}
+    .suffix = Открыт

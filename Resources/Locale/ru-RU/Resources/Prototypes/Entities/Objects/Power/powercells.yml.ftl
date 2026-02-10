@@ -36,3 +36,35 @@ ent-PowerCageMedium = энергоячейка средней ёмкости
 
 ent-PowerCageHigh = энергоячейка высокой ёмкости
     .desc = Перезаряжаемая энергетическая ячейка для больших устройств. Увеличенная ёмкость для увеличенного уровня мощности.
+
+ent-PowerCellSmallPrinted = { ent-PowerCellSmall }
+    .suffix = Пустой
+    .desc = { ent-PowerCellSmall }
+
+ent-PowerCellMediumPrinted = { ent-PowerCellMedium }
+    .suffix = Пустой
+    .desc = { ent-PowerCellMedium }
+
+ent-PowerCellHighPrinted = { ent-PowerCellHigh }
+    .suffix = Пустой
+    .desc = { ent-PowerCellHigh }
+
+ent-PowerCellHyperPrinted = { ent-PowerCellHyper }
+    .suffix = Пустой
+    .desc = { ent-PowerCellHyper }
+
+ent-PowerCellMicroreactorPrinted = { ent-PowerCellMicroreactor }
+    .suffix = Пустой
+    .desc = { ent-PowerCellMicroreactor }
+
+ent-PowerCageSmallEmpty = { ent-PowerCageSmall }
+    .suffix = Пустой
+    .desc = { ent-PowerCageSmall }
+
+ent-PowerCageMediumEmpty = { ent-PowerCageMedium }
+    .suffix = Пустой
+    .desc = { ent-PowerCageMedium }
+
+ent-PowerCageHighEmpty = {ent-PowerCageHigh}
+    .suffix = Пустой
+    .desc = {ent-PowerCageHigh}

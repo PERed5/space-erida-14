@@ -38,3 +38,7 @@ ent-CratePartsT3T4 = ящик компонентов 3/4 уровня
 
 ent-CratePartsT4 = ящик компонентов 4 уровня
     .desc = Содержит 5 случайных компонентов четвёртого уровня для улучшения оборудования.
+
+ent-CrateSalvageAssortedGoodies = {ent-CrateGenericSteel}
+    .suffix = Заполненный, Случайный утиль
+    .desc = {ent-CrateGenericSteel}

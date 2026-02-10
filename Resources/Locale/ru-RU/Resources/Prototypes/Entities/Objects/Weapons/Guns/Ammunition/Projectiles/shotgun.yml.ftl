@@ -30,4 +30,25 @@ ent-PelletGrapeshot = картечина
     .desc = { ent-BaseBullet }
 
 ent-PelletGlass = стеклянный осколок
-    .desc = {ent-BaseBullet}
+    .desc = { ent-BaseBullet }
+
+ent-PelletShotgunSpread = { ent-PelletShotgun }
+    .desc = { ent-PelletShotgun }
+
+ent-PelletShotgunIncendiarySpread = { ent-PelletShotgunIncendiary }
+    .desc = { ent-PelletShotgunIncendiary }
+
+ent-PelletShotgunPracticeSpread = { ent-PelletShotgunPractice }
+    .desc = { ent-PelletShotgunPractice }
+
+ent-PelletShotgunImprovisedSpread = { ent-PelletShotgunImprovised }
+    .desc = { ent-PelletShotgunImprovised }
+
+ent-PelletShotgunUraniumSpread = { ent-PelletShotgunUranium }
+    .desc = { ent-PelletShotgunUranium }
+
+ent-PelletGrapeshotSpread = { ent-PelletGrapeshot }
+    .desc = { ent-PelletGrapeshot }
+
+ent-PelletGlassSpread = {ent-PelletGlass}
+    .desc = {ent-PelletGlass}

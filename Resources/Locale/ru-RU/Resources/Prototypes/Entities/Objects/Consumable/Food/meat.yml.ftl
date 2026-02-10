@@ -202,3 +202,5 @@ ent-FoodMeatXenoCutletCooked = ксено вырезка
 
 ent-FoodMeatDragonCutletCooked = драконья вырезка
     .desc = Это блюдо для королей!
+ent-FoodMeatChickenFriedVox<NFD = mystery fried chicken
+    .desc = “Eleven secret herbs and… oh no. That’s not chicken."

@@ -23,4 +23,8 @@ ent-MobHumanLoneNuclearOperative = Одинокий оперативник
     .desc = { ent-MobHuman }
 
 ent-MobHumanWizard = Волшебник
-    .desc = {ent-MobHuman}
+    .desc = { ent-MobHuman }
+
+ent-MobHumanSyndicateAgentNukeops = {ent-MobHumanSyndicateAgentBase}
+    .suffix = Человек, Ядерный оперативник
+    .desc = {ent-MobHumanSyndicateAgentBase}

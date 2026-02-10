@@ -15,4 +15,7 @@ ent-MobSpawnCrabUranium = спавнер моб рудокраб уран
     .desc = { ent-MobSpawnCrabQuartz }
 
 ent-MobSpawnCrabBananium = спавнер моб рудокраб бананиум
-    .desc = {ent-MobSpawnCrabQuartz}
+    .desc = { ent-MobSpawnCrabQuartz }
+
+ent-EffectAnomalyFloraBulb = 
+    .desc = 

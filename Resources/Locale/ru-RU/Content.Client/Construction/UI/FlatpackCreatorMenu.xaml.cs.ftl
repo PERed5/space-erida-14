@@ -3,4 +3,6 @@ flatpacker-ui-insert-board = Для начала вставьте машинну
 
 flatpacker-ui-no-board-label = Отсутствует машинная плата!
 
-lathe-menu-tooltip-display = {amount} {material}
+lathe-menu-tooltip-display = { amount } { material }
+flatpacker-ui-board-invalid-label = [color=red]Недопустимая плата!
+    Невозможно выполнить печать![/color]

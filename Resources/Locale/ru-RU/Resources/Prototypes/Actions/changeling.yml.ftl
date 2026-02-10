@@ -4,3 +4,6 @@ ent-ActionRetractableItemArmBlade = Рука-клинок
 
 ent-ActionChangelingStore = ДНК Магазин
     .desc = Открывает хранилище способностей.
+
+ent-ActionChangelingTransform = [color=red]Трансформация[/color]
+    .desc = Трансформируйтесь и принимайте облик тех, кого вы поглотили.

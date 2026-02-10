@@ -106,3 +106,5 @@ ent-MobBreadDog = хлебака
 
 ent-FoodBreadCottonNutriBatard = хлопковый батар
     .desc = bon 'pétite!
+ent-FoodBreadNutriBatard<NFD = nutri-bâtard
+    .desc = bon 'pétite!

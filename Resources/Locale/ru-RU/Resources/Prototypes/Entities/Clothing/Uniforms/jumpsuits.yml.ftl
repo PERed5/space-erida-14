@@ -329,3 +329,6 @@ ent-ClothingUniformJumpsuitCasualGreen = повседневный зелёный
 
 ent-ClothingUniformJumpsuitFamilyGuy = семейный наряд
     .desc = Напоминает о времени, когда вы сделали что-то смешное.
+
+ent-ClothingUniformJumpsuitJesterAlt = {ent-ClothingUniformJumpsuitJester}
+    .desc = {ent-ClothingUniformJumpsuitJester}

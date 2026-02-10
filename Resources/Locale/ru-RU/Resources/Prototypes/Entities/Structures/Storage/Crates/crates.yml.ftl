@@ -118,4 +118,8 @@ ent-CrateTrashCart = мусорная тележка
     .desc = { ent-StructureWheeled }
 
 ent-CrateTrashCartJani = мусорная тележка уборщика
-    .desc = {ent-CrateBaseSecure}
+    .desc = { ent-CrateBaseSecure }
+
+ent-InvisibleCrate = {ent-CrateBaseWeldable}
+    .suffix = Стелс
+    .desc = {ent-CrateBaseWeldable}

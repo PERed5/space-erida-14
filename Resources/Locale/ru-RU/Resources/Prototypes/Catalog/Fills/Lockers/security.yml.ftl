@@ -29,4 +29,28 @@ ent-GunSafeSubMachineGunWt550 = оружейный сейф WT550
 
 ent-GunSafeLaserCarbine = оружейный сейф лазерных карабинов
     .suffix = Лазерный карабин
-    .desc = {ent-GunSafe}
+    .desc = { ent-GunSafe }
+
+ent-LockerWardenFilledHardsuit = { ent-LockerWarden }
+    .suffix = Заполненный, Скафандр
+    .desc = { ent-LockerWarden }
+
+ent-LockerWardenFilled = { ent-LockerWarden }
+    .suffix = Заполненный
+    .desc = { ent-LockerWarden }
+
+ent-LockerSecurityFilled = { ent-LockerSecurity }
+    .suffix = Заполненный
+    .desc = { ent-LockerSecurity }
+
+ent-LockerBrigmedicFilled = { ent-LockerBrigmedic }
+    .suffix = Бригмедик, Заполненный
+    .desc = { ent-LockerBrigmedic }
+
+ent-LockerDetectiveFilled = { ent-LockerDetective }
+    .suffix = Заполненный
+    .desc = { ent-LockerDetective }
+
+ent-ClosetBombFilled = {ent-ClosetBomb}
+    .suffix = Заполненный
+    .desc = {ent-ClosetBomb}

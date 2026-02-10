@@ -13,3 +13,6 @@ ent-WeaponCrusherDagger = кинжал-крушитель
 
 ent-WeaponCrusherGlaive = глефа-крушитель
     .desc = Ранняя версия протокинетического ускорителя в виде глефы. Обеспечивает лучшее исцеление в обмен на уменьшенный урон.
+
+ent-WeaponCrusher = {ent-BaseWeaponCrusher}
+    .desc = {ent-BaseWeaponCrusher}

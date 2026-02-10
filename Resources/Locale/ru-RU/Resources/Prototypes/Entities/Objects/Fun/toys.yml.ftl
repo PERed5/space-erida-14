@@ -25,3 +25,11 @@ ent-Error = ошибка
 ent-SpectralLocatorUnpowered = спектральный локатор
     .desc = Похоже, это модифицированный локатор аномалий. Выглядит очень старым.
     .suffix = Всегда запитан
+
+ent-SpectralLocator = { ent-SpectralLocatorUnpowered }
+    .suffix = Заряжен
+    .desc = { ent-SpectralLocatorUnpowered }
+
+ent-SpectralLocatorEmpty = {ent-SpectralLocator}
+    .suffix = Пустой
+    .desc = {ent-SpectralLocator}

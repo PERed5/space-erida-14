@@ -7,3 +7,6 @@ ent-ActionDisguiseNoRot = Вкл\выкл вращение
 
 ent-ActionDisguiseAnchor = Закрепить\открепить
     .desc = Для многих предметов, чтобы сразу не выдать себя, вам потребуется закрепиться.
+
+ent-ChameleonDisguise = Урист МакКляйнер
+    .desc = 

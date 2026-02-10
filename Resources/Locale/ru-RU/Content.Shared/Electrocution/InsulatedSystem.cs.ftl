@@ -1,2 +1,4 @@
 <#-- Auto generated file -->
 insulated-examinable-verb-text-message = Это изделие, по-видимому, имеет электрическую изоляцию. Оно должно защищать пользователя от поражения электрическим током.
+
+insulated-examinable-verb-text = Изолированный

@@ -39,3 +39,7 @@ ent-Shovel = лопата
 
 ent-RollingPin = скалка
     .desc = Приспособление, используемое для расплющивания теста.
+
+ent-RCDEmpty = {ent-RCD}
+    .suffix = Пустой
+    .desc = {ent-RCD}

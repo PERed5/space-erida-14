@@ -53,3 +53,39 @@ ent-TableCounterWood = деревянная стойка
 
 ent-TableCounterMetal = металлическая стойка
     .desc = Отличное место, чтобы пропустить стаканчик.
+
+ent-TableFancyBlue = { ent-TableFancyBase }
+    .suffix = Синий
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyCyan = { ent-TableFancyBase }
+    .suffix = Голубой
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyBlack = { ent-TableFancyBase }
+    .suffix = Чёрный
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyRed = { ent-TableFancyBase }
+    .suffix = Красный
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyPurple = { ent-TableFancyBase }
+    .suffix = Фиолетовый
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyPink = { ent-TableFancyBase }
+    .suffix = Розовый
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyGreen = { ent-TableFancyBase }
+    .suffix = Зелёный
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyOrange = { ent-TableFancyBase }
+    .suffix = Оранжевый
+    .desc = { ent-TableFancyBase }
+
+ent-TableFancyWhite = {ent-TableFancyBase}
+    .suffix = Белый
+    .desc = {ent-TableFancyBase}

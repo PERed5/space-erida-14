@@ -31,6 +31,18 @@ ent-RandomHumanoidSpawnerERTMedical = ОБР медик
     .suffix = Роль ОБР, Базовый
     .desc = { ent-RandomHumanoidSpawnerERTLeader }
 
+ent-RandomHumanoidSpawnerERTJanitorEVA = ОБР уборщик
+    .suffix = Роль ОБР, Окруж. среда ВКД
+    .desc = { ent-RandomHumanoidSpawnerERTJanitor }
+
+ent-RandomHumanoidSpawnerERTEngineerEVA = ОБР инженер
+    .suffix = Роль ОБР, Окруж. среда ВКД
+    .desc = { ent-RandomHumanoidSpawnerERTEngineer }
+
+ent-RandomHumanoidSpawnerERTMedicalEVA = ОБР медик
+    .suffix = Роль ОБР, Броня ВКД
+    .desc = { ent-RandomHumanoidSpawnerERTMedical }
+
 ent-RandomHumanoidSpawnerCluwne = Клувень
     .suffix = Спавнит клувеня
     .desc = 

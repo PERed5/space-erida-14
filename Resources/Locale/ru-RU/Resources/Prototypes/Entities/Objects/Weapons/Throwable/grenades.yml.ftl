@@ -36,3 +36,6 @@ ent-GrenadeDummy = граната-обманка
 
 ent-SyndieTrickyBomb = хитробомба
     .desc = Взрывчатка, изготовленная синдикатом, служит отличным отвлекающим манёвром.
+
+ent-GrenadeFlashEffect = 
+    .desc = 

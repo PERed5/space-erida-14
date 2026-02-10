@@ -13,3 +13,17 @@ ent-AnomalyLocatorWideUnpowered = локатор аномалий широког
 ent-WeaponGauntletGorilla = перчатка Г.О.Р.И.Л.Л.А.
     .suffix = Горилла
     .desc = Робастная часть исследовательского снаряжения. Будучи запитанным от ядра аномалии, способно одним ударом отправить в полёт аномальный объект.
+
+ent-AnomalyLocator = { ent-AnomalyLocatorUnpowered }
+    .desc = { ent-AnomalyLocatorUnpowered }
+
+ent-AnomalyLocatorEmpty = { ent-AnomalyLocatorUnpowered }
+    .suffix = Пустой
+    .desc = { ent-AnomalyLocatorUnpowered }
+
+ent-AnomalyLocatorWide = { ent-AnomalyLocatorWideUnpowered }
+    .desc = { ent-AnomalyLocatorWideUnpowered }
+
+ent-AnomalyLocatorWideEmpty = {ent-AnomalyLocatorWide}
+    .suffix = Пустой
+    .desc = {ent-AnomalyLocatorWide}

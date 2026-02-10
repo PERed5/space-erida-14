@@ -40,3 +40,5 @@ admin-verb-text-make-wizard = Сделать магом
 admin-verb-make-wizard = Сделать цель магом.
 
 admin-verb-make-space-ninja = Сделать цель космическим ниндзей.
+
+admin-verb-text-make-space-ninja = Сделать космическим ниндзей.

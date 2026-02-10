@@ -391,3 +391,6 @@ ent-PosterMapWaystation = карта Waystation
 
 ent-PosterMapOrigin = карта Origin
     .desc = Карта станции Origin.
+
+ent-PosterLegitBotanyFear = Страх гидропоники
+    .desc = Трижды подумайте, прежде чем открывать шлюз гидропоники, там может скрываться красный код.

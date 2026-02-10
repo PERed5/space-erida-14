@@ -86,3 +86,13 @@ ent-ClothingBackpackDuffelSyndicateFilledStarterKit = базовый компл�
 
 ent-ClothingBackpackDuffelSyndicateFilledHushpup = Набор Hushpup
     .desc = Содержит Hushpup в комплекте с коробкой дроби.
+
+ent-ClothingBackpackDuffelSyndicateCostumeClown = { ent-ClothingBackpackDuffelClown }
+    .desc = { ent-ClothingBackpackDuffelClown }
+    .suffix = Синдиката
+
+ent-ClothingBackpackChameleonFill = { ent-ClothingBackpackDuffelSyndicate }
+    .suffix = Заполненный, Хамелеон
+    .desc = { ent-ClothingBackpackDuffelSyndicate }
+ent-ClothingBackpackChameleonFillAgent<NFD = <NFD
+    .suffix = Fill, Chameleon, Syndie

@@ -1,4 +1,8 @@
 <#-- Auto generated file -->
-ent-SodaDispenserEmpty = {ent-SodaDispenser}
+ent-SodaDispenserEmpty = { ent-SodaDispenser }
     .suffix = Пустой
-    .desc = {ent-SodaDispenser}
+    .desc = { ent-SodaDispenser }
+
+ent-SodaDispenser = раздатчик безалкоголя
+    .desc = Разливочный автомат с ассортиментом из газировки и ряда других популярных напитков. Имеет один слот для ёмкостей.
+    .suffix = Заполненный

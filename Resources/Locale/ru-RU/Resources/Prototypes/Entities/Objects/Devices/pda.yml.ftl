@@ -182,3 +182,37 @@ ent-ChameleonPDA = КПК пассажира
 
 ent-WizardPDA = КПК волшебника
     .desc = Вы слышите слабый шёпот, доносящийся из него.
+
+ent-VisitorClownPDA = { ent-ClownPDA }
+    .suffix = Посетитель
+    .desc = { ent-ClownPDA }
+
+ent-VisitorChaplainPDA = { ent-ChaplainPDA }
+    .suffix = Посетитель
+    .desc = { ent-ChaplainPDA }
+
+ent-VisitorLibrarianPDA = { ent-LibrarianPDA }
+    .suffix = Посетитель
+    .desc = { ent-LibrarianPDA }
+
+ent-VisitorLawyerPDA = { ent-LawyerPDA }
+    .suffix = Посетитель
+    .desc = { ent-LawyerPDA }
+
+ent-VisitorMedicalPDA = { ent-MedicalPDA }
+    .suffix = Посетитель
+    .desc = { ent-MedicalPDA }
+
+ent-DeathsquadPDA = { ent-CentcomPDA }
+    .suffix = Эскадрон смерти
+    .desc = { ent-CentcomPDA }
+
+ent-VisitorMusicianPDA = { ent-MusicianPDA }
+    .suffix = Посетитель
+    .desc = { ent-MusicianPDA }
+
+ent-VisitorPDA = { ent-ClearPDA }
+    .desc = { ent-ClearPDA }
+
+ent-ScurretPDA = {ent-ClearPDA}
+    .desc = Временный КПК, выдаваемый временным слизенькам. Не делает ничего особенного. Вава!

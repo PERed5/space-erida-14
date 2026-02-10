@@ -166,3 +166,61 @@ ent-MobReindeerDoe = северный олень-самка
 
 ent-MobCorgiSmart = умный корги
     .desc = Необычайно умный пёс.
+
+ent-MobChicken1 = { ent-MobChicken }
+    .desc = { ent-MobChicken }
+
+ent-MobChicken2 = { ent-MobChicken }
+    .desc = { ent-MobChicken }
+
+ent-FoodEggChickenFertilized = куриное яйцо
+    .suffix = Оплодотворённый, Курица
+    .desc = { ent-FoodEgg }
+
+ent-FoodEggDuckFertilized = утиное яйцо
+    .suffix = Оплодотворённый, Утка
+    .desc = { ent-FoodEgg }
+
+ent-MobMonkeySyndicateAgent = обезьяна
+    .desc = { ent-MobBaseSyndicateMonkey }
+    .suffix = InteQ
+
+ent-MobMonkeySyndicateAgentNukeops = { ent-MobBaseSyndicateMonkey }
+    .suffix = Ядерные Оперативники
+    .desc = { ent-MobBaseSyndicateMonkey }
+
+ent-MobBaseSyndicateKobold = { ent-MobBaseKobold }
+    .suffix = InteQ, Базовый
+    .desc = { ent-MobBaseKobold }
+
+ent-MobKoboldSyndicateAgent = { ent-MobBaseSyndicateKobold }
+    .suffix = Агент InteQ
+    .desc = { ent-MobBaseSyndicateKobold }
+
+ent-MobKoboldSyndicateAgentNukeops = { ent-MobBaseSyndicateKobold }
+    .suffix = Ядерные оперативники
+    .desc = { ent-MobBaseSyndicateKobold }
+
+ent-MobMouseAdmeme = { ent-MobMouse }
+    .suffix = Адмемы
+    .desc = { ent-MobMouse }
+
+ent-MobMouse1 = { ent-MobMouse }
+    .desc = { ent-MobMouse }
+
+ent-MobMouse2 = { ent-MobMouse }
+    .desc = { ent-MobMouse }
+
+ent-MobParrot = попугай
+    .desc = Проникает в ваши владения, шпионит за вами и при этом остаётся классным питомцем.
+
+ent-MobGiantSpiderAngry = { ent-MobGiantSpider }
+    .desc = { ent-MobGiantSpider }
+    .suffix = Злой
+
+ent-MobCorgi = { ent-MobCorgiBase }
+    .desc = { ent-MobCorgiBase }
+
+ent-MobDionaNymphAccent = {ent-MobDionaNymph}
+    .suffix = Акцент
+    .desc = {ent-MobDionaNymph}

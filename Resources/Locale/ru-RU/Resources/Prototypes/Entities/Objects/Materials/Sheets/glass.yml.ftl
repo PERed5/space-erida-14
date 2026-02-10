@@ -45,4 +45,16 @@ ent-SheetClockworkGlass = заводное стекло
 
 ent-SheetClockworkGlass1 = заводное стекло
     .suffix = Один
-    .desc = {ent-SheetClockworkGlass}
+    .desc = { ent-SheetClockworkGlass }
+
+ent-SheetGlass = { ent-SheetGlassBase }
+    .suffix = Полный
+    .desc = { ent-SheetGlassBase }
+
+ent-SheetGlass10 = { ent-SheetGlass }
+    .suffix = 10
+    .desc = { ent-SheetGlass }
+
+ent-SheetGlass1 = {ent-SheetGlass}
+    .suffix = Один
+    .desc = {ent-SheetGlass}

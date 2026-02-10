@@ -4,4 +4,8 @@ ent-UnfinishedMachineFrame = каркас машины
     .suffix = Незаконченный
 
 ent-MachineFrameDestroyed = разрушенный каркас машины
-    .desc = {ent-BaseStructureDynamic}
+    .desc = { ent-BaseStructureDynamic }
+
+ent-MachineFrame = каркас машины
+    .suffix = Готовый
+    .desc = 

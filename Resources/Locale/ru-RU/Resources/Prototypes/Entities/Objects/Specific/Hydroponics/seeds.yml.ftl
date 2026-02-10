@@ -207,4 +207,8 @@ ent-AnomalyBerrySeeds = пакет семян (аномальные ягоды)
     .desc = { ent-SeedBase }
 
 ent-BloonionSeeds = пакет семян (лук-летун)
-    .desc = {ent-SeedBase}
+    .desc = { ent-SeedBase }
+
+ent-FakeCapfruitSeeds = {ent-RealCapfruitSeeds}
+    .suffix = Боевой
+    .desc = {ent-RealCapfruitSeeds}

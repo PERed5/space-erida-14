@@ -116,3 +116,6 @@ ent-ClothingMaskNinja = маска ниндзя
 
 ent-ClothingMaskWeldingGas = сварочный противогаз
     .desc = Противогаз со встроенными сварочными очками и лицевым щитком. Выглядит как череп, однозначно разработка какого-то задрота.
+
+ent-ClothingMaskClown = {ent-ClothingMaskClownBase}
+    .desc = {ent-ClothingMaskClownBase}

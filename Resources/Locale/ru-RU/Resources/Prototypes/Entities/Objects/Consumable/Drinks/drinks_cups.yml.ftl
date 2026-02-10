@@ -58,3 +58,5 @@ ent-DrinkGreenTea = чашка зелёного чая
 
 ent-DrinkLean = лин
     .desc = Бро, у Дрейка такая крутая причёска фейд, бро, Дрейк лучший, бро, давай, бро.
+ent-DrinkTeacupEmpty<NFD = teacup
+    .desc = A plain white porcelain teacup.

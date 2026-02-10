@@ -16,3 +16,5 @@ fax-machine-popup-source-unknown = Неизвестно
 fax-machine-popup-source-unknown = Неизвестно
 
 fax-machine-popup-source-unknown = Неизвестно
+
+device-address-unknown = ????-????

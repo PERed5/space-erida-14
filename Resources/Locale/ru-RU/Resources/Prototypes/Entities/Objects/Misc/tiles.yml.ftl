@@ -330,4 +330,7 @@ ent-FloorTileItemXenoborg = покрытие ксеноборгов
     .desc = { ent-FloorTileItemBase }
 
 ent-FloorTileItemDarkSquiggly = тёмная волнистая стальная плитка
-    .desc = {ent-FloorTileItemDark}
+    .desc = { ent-FloorTileItemDark }
+
+ent-FloorTileItemAstroIronsandBorderless = железопесчанный пол
+    .desc = Искусственный красный песок. Импортирован с искусственного Марса.

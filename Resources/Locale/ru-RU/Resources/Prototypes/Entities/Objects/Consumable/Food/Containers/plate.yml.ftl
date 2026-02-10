@@ -19,3 +19,6 @@ ent-FoodPlateTin = формочка для пирога
 
 ent-FoodPlateMuffinTin = формочка для маффинов
     .desc = Дешёвая формочка из фольги для маффинов.
+
+ent-FoodPlateSmallTrash = {ent-FoodPlateTrash}
+    .desc = {ent-FoodPlateTrash}

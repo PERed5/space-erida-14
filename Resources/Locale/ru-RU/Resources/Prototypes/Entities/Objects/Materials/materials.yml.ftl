@@ -63,3 +63,75 @@ ent-MaterialGunpowder = чёрный порох
 ent-MaterialGoliathHide = пластины голиафа
     .desc = Куски каменистой шкуры голиафа. Они могут сделать ваш костюм более устойчивым к атакам местной фауны.
     .suffix = Полный
+
+ent-MaterialCardboard10 = { ent-MaterialCardboard }
+    .suffix = 10
+    .desc = { ent-MaterialCardboard }
+
+ent-MaterialCardboard1 = { ent-MaterialCardboard }
+    .suffix = Один
+    .desc = { ent-MaterialCardboard }
+
+ent-MaterialCloth10 = { ent-MaterialCloth }
+    .suffix = 10
+    .desc = { ent-MaterialCloth }
+
+ent-MaterialCloth1 = { ent-MaterialCloth }
+    .suffix = Один
+    .desc = { ent-MaterialCloth }
+
+ent-MaterialDurathread1 = { ent-MaterialDurathread }
+    .suffix = Одна
+    .desc = { ent-MaterialDurathread }
+
+ent-MaterialWoodPlank10 = { ent-MaterialWoodPlank }
+    .suffix = 10
+    .desc = { ent-MaterialWoodPlank }
+
+ent-MaterialWoodPlank1 = { ent-MaterialWoodPlank }
+    .suffix = Один
+    .desc = { ent-MaterialWoodPlank }
+
+ent-MaterialBiomass1 = { ent-MaterialBiomass }
+    .suffix = Один
+    .desc = { ent-MaterialBiomass }
+
+ent-MaterialDiamond1 = { ent-MaterialDiamond }
+    .suffix = Один
+    .desc = { ent-MaterialDiamond }
+
+ent-MaterialCotton1 = { ent-MaterialCotton }
+    .suffix = Один
+    .desc = { ent-MaterialCotton }
+
+ent-MaterialPyrotton1 = { ent-MaterialPyrotton }
+    .suffix = Один
+    .desc = { ent-MaterialPyrotton }
+
+ent-MaterialBananium1 = { ent-MaterialBananium }
+    .suffix = Один
+    .desc = { ent-MaterialBananium }
+
+ent-MaterialWebSilk25 = { ent-MaterialWebSilk }
+    .suffix = 25
+    .desc = { ent-MaterialWebSilk }
+
+ent-MaterialWebSilk1 = { ent-MaterialWebSilk }
+    .suffix = 1
+    .desc = { ent-MaterialWebSilk }
+
+ent-MaterialToothSpaceCarp1 = { ent-MaterialToothSpaceCarp }
+    .suffix = 1
+    .desc = { ent-MaterialToothSpaceCarp }
+
+ent-MaterialToothSharkminnow1 = { ent-MaterialToothSharkminnow }
+    .suffix = 1
+    .desc = { ent-MaterialToothSharkminnow }
+
+ent-MaterialBones1 = { ent-MaterialBones }
+    .suffix = 1
+    .desc = { ent-MaterialBones }
+
+ent-MaterialGoliathHide1 = {ent-MaterialGoliathHide}
+    .suffix = 1
+    .desc = {ent-MaterialGoliathHide}

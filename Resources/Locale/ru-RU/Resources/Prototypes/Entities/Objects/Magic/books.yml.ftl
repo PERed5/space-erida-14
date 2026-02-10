@@ -22,4 +22,12 @@ ent-FireballSpellbook = книга заклинания огненный шар
     .desc = { ent-BaseSpellbook }
 
 ent-ScrollRunes = свиток рун
-    .desc = {ent-BaseSpellbook}
+    .desc = { ent-BaseSpellbook }
+
+ent-WizardsGrimoireNoRefund = гримуар волшебника
+    .suffix = Волшебник, Без возврата средств
+    .desc = { ent-WizardsGrimoire }
+
+ent-WizardsGrimoireDebug = { ent-WizardsGrimoire }
+    .desc = { ent-WizardsGrimoire }
+    .suffix = Маг, DEBUG

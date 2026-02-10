@@ -18,3 +18,15 @@ ent-WeaponRevolverPython = Питон
 ent-WeaponRevolverPirate = пиратский револьвер
     .desc = Простой револьвер одинарного действия, самоделка космического пирата. Старый и покрытый ржавчиной, но почему-то всё ещё работающий. Вмещает 5 патронов калибра .45 магнум.
     .suffix = Револьвер
+
+ent-WeaponRevolverMatebaAP = { ent-WeaponRevolverMateba }
+    .suffix = Бронебойные
+    .desc = { ent-WeaponRevolverMateba }
+
+ent-WeaponRevolverPythonAP = { ent-WeaponRevolverPython }
+    .desc = { ent-WeaponRevolverPython }
+    .suffix = Револьвер, Бронебойный
+
+ent-WeaponRevolverPirateEmpty = {ent-WeaponRevolverPirate}
+    .desc = {ent-WeaponRevolverPirate}
+    .suffix = Пустой

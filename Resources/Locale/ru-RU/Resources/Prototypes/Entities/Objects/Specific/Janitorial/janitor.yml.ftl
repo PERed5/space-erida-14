@@ -22,3 +22,7 @@ ent-WireBrush = обдирочная щетка
 
 ent-WireBrushElectrical = электрическая проволочная щетка
     .desc = Стальная щетка с жесткой щетиной и подвижной головкой, значительно облегчающая чистку.
+
+ent-WetFloorSignMineExplosive = {ent-WetFloorSign}
+    .desc = {ent-WetFloorSign}
+    .suffix = Взрывчатка

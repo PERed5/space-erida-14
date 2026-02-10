@@ -7,3 +7,15 @@ ent-CheapRollerBed = каталка
 
 ent-EmergencyRollerBed = каталка
     .desc = Прочная на вид каталка, используемая в чрезвычайных ситуациях.
+
+ent-RollerBedSpawnFolded = { ent-RollerBed }
+    .suffix = Сложенный
+    .desc = { ent-RollerBed }
+
+ent-CheapRollerBedSpawnFolded = { ent-CheapRollerBed }
+    .suffix = Сложенный
+    .desc = { ent-CheapRollerBed }
+
+ent-EmergencyRollerBedSpawnFolded = {ent-EmergencyRollerBed}
+    .suffix = Сложенный
+    .desc = {ent-EmergencyRollerBed}

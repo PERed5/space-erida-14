@@ -4,3 +4,6 @@ ent-CargoPalletSell = продающий грузовой поддон
 
 ent-CargoPalletBuy = покупающий грузовой поддон
     .desc = Определяет, где будут появляться заказанные товары после покупки. Изготовлен из пластитана, чтобы обезопасить от надоедливых вандалов.
+
+ent-CargoPallet = {ent-BaseCargoPallet}
+    .desc = {ent-BaseCargoPallet}

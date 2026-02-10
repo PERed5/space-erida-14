@@ -31,3 +31,10 @@ ent-Pill = таблетка
 
 ent-PillCanister = баночка для таблеток
     .desc = Вмещает до 10 таблеток.
+
+ent-CryoxadoneBeakerSmall = { ent-Beaker }
+    .desc = { ent-Beaker }
+    .suffix = Криоксадон
+
+ent-Syringe = {ent-BaseSyringe}
+    .desc = {ent-BaseSyringe}

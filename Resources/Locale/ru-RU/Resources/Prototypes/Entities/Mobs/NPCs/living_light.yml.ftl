@@ -4,3 +4,6 @@ ent-MobLuminousObject = светящийся объект
 
 ent-MobLuminousEntity = светящаяся сущность
     .desc = Ослепительная прозрачная сущность, чей яркий глаз кажется опасным и обжигающим.
+
+ent-MobLuminousPerson = {ent-MobLivingLight}
+    .desc = {ent-MobLivingLight}

@@ -6,3 +6,5 @@ medibot-target-dead = Пациент мёртв.
 medibot-target-healthy = Пациент уже здоров.
 
 medibot-target-injected = Пациенту был сделан укол.
+
+injector-component-feel-prick-message = Вы чувствуете слабый укол!

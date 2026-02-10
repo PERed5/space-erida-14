@@ -64,3 +64,11 @@ ent-CrateNPCKangaroo = ящик с кенгуру
 
 ent-CrateNPCMothroach = ящик таракамолей
     .desc = Ящик, содержащий четырёх таракамолей.
+
+ent-CrateNPCHamster = { ent-CrateRodentCage }
+    .desc = { ent-CrateRodentCage }
+    .suffix = Заполнен
+
+ent-CrateNPCHamlet = {ent-CrateRodentCage}
+    .desc = {ent-CrateRodentCage}
+    .suffix = Гамлет

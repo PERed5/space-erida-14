@@ -4,3 +4,7 @@ ent-AmeController = контроллер ДАМ
 
 ent-AmeShielding = экранирование ДАМ
     .desc = Впускает антиматерию и выпускает материю.
+
+ent-AmeControllerUnanchored = {ent-AmeController}
+    .suffix = Не закреплено
+    .desc = {ent-AmeController}

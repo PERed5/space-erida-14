@@ -19,3 +19,15 @@ ent-TreasureSampleTube = пробирка для образцов
 
 ent-TreasureCoinIron = монета
     .desc = Плоский кусочек металла. Если бы он всё ещё находился в обращении, инфляция сделала бы его бесполезным. Но поскольку это не так, она достаточно ценна, чтобы хранить её в книге.
+
+ent-TreasureCoinSilver = { ent-TreasureCoinIron }
+    .desc = { ent-TreasureCoinIron }
+
+ent-TreasureCoinGold = { ent-TreasureCoinIron }
+    .desc = { ent-TreasureCoinIron }
+
+ent-TreasureCoinAdamantine = { ent-TreasureCoinIron }
+    .desc = { ent-TreasureCoinIron }
+
+ent-TreasureCoinDiamond = {ent-TreasureCoinIron}
+    .desc = {ent-TreasureCoinIron}

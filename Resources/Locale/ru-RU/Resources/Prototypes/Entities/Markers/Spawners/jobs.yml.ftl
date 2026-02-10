@@ -135,4 +135,5 @@ ent-SpawnPointReporter = репортёр
     .desc = { ent-SpawnPointJobBase }
 
 ent-SpawnPointPsychologist = психолог
-    .desc = {ent-SpawnPointJobBase}
+    .desc = { ent-SpawnPointJobBase }
+ent-SpawnPointAnyJob<NFD = any job spawn point

@@ -62,3 +62,6 @@ ent-ClothingOuterArmorPodWars = броня Броненосец II
 
 ent-CardArmour = картонная броня
     .desc = Средневековый нагрудник, сделанный из картона.
+
+ent-ClothingOuterArmorBasic = {ent-ClothingOuterArmorBase}
+    .desc = {ent-ClothingOuterArmorBase}

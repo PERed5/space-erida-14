@@ -45,3 +45,5 @@ ent-XenoborgCircuitBoard = плата законов (Ксеноборг)
 ent-MothershipCircuitBoard = плата законов (Ядро материнского корабля)
     .desc = Электронная плата, хранящая набор законов 'Ядро материнского корабля'.
     .suffix = Адмемы
+ent-SyndimovCircuitBoard<NFD = law board (Syndimov)
+    .desc = An electronics board containing the Syndimov lawset.

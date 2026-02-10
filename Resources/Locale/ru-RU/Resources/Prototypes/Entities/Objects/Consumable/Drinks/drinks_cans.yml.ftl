@@ -61,3 +61,7 @@ ent-DrinkBeerCan = баночка пива
 
 ent-DrinkWineCan = баночка вина
     .desc = Ваш путь к веселью и забвению всех забот!
+
+ent-DrinkColaCanEmpty = {ent-DrinkColaCan}
+    .suffix = Пустой
+    .desc = {ent-DrinkColaCan}

@@ -7,3 +7,11 @@ ent-LauncherCreamPie = пирогомёт
 
 ent-LauncherSyringe = шприцемёт
     .desc = Зарядите шприцы ядом для получения максимального удовольствия.
+
+ent-WeaponImprovisedPneumaticCannonGun = { ent-WeaponImprovisedPneumaticCannon }
+    .suffix = Оружие
+    .desc = { ent-WeaponImprovisedPneumaticCannon }
+
+ent-WeaponImprovisedPneumaticCannonAdmeme = {ent-WeaponImprovisedPneumaticCannonGun}
+    .suffix = Адмемы
+    .desc = {ent-WeaponImprovisedPneumaticCannonGun}

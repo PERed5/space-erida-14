@@ -5,3 +5,10 @@ ent-HotPotato = горячая картошка
 ent-TrashBananaPeelExplosiveUnarmed = банан
     .desc = Что-то в этом банане не так.
     .suffix = Не активирован
+
+ent-TrashBananaPeelExplosive = банановая кожура
+    .suffix = Взрывчатка
+    .desc = { ent-TrashBananaPeel }
+
+ent-SnapPopExplosive = { ent-SnapPop }
+    .suffix = explosive

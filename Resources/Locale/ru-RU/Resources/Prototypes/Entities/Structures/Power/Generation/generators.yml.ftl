@@ -13,3 +13,18 @@ ent-GeneratorRTG = РИТЭГ
 ent-GeneratorRTGDamaged = повреждённый РИТЭГ
     .desc = Радиоизотопный термоэлектрический генератор для долговременного питания. У этого повреждено экранирование.
     .suffix = 10кВт
+
+ent-GeneratorBasic = { ent-BaseGenerator }
+    .suffix = Базовый, 3кВт
+    .desc = { ent-BaseGenerator }
+
+ent-GeneratorBasic15kW = { ent-BaseGenerator }
+    .suffix = Базовый, 15кВт
+    .desc = { ent-BaseGenerator }
+
+ent-GeneratorWallmountBasic = { ent-BaseGeneratorWallmount }
+    .suffix = Базовый, 3кВт
+    .desc = { ent-BaseGeneratorWallmount }
+
+ent-GeneratorWallmountAPULV = ВСУ шаттла
+    .desc =  Усовершенствованный вспомогательный силовой агрегат для шаттла.

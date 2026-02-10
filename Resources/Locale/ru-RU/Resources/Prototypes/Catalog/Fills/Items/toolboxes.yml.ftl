@@ -25,4 +25,10 @@ ent-ToolboxMechanicalFilledAllTools = механический ящик для �
 
 ent-ToolboxGoldFilled = золотой ящик для инструментов
     .suffix = Заполненный
-    .desc = {ent-ToolboxGolden}
+    .desc = { ent-ToolboxGolden }
+
+ent-ToolboxSyndicateFilled = { ent-ToolboxSyndicate }
+    .suffix = Заполненный
+    .desc = { ent-ToolboxSyndicate }
+ent-FoolboxFilled<NFD = <NFD
+    .suffix = Filled

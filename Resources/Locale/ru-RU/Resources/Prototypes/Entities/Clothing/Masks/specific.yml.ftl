@@ -5,3 +5,7 @@ ent-ClothingMaskGasChameleon = противогаз
 
 ent-ClothingMaskGoldenCursed = золотая маска
     .desc = Раньше использовались в странных пантомимах, но после того, как один из актёров сошёл с ума на сцене, эти маски перестали использовать. Вы можете поклясться, что её лицо искажается, когда вы не смотрите.
+
+ent-ClothingMaskGasVoiceChameleon = {ent-ClothingMaskGasChameleon}
+    .suffix = Голосовая маска, Хамелеон
+    .desc = {ent-ClothingMaskGasChameleon}

@@ -1,3 +1,15 @@
 <#-- Auto generated file -->
 ent-ShotGunCabinet = шкаф для дробовика
     .desc = Имеется небольшая этикетка с надписью "Только для экстренных ситуаций" вместе с инструкцией по безопасному использованию дробовика. Если бы.
+
+ent-ShotGunCabinetOpen = { ent-ShotGunCabinet }
+    .suffix = Открытый
+    .desc = { ent-ShotGunCabinet }
+
+ent-ShotGunCabinetFilled = { ent-ShotGunCabinet }
+    .suffix = Заполненный
+    .desc = { ent-ShotGunCabinet }
+
+ent-ShotGunCabinetFilledOpen = {ent-ShotGunCabinetFilled}
+    .suffix = Заполненный, Открытый
+    .desc = {ent-ShotGunCabinetFilled}
