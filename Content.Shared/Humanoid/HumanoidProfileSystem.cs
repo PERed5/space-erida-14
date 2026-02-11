@@ -1,4 +1,4 @@
-using Content.Shared._Corvax.TTS;
+using Content.Shared._Erida.TTS;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;

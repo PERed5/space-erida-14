@@ -21,7 +21,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using System.Linq;
-using Content.Shared._Corvax.TTS;
+using Content.Shared._Erida.TTS;
 
 namespace Content.Server.Telephone;
 

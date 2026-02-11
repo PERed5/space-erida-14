@@ -7,7 +7,6 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared;
 using Robust.Shared.Configuration;
-using Content.Shared._Corvax.CCCVars;
 
 namespace Content.Client.Options.UI.Tabs;
 
@@ -50,12 +49,12 @@ public sealed partial class AudioTab : Control
             scale: ContentAudioSystem.LobbyMultiplier);
 
         Control.AddOptionPercentSlider(
-            CCCVars.TTSVolume,
+            CCVars.TTSVolume,
             SliderTtsVolume,
             scale: ContentAudioSystem.TtsMultiplier); // Corvax-TTS
 
         Control.AddOptionPercentSlider(
-            CCCVars.TTSAnnounceVolume,
+            CCVars.TTSAnnounceVolume,
             SliderTtsAnnounceVolume,
             scale: ContentAudioSystem.TtsAnnounceMultiplier); // Corvax-TTS
 

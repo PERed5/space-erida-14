@@ -20,7 +20,7 @@ using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 using Robust.Shared;
 using YamlDotNet.RepresentationModel;
-using Content.Shared._Corvax.TTS;
+using Content.Shared._Erida.TTS;
 
 namespace Content.Shared.Preferences
 {

@@ -34,7 +34,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
-using Content.Shared._Corvax.CCCVars;
+using Content.Shared.CCVar;
 
 namespace Content.Client.Lobby.UI
 {
@@ -279,7 +279,7 @@ namespace Content.Client.Lobby.UI
             // Corvax-TTS-Start
             #region Voice
 
-            if (configurationManager.GetCVar(CCCVars.TTSEnabled))
+            if (configurationManager.GetCVar(CCVars.TTSEnabled))
             {
                 TTSContainer.Visible = true;
                 InitializeVoice();
