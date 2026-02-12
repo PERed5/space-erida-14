@@ -103,7 +103,9 @@
     coefficient: 0.5 # rat king touches more wires, see?
   - type: Rummager
   - type: RatKing
-    hungerPerArmyUse: 25
+    # Erida-start
+    hungerPerArmyUse: 50 # 25
+    # Erida-end
     hungerPerDomainUse: 50
   - type: MobsterAccent
   - type: Speech
@@ -126,6 +128,15 @@
     attributes:
       gender: male
   - type: Sharp
+  - type: TTS # Corvax-TTS
+    voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entity
   id: MobRatKingBuff
@@ -163,6 +174,15 @@
   - type: GuideHelp
     guides:
     - MinorAntagonists
+  - type: TTS # Corvax-TTS
+    voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entity
   name: rat servant
@@ -173,8 +193,10 @@
   components:
   - type: CombatMode
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
-    baseSprintSpeed : 3.5
+    # Erida-start
+    baseWalkSpeed : 5.00 # 3.5
+    baseSprintSpeed : 5.00 # 3.5
+    # Erida-end
   - type: InputMover
   - type: MobMover
   - type: HTN
@@ -228,8 +250,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      15: Critical
-      30: Dead
+      # Erida-start
+      30: Critical # 15
+      60: Dead # 30
+      # Erida-end
   - type: Destructible
     thresholds:
     - trigger:
@@ -248,8 +272,10 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 5
-        Piercing: 3
+        # Erida-start
+        Slash: 10 # 5
+        Piercing: 6 # 3
+        # Erida-end
   - type: Hunger # probably should be prototyped
     thresholds:
       Overfed: 200
@@ -304,6 +330,15 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+  - type: TTS # Corvax-TTS
+    voice: Monolith2
+  - type: LanguageKnowledge # backmen
+    speaks:
+    - TauCetiBasic
+    - Mouse
+    understands:
+    - TauCetiBasic
+    - Mouse
 
 - type: entityTable
   id: RatKingLoot
@@ -337,7 +372,9 @@
   description: Spend some hunger to release a cloud of ammonia into the air.
   components:
   - type: Action
-    useDelay: 6
+    # Erida-start
+    useDelay: 8 # 4
+    # Erida-end
     icon:
       sprite: Interface/Actions/actions_rat_king.rsi
       state: ratKingDomain

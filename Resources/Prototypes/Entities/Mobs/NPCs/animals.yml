@@ -54,8 +54,15 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
-  - type: ReplacementAccent
-    accent: mouse
+#  - type: ReplacementAccent
+#    accent: mouse
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
   - type: MeleeWeapon
     soundHit:
         path: /Audio/Effects/bite.ogg
@@ -277,8 +284,15 @@
     eggSpawn:
     - id: FoodEgg
   - type: ExaminableHunger
-  - type: ReplacementAccent
-    accent: chicken
+  #- type: ReplacementAccent
+  #  accent: chicken
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Chicken
+    understands:
+    - Chicken
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -583,8 +597,15 @@
       amount: 2
   - type: Extractable
     grindableSolutionName: food
-  - type: ReplacementAccent
-    accent: mothroach
+#  - type: ReplacementAccent
+#    accent: mothroach
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Moffic
+    understands:
+    - Moffic
   - type: ZombieAccentOverride
     accent: zombieMoth
   - type: Vocal
@@ -726,8 +747,16 @@
     eggSpawn:
     - id: FoodEgg
   - type: ExaminableHunger
-  - type: ReplacementAccent
-    accent: duck
+#  - type: ReplacementAccent
+#    accent: duck
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Duck
+    understands:
+    - SpaceMob
+    - Duck
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -1003,8 +1032,16 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-  - type: ReplacementAccent
-    accent: crab
+  #- type: ReplacementAccent
+  #  accent: crab
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Crab
+    understands:
+    - SpaceMob
+    - Crab
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -1283,8 +1320,17 @@
   - type: Inventory
     speciesId: kangaroo
     templateId: kangaroo
-  - type: ReplacementAccent
-    accent: kangaroo
+  #- type: ReplacementAccent
+  #  accent: kangaroo
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - SpaceMob
+    - Kangaroo
+    understands:
+    - SpaceMob
+    - Kangaroo
   - type: Butcherable
     spawned:
     - id: FoodMeat
@@ -1561,8 +1607,15 @@
   - type: NameIdentifier
     group: Kobold
   - type: LizardAccent
-  - type: ReplacementAccent
-    accent: kobold
+  #- type: ReplacementAccent
+  #  accent: kobold
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Kobold
+    understands:
+    - Kobold
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
@@ -1844,8 +1897,15 @@
     spawned:
     - id: FoodMeatRat
       amount: 1
-  - type: ReplacementAccent
-    accent: mouse
+  #- type: ReplacementAccent
+  #  accent: mouse
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
   - type: Tag
     tags:
     - Trash
@@ -2302,6 +2362,11 @@
       reagents:
       - ReagentId: Blood
         Quantity: 50
+  - type: LanguageKnowledge # Erida-edit
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
 
 - type: entity
   parent: MobParrotBase
@@ -2497,6 +2562,11 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Scale
+  - type: LanguageKnowledge # Erida-edit
+    speaks:
+    - Snake
+    understands:
+    - Snake
 
 # Code unique spider prototypes or combine them all into one spider and get a
 # random sprite state when you spawn it.
@@ -2589,6 +2659,11 @@
       groups:
         Brute: -0.07
         Burn: -0.07
+  - type: LanguageKnowledge # Erida-edit
+    speaks:
+    - Spider
+    understands:
+    - Spider
 
 - type: entity
   parent: MobSpiderBase
@@ -2986,8 +3061,16 @@
     spawned:
     - id: FoodMeat
       amount: 2
-  - type: ReplacementAccent
-    accent: dog
+  #- type: ReplacementAccent
+  #  accent: dog
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Dog
+    understands:
+    - Dog
+    - TauCetiBasic
   - type: Tag
     tags:
     - VimPilot
@@ -3126,8 +3209,16 @@
     spawned:
     - id: FoodMeat
       amount: 3
-  - type: ReplacementAccent
-    accent: cat
+  #- type: ReplacementAccent
+  #  accent: cat
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Cat
+    understands:
+    - Cat
+    - TauCetiBasic
   - type: InteractionPopup
     successChance: 0.7
     interactSuccessString: petting-success-cat
@@ -3527,8 +3618,16 @@
     spawned:
     - id: FoodMeat
       amount: 1
-  - type: ReplacementAccent
-    accent: mouse
+  #- type: ReplacementAccent
+  #  accent: mouse
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Mouse
+    understands:
+    - Mouse
+    - TauCetiBasic
   - type: Tag
     tags:
     - VimPilot
@@ -3646,8 +3745,16 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/pig_oink.ogg
-  - type: ReplacementAccent
-    accent: pig
+  #- type: ReplacementAccent
+  #  accent: pig
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - Pig
+    understands:
+    - Pig
+    - TauCetiBasic
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-organic
   - type: NpcFactionMember
@@ -3918,3 +4025,10 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+  - type: LanguageKnowledge #backmen: languages
+    speaks:
+    - TauCetiBasic
+    - Dog
+    understands:
+    - TauCetiBasic
+    - Dog

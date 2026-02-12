@@ -86,6 +86,11 @@
       interactFailureString: petting-failure-carp
       interactFailureSound:
         path: /Audio/Effects/bite.ogg
+    - type: LanguageKnowledge # Erida-edit
+      speaks:
+      - Dragon
+      understands:
+      - Dragon
 
 - type: entity
   parent: BaseMobCarp

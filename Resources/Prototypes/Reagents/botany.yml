@@ -272,6 +272,16 @@
         - !type:ReagentCondition
           reagent: Ammonia
           min: 1
+      # Erida-start
+      - !type:ModifyBleed
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Rat ]
+        - !type:ReagentCondition
+          reagent: Ammonia
+          min: 1
+        amount: -1.0
+      # Erida-end
       - !type:Oxygenate # ammonia displaces nitrogen in vox blood
         conditions:
         - !type:MetabolizerTypeCondition

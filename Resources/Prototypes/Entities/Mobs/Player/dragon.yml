@@ -42,8 +42,8 @@
   - type: MobMover
   - type: InputMover
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3
-    baseSprintSpeed: 5
+    baseWalkSpeed: 4 # 3 Erida-edit
+    baseSprintSpeed: 6 # 5 Erida-edit
     baseWeightlessModifier: 1.5
   - type: RandomSprite
     available:
@@ -91,12 +91,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      450: Critical
-      500: Dead
+      950: Critical # 450 Erida-edit
+      1000: Dead # 500 Erida-edit
   - type: SlowOnDamage
     speedModifierThresholds:
-      250: 0.7
-      400: 0.5
+      500: 0.7 # 250 Erida-edit
+      800: 0.5 # 400 Erida-edit
   # disable taking damage from fire, since its a fire breathing dragon
   - type: Flammable
     damage:
@@ -134,7 +134,7 @@
     damage:
       types:
         Piercing: 15
-        Slash: 15
+        Slash: 25 # 15 Erida-edit
   - type: Devourer
     foodPreferenceWhitelist:
       components:
@@ -168,6 +168,15 @@
     speedModifier: 2.5 # fast because dragon strong
     useSound:
       path: /Audio/Items/crowbar.ogg
+  - type: ProRottingContainer # Erida-edit
+    decayModifier: 0
+  - type: LanguageKnowledge # Erida-edit
+    speaks:
+    - TauCetiBasic
+    - Dragon
+    understands:
+    - TauCetiBasic
+    - Dragon
 
 - type: entity
   parent: BaseMobDragon
