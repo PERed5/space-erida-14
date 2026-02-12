@@ -39,6 +39,12 @@
         layer:
         - MachineLayer
   - type: EntityStorage
+    # handling sounds edit start
+    closeSound:
+      path: /Audio/_Erida/Machines/crate_close.ogg
+    openSound:
+      path: /Audio/_Erida/Machines/crate_open.ogg
+    # handling sounds edit end
   - type: PlaceableSurface
     isPlaceable: false # defaults to closed.
   - type: Damageable
@@ -58,6 +64,28 @@
   - type: EntityStorageVisuals
     stateDoorOpen: open
     stateDoorClosed: closed
+  - type: GenericVisualizer
+    visuals:
+      enum.PaperLabelVisuals.HasLabel:
+        enum.PaperLabelVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PaperLabelVisuals.LabelType:
+        enum.PaperLabelVisuals.Layer:
+          Paper: { state: paper }
+          Bounty: { state: bounty }
+          CaptainsPaper: { state: captains_paper }
+          Invoice: { state: invoice }
+  - type: PaperLabel
+    labelSlot:
+      insertVerbText: comp-paper-label-insert
+      ejectVerbText: comp-paper-label-eject
+      whitelist:
+        components:
+        - Paper
+      blacklist:
+        tags:
+        - Book
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container

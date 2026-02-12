@@ -3,6 +3,23 @@
   id: BaseKnife
   abstract: true
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/knife_pickup.ogg
+      params:
+        volume: -8
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Erida/Items/handling/knife_drop.ogg
+      params:
+        volume: -8
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Erida/Items/handling/knife_drop.ogg
+      params:
+        volume: -8
+  # handling sounds edit end
   - type: Tag
     tags:
     - Knife

@@ -5,6 +5,17 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: PistolsPickUp
+  - type: EmitSoundOnDrop
+    sound:
+      collection: PistolsDrop
+  - type: EmitSoundOnLand
+    sound:
+      collection: PistolsDrop
+  # handling sounds edit start
   - type: Sprite
     layers:
       - state: base
@@ -52,6 +63,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
@@ -81,7 +93,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolHighCapacity
+        startingItem: MagazinePistol
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
@@ -92,6 +104,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgePistol
         priority: 1
         whitelist:
           tags:
@@ -110,11 +123,11 @@
   description: A cyborg-mounted weapon system based on the Viper pistol. Creates ammunition on the fly from an internal fabricator, which slowly self-charges.
   components:
   - type: Gun
-    fireRate: 6
+    fireRate: 5
     selectedMode: SemiAuto
     availableModes:
-    - SemiAuto
-    - FullAuto
+      - SemiAuto
+      - FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
   - type: Sprite
@@ -178,6 +191,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgeCaselessRifle
         priority: 1
         whitelist:
           tags:
@@ -254,6 +268,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
+        startingItem: CartridgeMagnum
         priority: 1
         whitelist:
           tags:

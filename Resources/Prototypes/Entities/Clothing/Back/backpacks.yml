@@ -13,6 +13,27 @@
     quickEquip: false
     slots:
     - back
+  # handling sounds edit start
+    equipSound:
+      path: /Audio/_Erida/Items/handling/backpack_equip.ogg
+      params:
+        volume: -9
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/backpack_pickup.ogg
+      params:
+        volume: -9
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Erida/Items/handling/backpack_drop.ogg
+      params:
+        volume: -11
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Erida/Items/handling/backpack_drop.ogg
+      params:
+        volume: -11
+  # handling sounds edit end
   - type: Storage
     grid:
     - 0,0,6,3
@@ -364,7 +385,7 @@
   id: ClothingBackpackDebug
   name: wackpack
   description: What the fuck is this?
-  suffix: DEBUG
+  suffix: Debug
   components:
   - type: Storage
     grid:
@@ -380,7 +401,7 @@
   id: ClothingBackpackDebug2
   name: big wackpack
   description: What the fuck is this?
-  suffix: DEBUG
+  suffix: Debug
   components:
   - type: Storage
     grid:
@@ -391,7 +412,7 @@
   id: ClothingBackpackDebug3
   name: gay wackpack
   description: What the fuck is this?
-  suffix: DEBUG
+  suffix: Debug
   components:
   - type: Storage
     grid:

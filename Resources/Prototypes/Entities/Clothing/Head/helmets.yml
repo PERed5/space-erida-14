@@ -19,6 +19,14 @@
   id: ClothingHeadHelmetArmoredBase
   abstract: true
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Erida/Items/handling/helmet_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Erida/Items/handling/helmet_drop.ogg
+  # handling sounds edit end
   - type: Armor #Values seem to let the user survive one extra hit if attacked consistently.
     modifiers:
       coefficients:

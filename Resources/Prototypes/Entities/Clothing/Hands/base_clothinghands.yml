@@ -7,6 +7,12 @@
     state: icon
   - type: Clothing
     slots: [gloves]
+  # handling sounds edit start
+    equipSound:
+      path: /Audio/_Erida/Items/handling/generic_equip2.ogg
+      params:
+        volume: -4
+  # handling sounds edit end
   - type: Edible
     requiresSpecialDigestion: true
   - type: Item

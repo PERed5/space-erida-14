@@ -699,4 +699,28 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         return !HasComp<BypassInteractionChecksComponent>(viewer);
     }
+
+    // Erida start
+    public bool IsStripBlocked(SlotDefinition definition, EntityUid? viewer)
+    {
+        if (!definition.StripBlocked)
+            return false;
+
+        if (viewer == null)
+            return true;
+
+        return !HasComp<BypassInteractionChecksComponent>(viewer);
+    }
+
+    public bool IsStripForcedHidden(SlotDefinition definition, EntityUid? viewer)
+    {
+        if (!definition.StripHiddenForce)
+            return false;
+
+        if (viewer == null)
+            return true;
+
+        return !HasComp<BypassInteractionChecksComponent>(viewer);
+    }
+    // Erida end
 }

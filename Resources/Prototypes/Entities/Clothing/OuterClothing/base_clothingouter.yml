@@ -3,9 +3,28 @@
   parent: Clothing
   id: ClothingOuterBase
   components:
+  # handling sounds edit start
+  - type: EmitSoundOnPickup
+    sound:
+      collection: GenericPickup
+      params:
+        volume: -9
+  - type: EmitSoundOnDrop
+    sound:
+      collection: GenericDrop
+      params:
+        volume: -9
+  - type: EmitSoundOnLand
+    sound:
+      collection: GenericDrop
+      params:
+        volume: -9
   - type: Clothing
     slots:
     - outerClothing
+    equipSound:
+      collection: GenericEquip
+  # handling sounds edit end
   - type: Sprite
     state: icon
 
@@ -23,20 +42,18 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, GLOVES, SOCKS ]
+    hideList: [ IDCARD, POCKET ]
 
 - type: entity
   abstract: true
   parent: ClothingOuterBase
   id: ClothingOuterStorageBase
   components:
-  - type: Item
-    size: Normal
-    shape:
-    - 0,0,1,2
   - type: Storage
     grid:
     - 0,0,2,1
-    maxItemSize: Small
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -150,14 +167,14 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
-  # Backmen-start
   - type: ClothingGrant # supermatter
     component:
     - type: BkmSupermatterImmune
-  # Backmen-end
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, GLOVES, SOCKS, FEET ]
+    hideList: [ IDCARD, POCKET ]
   - type: HideLayerClothing
-    slots:
-    - Tail
+    layers: { Tail: OUTERCLOTHING }
 
 - type: entity
   abstract: true
@@ -165,9 +182,6 @@
   id: ClothingOuterEVASuitBase
   name: base EVA Suit
   components:
-# SlotBlocker blocked until UI change
-#  - type: SlotBlock
-#    slots: [innerclothing, feet]
   - type: PressureProtection
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
@@ -187,9 +201,11 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
-  - type: HideLayerClothing
-    slots:
-    - Tail
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, SOCKS, UNDERSHIRT, UNDERPANTS, FEET, LEGS, GLOVES, INNERCLOTHING, FEET ]
+    hideList: [ IDCARD, POCKET ]
+  - type: HideLayerClothing # Erida edit
+    layers: { Tail: OUTERCLOTHING } # Erida edit
 
 - type: entity
   parent: ClothingOuterBase
@@ -205,6 +221,9 @@
       toggleable-clothing: !type:ContainerSlot {}
       storagebase: !type:Container
         ents: []
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING ]
+    hideList: [ IDCARD, POCKET ]
 
 - type: entity
   abstract: true

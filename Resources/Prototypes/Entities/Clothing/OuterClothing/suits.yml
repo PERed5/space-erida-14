@@ -225,6 +225,9 @@
     sprite: Clothing/OuterClothing/Suits/chicken.rsi
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, SOCKS, FEET ]
+    hideList: [ POCKET, IDCARD ]
 
 - type: entity
   parent: ClothingOuterBase
@@ -236,6 +239,9 @@
     sprite: Clothing/OuterClothing/Suits/shrine-maiden.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/shrine-maiden.rsi
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING ]
+    hideList: [ POCKET, IDCARD ]
 
 - type: entity
   parent: ClothingOuterBase
@@ -247,6 +253,9 @@
     sprite: Clothing/OuterClothing/Suits/witchrobe.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/witchrobe.rsi
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING ]
+    hideList: [ POCKET, IDCARD ]
 
 - type: entity
   parent: ClothingOuterBase
@@ -263,6 +272,9 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, SOCKS, FEET ]
+    hideList: [ POCKET, IDCARD ]
 
 - type: entity
   parent: ClothingOuterBase
@@ -290,6 +302,9 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, SOCKS, FEET ]
+    hideList: [ POCKET, IDCARD ]
   - type: AddAccentClothing
     accent: BarkAccent
 
@@ -311,6 +326,9 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: SlotBlock
+    blockList: [ UNDERPOCKET, UNDERSHIRT, UNDERPANTS, LEGS, INNERCLOTHING, SOCKS, FEET ]
+    hideList: [ POCKET, IDCARD ]
   - type: HideLayerClothing
     slots:
     - Tail
