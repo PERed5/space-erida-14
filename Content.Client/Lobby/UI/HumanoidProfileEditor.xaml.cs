@@ -35,6 +35,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
 using Content.Shared.CCVar;
+using Content.Shared._Erida.Preference;
 
 namespace Content.Client.Lobby.UI
 {
@@ -275,6 +276,19 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion SpawnPriority
+
+            // Erida start
+            foreach (var value in Enum.GetValues<CorporationPreference>())
+            {
+                CorporationButton.AddItem(Loc.GetString($"humanoid-profile-editor-preference-corporation-{value.ToString().ToLower()}"), (int)value);
+            }
+
+            CorporationButton.OnItemSelected += args =>
+            {
+                CorporationButton.SelectId(args.Id);
+                SetCorporationPriority((CorporationPreference)args.Id);
+            };
+            // Erida end
 
             // Corvax-TTS-Start
             #region Voice
@@ -849,6 +863,7 @@ namespace Content.Client.Lobby.UI
             UpdateSaveButton();
             UpdateMarkings();
             UpdateTTSVoicesControls(); // Corvax-TTS
+            UpdateCorporationControls(); // Erida edit
 
             RefreshAntags();
             RefreshJobs();
@@ -1422,6 +1437,25 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
             SetDirty();
         }
+
+        // Erida start
+        private void SetCorporationPriority(CorporationPreference newCorporation)
+        {
+            Profile = Profile?.WithCorporationPreference(newCorporation);
+            SetDirty();
+        }
+
+        private void UpdateCorporationControls()
+        {
+            if (Profile == null)
+            {
+                return;
+            }
+
+            CorporationButton.SelectId((int)Profile.Corporation);
+        }
+        // Erida end
+
 
         public bool IsDirty
         {

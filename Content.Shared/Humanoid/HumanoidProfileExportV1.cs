@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared._Erida.Preference;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
@@ -114,12 +115,17 @@ public sealed partial class HumanoidCharacterProfileV1
     [DataField]
     public SpawnPriorityPreference SpawnPriority;
 
+    // Erida start
+    [DataField]
+    public CorporationPreference Corporation;
+    // Erida end
+
     [DataField]
     public PreferenceUnavailableMode PreferenceUnavailable;
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, OOCContent, CharacterContent, GreenContent, YellowContent, RedContent, TagsContent, LinksContent, NSFWContent, NSFWOOCContent, NSFWLinksContent, NSFWTagsContent, Species, Voice, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
+        return new(Name, FlavorText, OOCContent, CharacterContent, GreenContent, YellowContent, RedContent, TagsContent, LinksContent, NSFWContent, NSFWOOCContent, NSFWLinksContent, NSFWTagsContent, Species, Voice, Age, Sex, Gender, Appearance.ToV2(Species), SpawnPriority, Corporation, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts);
     }
 }
 

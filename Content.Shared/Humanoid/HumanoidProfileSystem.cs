@@ -1,3 +1,6 @@
+using Content.Shared._Erida.Language.Components;
+using Content.Shared._Erida.Language.Systems;
+using Content.Shared._Erida.Preference;
 using Content.Shared._Erida.TTS;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Prototypes;
@@ -41,6 +44,7 @@ public sealed class HumanoidProfileSystem : EntitySystem
         ent.Comp.Species = profile.Species;
         ent.Comp.Sex = profile.Sex;
         SetTTSVoice(ent.Owner, profile.Voice, ent.Comp);
+        SetCorporation(ent.Owner, profile.Corporation, ent.Comp);
         Dirty(ent);
 
         var sexChanged = new SexChangedEvent(ent.Comp.Sex, profile.Sex);
@@ -72,6 +76,26 @@ public sealed class HumanoidProfileSystem : EntitySystem
         comp.VoicePrototypeId = voiceId;
     }
     // Corvax-TTS-End
+
+    // Erida start
+    public void SetCorporation(EntityUid uid, CorporationPreference corporation, HumanoidProfileComponent humanoid)
+    {
+        humanoid.Corporation = corporation;
+
+        if (!TryComp<LanguageKnowledgeComponent>(uid, out var comp))
+            return;
+
+        if (corporation == CorporationPreference.NanoTrasen || corporation == CorporationPreference.Syndicate) {
+            var languageName = "Codespeak" + $"{corporation}";
+
+            comp.SpokenLanguages.Add(languageName);
+            comp.UnderstoodLanguages.Add(languageName);
+
+            RaiseLocalEvent(uid, new LanguageListUpdated());
+        }
+    }
+    // Erida end
+
 
     /// <summary>
     /// Takes ID of the species prototype, returns UI-friendly name of the species.
