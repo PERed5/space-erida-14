@@ -20,6 +20,9 @@
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [Shadowkin]
+          inverted: true
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
           inverted: true
@@ -51,6 +54,9 @@
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [Shadowkin]
+          inverted: false
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
           inverted: true
@@ -176,6 +182,9 @@
         - !type:MetabolizerTypeCondition
           type: [ Plant, Vox ]
           inverted: true
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [Shadowkin]
+          inverted: false
         ignoreResistances: true
         damage:
           types:
@@ -197,7 +206,7 @@
         minScale: 0.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant, Vox ]
+          type: [ Plant, Vox, Shadowkin ] # Erida-edit
           inverted: true
         # Don't want people to get toxin damage from the gas they just
         # exhaled, right?
@@ -241,6 +250,9 @@
       # Converts Nitrogen into Ammonia
       - !type:ModifyLungGas
         conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
         ratios:

@@ -243,6 +243,7 @@
     - AmmoniaBlood
     - ZombieBlood
     - Sap
+    - ShadowkinBlood # Erida-edit
 
 - type: xenoArchTrigger
   id: TriggerThrow

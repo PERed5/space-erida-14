@@ -152,12 +152,27 @@
           Brute: -1.5
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
         - !type:ReagentCondition
           reagent: Bicaridine
           min: 15
         damage:
           types:
             Asphyxiation: 0.5
+            Poison: 1.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:ReagentCondition
+          reagent: Bicaridine
+          min: 15
+        damage:
+          types:
+            Bloodloss: 0.5
             Poison: 1.5
       - !type:Vomit
         conditions:
@@ -239,12 +254,29 @@
             Cold: -1.5
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
         - !type:ReagentCondition
           reagent: Dermaline
           min: 10
         damage:
           types:
             Asphyxiation: 1
+            Cold: 2
+          groups:
+            Brute: 0.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:ReagentCondition
+          reagent: Dermaline
+          min: 10
+        damage:
+          types:
+            Bloodloss: 1
             Cold: 2
           groups:
             Brute: 0.5
@@ -266,18 +298,46 @@
     Bloodstream:
       effects:
       - !type:HealthChange
+        conditions: # Erida-edit
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: true
         damage:
           types:
             Asphyxiation: -1
             Bloodloss: -0.5
       - !type:HealthChange
         conditions:
+          - !type:MetabolizerTypeCondition # Erida-edit
+            type: [ Shadowkin ]
+            inverted: true
           - !type:ReagentCondition
             reagent: Dexalin
             min: 20
         damage:
           types:
             Asphyxiation: 3
+            Cold: 1
+      - !type:HealthChange # Erida-edit
+        conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: false
+        damage:
+          types:
+            Asphyxiation: -1
+            Bloodloss: -1.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: false
+          - !type:ReagentCondition
+            reagent: Dexalin
+            min: 20
+        damage:
+          types:
+            Bloodloss: 3
             Cold: 1
 
 - type: reagent
@@ -292,6 +352,10 @@
     Bloodstream:
       effects:
       - !type:HealthChange
+        conditions: # Erida-edit
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: true
         damage:
           types:
             Asphyxiation: -3.5
@@ -305,12 +369,36 @@
         amount: -3
       - !type:HealthChange
         conditions:
+          - !type:MetabolizerTypeCondition # Erida-edit
+            type: [ Shadowkin ]
+            inverted: true
           - !type:ReagentCondition
             reagent: DexalinPlus
             min: 25
         damage:
           types:
             Asphyxiation: 5
+            Cold: 3
+      - !type:HealthChange # Erida-edit
+        conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: false
+        damage:
+          types:
+            Asphyxiation: -2
+            Bloodloss: -4
+      - !type:HealthChange # Erida-edit
+        conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Shadowkin ]
+            inverted: false
+          - !type:ReagentCondition
+            reagent: DexalinPlus
+            min: 25
+        damage:
+          types:
+            Bloodloss: 5
             Cold: 3
 
 # this ones a doozy
@@ -334,6 +422,9 @@
         amount: -5
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
           # they gotta be in crit first
         - !type:MobStateCondition
           mobstate: Critical
@@ -349,12 +440,46 @@
             Burn: -0.5
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
         - !type:ReagentCondition
           reagent: Epinephrine
           min: 20
         damage:
           types:
             Asphyxiation: 1
+            Poison: 1
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:MobStateCondition
+          mobstate: Critical
+        - !type:ReagentCondition
+          reagent: Epinephrine
+          min: 0
+          max: 20
+        damage:
+          types:
+            Asphyxiation: -1
+            Bloodloss: -1
+            Poison: -0.5
+          groups:
+            Brute: -0.5
+            Burn: -0.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:ReagentCondition
+          reagent: Epinephrine
+          min: 20
+        damage:
+          types:
+            Bloodloss: 1
             Poison: 1
       - !type:AdjustReagent
         reagent: HeartbreakerToxin
@@ -451,12 +576,28 @@
       effects:
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
           # they gotta be in crit first
         - !type:MobStateCondition
           mobstate: Critical
         damage:
           types:
             Asphyxiation: -2
+      - !type:ModifyBleed
+        amount: -0.25
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:MobStateCondition
+          mobstate: Critical
+        damage:
+          types:
+            Bloodloss: -0.5
+            Asphyxiation: -1
       - !type:ModifyBleed
         amount: -0.25
 
@@ -627,6 +768,10 @@
     Bloodstream:
       effects:
       - !type:HealthChange
+        conditions: # Erida-edit
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: true
         damage:
           groups:
             Brute: -3.5
@@ -634,12 +779,36 @@
             Asphyxiation: -2.5
       - !type:HealthChange
         conditions:
+        - !type:MetabolizerTypeCondition # Erida-edit
+          type: [ Shadowkin ]
+          inverted: true
         - !type:ReagentCondition
           reagent: PolypyryliumOligomers
           min: 30
         damage:
           types:
             Asphyxiation: 3.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        damage:
+          groups:
+            Brute: -3.5
+          types:
+            Bloodloss: -2.5
+      - !type:HealthChange # Erida-edit
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Shadowkin ]
+          inverted: false
+        - !type:ReagentCondition
+          reagent: PolypyryliumOligomers
+          min: 30
+        damage:
+          types:
+            Bloodloss: 3.5
       - !type:ModifyBleed
         amount: -0.25
 

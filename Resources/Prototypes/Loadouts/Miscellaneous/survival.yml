@@ -19,6 +19,9 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    # Erida-edit
+    - Shadowkin
+    # Erida-end
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

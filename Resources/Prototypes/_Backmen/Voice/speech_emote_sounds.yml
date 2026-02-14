@@ -1,0 +1,172 @@
+ #felinids
+- type: emoteSounds
+  id: MaleFelinid
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Yawn:
+      collection: MaleYawn
+    Whistle:
+      collection: Whistles
+    Mews:
+      collection: FelinidMews
+    Meows:
+      collection: FelinidMeows
+    Purrs:
+      collection: FelinidPurrs
+    Hiss:
+      collection: FelinidHisses
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Moan:
+      collection: MaleMoan
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+
+- type: emoteSounds
+  id: FemaleFelinid
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Mews:
+      collection: FelinidMews
+    Meows:
+      collection: FelinidMeows
+    Purrs:
+      collection: FelinidPurrs
+    Hiss:
+      collection: FelinidHisses
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
+    Moan:
+      collection: FemaleMoan
+    Yawn:
+      collection: FemaleYawn
+
+ #shadowkins
+
+- type: emoteSounds
+  id: MaleShadowkin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ShadowkinScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Moan:
+      collection: MaleMoan
+    Gasp:
+      collection: MaleGasp
+    DefaultDeathgasp:
+      collection: MaleDeathGasp
+    Wurble:
+      collection: Wurble
+    Yawn:
+      collection: MaleYawn
+    ShadowkinGrowl:
+      collection: ShadowkinGrowl
+
+- type: emoteSounds
+  id: FemaleShadowkin
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ShadowkinScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: FemaleDeathGasp
+    Moan:
+      collection: FemaleMoan
+    Wurble:
+      collection: Wurble
+    Yawn:
+      collection: FemaleYawn
+    ShadowkinGrowl:
+      collection: ShadowkinGrowl
+
+- type: emoteSounds
+  id: ShadowkinBodyEmotes
+  sounds:
+    Thump:
+      path: /Audio/Effects/soft_thump.ogg
+      params:
+        variation: 0.125
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Wink:
+      collection: Wink
+    Snap:
+      collection: Snaps
+      params:
+        volume: -6
+    Salute:
+      collection: Salutes
+    Purse:
+      path: /Audio/Effects/thudswoosh.ogg

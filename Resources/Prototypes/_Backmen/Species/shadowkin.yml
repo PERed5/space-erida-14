@@ -1,0 +1,21 @@
+- type: species
+  id: Shadowkin
+  name: species-name-shadowkin
+  roundStart: true
+  prototype: MobShadowkin
+  defaultSkinTone: "#FFFFFF"
+  defaultEyeTone: "#FFFFFF" #"#000000"
+  dollPrototype: AppearanceShadowkin
+  skinColoration: Hues
+  maleFirstNames: names-shadowkin-male-first
+  femaleFirstNames: names-shadowkin-female-first
+  maleLastNames: names-shadowkin-male-last
+  femaleLastNames: names-shadowkin-female-last
+  minAge: 18
+  maxAge: 500
+  youngAge: 501
+  oldAge: 502
+  sexes:
+    - Male
+    - Female
+    - Unsexed
