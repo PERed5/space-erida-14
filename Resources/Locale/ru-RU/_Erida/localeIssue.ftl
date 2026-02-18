@@ -211,3 +211,5 @@ ui-escape-feedback = Фидбэк
 
 ui-options-hold-to-attack-melee = Атака при удержании (ближний)
 ui-options-hold-to-attack-ranged = Атака при удержании (дальний)
+
+paper-sign-verb = Подписать
