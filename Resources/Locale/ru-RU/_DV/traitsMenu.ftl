@@ -60,3 +60,4 @@ trait-category-medical = Медицинские
 trait-category-mental = Психические
 trait-category-accents = Акценты
 trait-category-meta = Мета
+trait-category-species = Расовые

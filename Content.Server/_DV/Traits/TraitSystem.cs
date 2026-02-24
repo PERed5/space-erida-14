@@ -7,6 +7,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
+using Content.Shared.Inventory;
 using Content.Shared.Roles;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
@@ -47,7 +48,7 @@ public sealed class TraitSystem : EntitySystem
             return;
 
         // Get species ID for condition checking
-        string? speciesId = null;
+        string? speciesId = args.Profile.Species;
 
         // Track disabled traits and reasons
         var disabledTraits = new Dictionary<ProtoId<TraitPrototype>, List<string>>();
