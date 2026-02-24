@@ -132,6 +132,7 @@ public sealed partial class StoreSystem
     /// </summary>
     private void OnBuyRequest(EntityUid uid, StoreComponent component, StoreBuyListingMessage msg)
     {
+        EntityUid? EvProduct = null; // Erida-edit
         var listing = component.FullListingsCatalog.FirstOrDefault(x => x.ID.Equals(msg.Listing.Id));
 
         if (listing == null) //make sure this listing actually exists
@@ -183,6 +184,7 @@ public sealed partial class StoreSystem
         if (listing.ProductEntity != null)
         {
             var product = Spawn(listing.ProductEntity, Transform(buyer).Coordinates);
+            EvProduct = product; // Erida-edit
             _hands.PickupOrDrop(buyer, product);
 
             HandleRefundComp(uid, component, product);
@@ -289,7 +291,9 @@ public sealed partial class StoreSystem
         var buyFinished = new StoreBuyFinishedEvent
         {
             PurchasedItem = listing,
-            StoreUid = uid
+            StoreUid = uid,
+            PurchasedItemEntity = EvProduct,
+            User = msg.Actor
         };
         RaiseLocalEvent(ref buyFinished);
 
@@ -419,5 +423,7 @@ public sealed partial class StoreSystem
 [ByRefEvent]
 public readonly record struct StoreBuyFinishedEvent(
     EntityUid StoreUid,
-    ListingDataWithCostModifiers PurchasedItem
+    ListingDataWithCostModifiers PurchasedItem,
+    EntityUid? PurchasedItemEntity, // Erida-edit
+    EntityUid User
 );
