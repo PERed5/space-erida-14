@@ -6,7 +6,6 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: SubdermalImplant
-    canImplantSelf: false
     whitelist:
       components:
       - MobState  # can implant ian.

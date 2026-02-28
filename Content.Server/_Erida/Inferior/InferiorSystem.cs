@@ -54,7 +54,6 @@ public sealed class InferiorSystem : SharedInferiorSystem
         SubscribeLocalEvent<InferiorComponent, ComponentStartup>(OnStartup);
         SubscribeLocalEvent<InferiorComponent, ComponentShutdown>(OnShutdown);
 
-        //SubscribeLocalEvent<StoreBuyFinishedEvent>(StoreBuyFinishedEvent);
         SubscribeLocalEvent<InferiorRoleComponent, GetBriefingEvent>(OnGetBriefing);
         SubscribeLocalEvent<InferiorComponent, MindAddedMessage>(OnMindAdded);
         SubscribeLocalEvent<InferiorComponent, MindRemovedMessage>(OnMindRemoved);
@@ -102,7 +101,6 @@ public sealed class InferiorSystem : SharedInferiorSystem
     {
         if (HasComp<MindShieldComponent>(uid)
             || !_mindSystem.TryGetMind(uid, out var mindId, out var mind)
-            || uid == comp.Overlord
             || comp.Overlord == null)
         {
             return;
