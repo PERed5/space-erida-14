@@ -5,3 +5,13 @@
   prototype: MobHuman
   dollPrototype: AppearanceHuman
   skinColoration: HumanToned
+
+- type: species
+  id: Felinid
+  parent: Human
+  roundStart: true
+
+- type: species
+  id: Anthropomorph
+  parent: Human
+  roundStart: true

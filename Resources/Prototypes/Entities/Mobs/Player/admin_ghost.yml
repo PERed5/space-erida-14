@@ -118,6 +118,7 @@
   - type: ShowJobIcons
   - type: ShowHealthBars
   - type: ShowCriminalRecordIcons
+  - type: UniversalLanguageSpeaker
   # Erida-end
 
 - type: entity
@@ -138,7 +139,7 @@
   description: View a Solar Control Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: solar } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: solar } # _Corvax-Resprite
     iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: solar }
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
@@ -150,7 +151,7 @@
   description: View a Communications Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: comms_console } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: comms_console } # _Corvax-Resprite
     iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: comms_console }
     keywords: [ "AI", "console", "interface" ]
     priority: -4
@@ -164,7 +165,7 @@
   description: View a Mass Scanner Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: mass_scanner } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: mass_scanner } # _Corvax-Resprite
     iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: mass_scanner }
     keywords: [ "AI", "console", "interface" ]
     priority: -6
@@ -178,8 +179,8 @@
   description: View a Cargo Ordering Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: cargo } # Corvax-Resprite
-    iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: cargo } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: cargo } # _Corvax-Resprite
+    iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: cargo } # _Corvax-Resprite
   - type: InstantAction
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
 
@@ -190,7 +191,7 @@
   description: View a Crew Monitoring Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: crew_monitor } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: crew_monitor } # _Corvax-Resprite
     iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: crew_monitor }
     keywords: [ "AI", "console", "interface" ]
     priority: -8
@@ -204,7 +205,7 @@
   description: View a Station Records Interface.
   components:
   - type: Action
-    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: station_records } # Corvax-Resprite
+    icon: { sprite: _Corvax/Interface/adminactions.rsi, state: station_records } # _Corvax-Resprite
     iconOn: { sprite: _Corvax/Interface/adminactions.rsi, state: station_records }
     keywords: [ "AI", "console", "interface" ]
     priority: -7

@@ -2,6 +2,9 @@
 - type: roleLoadout
   id: JobCaptain
   groups:
+  - Werx-Captain #erida
+  - Niz-Captain #erida
+  - Socks-Captain #erida
   - CaptainHead
   - CaptainNeck
   - CaptainJumpsuit
@@ -15,7 +18,9 @@
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
-  - GroupTankHarness
+  - Werx-HeadofPersonnel #erida
+  - Niz-HeadofPersonnel #erida
+  - Socks-HeadofPersonnel #erida
   - HoPHead
   - HoPNeck
   - HoPJumpsuit
@@ -24,8 +29,39 @@
   - Glasses
   - Survival
   - Trinkets
-  #- HoPJobTrinkets
+  - HoPJobTrinkets
   - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobIAA # Corvax
+  groups:
+  - Werx-IAA #erida
+  - Niz-IAA #erida
+  - Socks-IAA #erida
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
+  id: JobSecurityPilot # Corvax
+  groups:
+  - Werx
+  - Niz
+  - Socks
+  - SecurityJumpsuitPilot #backmen
+  - SecurityBackpack
+  - SecurityOuterClothingPilot #backmen
+  - SecurityHeadPilot #backmen
+  - SecurityClothingBeltPilot #backmen
+  - SecurityEyesPilot #backmen
+  - SecurityShoesPilot #backmen
+  - SurvivalSecurity
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - SecurityServiceWeapon # Erida
 
 # Silicons
 - type: roleLoadout
@@ -42,6 +78,8 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
+  - Werx-Passenger #erida
+  - Niz-Passenger #erida
   - GroupTankHarness
   - PassengerJumpsuit
   - CommonBackpack
@@ -59,6 +97,9 @@
 - type: roleLoadout
   id: JobBartender
   groups:
+  - Werx-Bartender #erida
+  - Niz-Bartender #erida
+  - Socks-Bartender #erida
   - GroupTankHarness
   - BartenderHead
   - BartenderJumpsuit
@@ -73,6 +114,9 @@
 - type: roleLoadout
   id: JobServiceWorker
   groups:
+  - Werx-Service #erida
+  - Niz-Service #erida
+  - Socks-Service #erida
   - GroupTankHarness
   - BartenderJumpsuit
   - CommonBackpack
@@ -85,6 +129,9 @@
 - type: roleLoadout
   id: JobChef
   groups:
+  - Werx-Chef #erida
+  - Niz-Chef #erida
+  - Socks-Chef #erida
   - GroupTankHarness
   - ChefHead
   - ChefMask
@@ -100,6 +147,9 @@
 - type: roleLoadout
   id: JobLibrarian
   groups:
+  - Werx-Librarian #erida
+  - Niz-Librarian #erida
+  - Socks-Librarian #erida
   - GroupTankHarness
   - LibrarianJumpsuit
   - CommonBackpack
@@ -112,6 +162,9 @@
 - type: roleLoadout
   id: JobLawyer
   groups:
+  - Werx-Lawyer #erida
+  - Niz-Lawyer #erida
+  - Socks-Lawyer #erida
   - GroupTankHarness
   - LawyerNeck
   - LawyerJumpsuit
@@ -126,6 +179,9 @@
   id: JobChaplain
   canCustomizeName: true
   groups:
+  - Werx-Chaplain #erida
+  - Niz-Chaplain #erida
+  - Socks-Chaplain #erida
   - GroupTankHarness
   - ChaplainHead
   - ChaplainMask
@@ -143,6 +199,9 @@
 - type: roleLoadout
   id: JobJanitor
   groups:
+  - Werx-Janitor #erida
+  - Niz-Janitor #erida
+  - Socks-Janitor #erida
   - GroupTankHarness
   - JanitorHead
   - JanitorJumpsuit
@@ -158,6 +217,9 @@
 - type: roleLoadout
   id: JobBotanist
   groups:
+  - Werx-Botanist #erida
+  - Niz-Botanist #erida
+  - Socks-Botanist #erida
   - GroupTankHarness
   - BotanistHead
   - BotanistJumpsuit
@@ -173,6 +235,9 @@
   id: JobClown
   canCustomizeName: true
   groups:
+  - Werx-Clown #erida
+  - Niz-Clown #erida
+  - Socks-Clown #erida
   - GroupTankHarness
   - ClownHead
   - ClownJumpsuit
@@ -188,6 +253,9 @@
   id: JobMime
   canCustomizeName: true
   groups:
+  - Werx-Mime #erida
+  - Niz-Mime #erida
+  - Socks-Mime #erida
   - GroupTankHarness
   - MimeHead
   - MimeMask
@@ -204,6 +272,9 @@
   id: JobMusician
   canCustomizeName: true
   groups:
+  - Werx-Musician #erida
+  - Niz-Musician #erida
+  - Socks-Musician #erida
   - GroupTankHarness
   - MusicianJumpsuit
   - CommonBackpack
@@ -219,6 +290,9 @@
 - type: roleLoadout
   id: JobQuartermaster
   groups:
+  - Werx-Quartermaster #erida
+  - Niz-Quartermaster #erida
+  - Socks-Quartermaster #erida
   - GroupTankHarness
   - QuartermasterHead
   - QuartermasterNeck
@@ -235,6 +309,9 @@
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
+  - Werx-CargoTechnician #erida
+  - Niz-CargoTechnician #erida
+  - Socks-CargoTechnician #erida
   - GroupTankHarness
   - CargoTechnicianHead
   - CargoTechnicianJumpsuit
@@ -251,6 +328,9 @@
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
+  - Werx-SalvageSpecialist #erida
+  - Niz-SalvageSpecialist #erida
+  - Socks-SalvageSpecialist #erida
   - GroupTankHarness
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
@@ -265,6 +345,9 @@
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
+  - Werx-ChiefEngineer #erida
+  - Niz-ChiefEngineer #erida
+  - Socks-ChiefEngineer #erida
   - GroupTankHarness
   - ChiefEngineerHead
   - ChiefEngineerJumpsuit
@@ -280,9 +363,13 @@
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
+  - Werx-TechnicalAssistant #erida
+  - Niz-TechnicalAssistant #erida
+  - Socks-TechnicalAssistant #erida
   - GroupTankHarness
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
+  - Trinkets
   - SurvivalExtended
   - Trinkets
   #- TechnicalAssistantJobTrinkets
@@ -291,6 +378,9 @@
 - type: roleLoadout
   id: JobStationEngineer
   groups:
+  - Werx-Engineer #erida
+  - Niz-Engineer #erida
+  - Socks-Engineer #erida
   - GroupTankHarness
   - StationEngineerHead
   - StationEngineerJumpsuit
@@ -298,6 +388,7 @@
   - StationEngineerOuterClothing
   - StationEngineerShoes
   - StationEngineerID
+  - Trinkets
   - SurvivalExtended
   - Trinkets
   #- StationEngineerJobTrinkets
@@ -306,6 +397,9 @@
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
+  - Werx-AtmosphericTechnician #erida
+  - Niz-AtmosphericTechnician #erida
+  - Socks-AtmosphericTechnician #erida
   - GroupTankHarness
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianBackpack
@@ -320,6 +414,9 @@
 - type: roleLoadout
   id: JobResearchDirector
   groups:
+  - Werx-ResearchDirector #erida
+  - Niz-ResearchDirector #erida
+  - Socks-ResearchDirector #erida
   - GroupTankHarness
   - ResearchDirectorHead
   - ResearchDirectorNeck
@@ -337,6 +434,9 @@
 - type: roleLoadout
   id: JobScientist
   groups:
+  - Werx-Scientist #erida
+  - Niz-Scientist #erida
+  - Socks-Scientist #erida
   - GroupTankHarness
   - ScientistHead
   - ScientistNeck
@@ -355,6 +455,9 @@
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
+  - Werx-ResearchAssistant #erida
+  - Niz-ResearchAssistant #erida
+  - Socks-ResearchAssistant #erida
   - GroupTankHarness
   - ResearchAssistantJumpsuit
   - ScientistBackpack
@@ -368,6 +471,9 @@
 - type: roleLoadout
   id: JobHeadOfSecurity
   groups:
+  - Werx-HeadOfSecurity #erida
+  - Niz-HeadOfSecurity #erida
+  - Socks-HeadOfSecurity #erida
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
@@ -379,10 +485,14 @@
   - Trinkets
   - HeadofSecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
+  - SecurityServiceWeapon # Erida
 
 - type: roleLoadout
   id: JobWarden
   groups:
+  - Werx-Warden #erida
+  - Niz-Warden #erida
+  - Socks-Warden #erida
   - WardenHead
   - WardenJumpsuit
   - SecurityBackpack
@@ -393,10 +503,14 @@
   - Trinkets
   - WardenJobTrinkets
   - GroupSpeciesBreathToolSecurity
+  - SecurityServiceWeapon # Erida
 
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
+  - Werx-SecurityOfficer #erida
+  - Niz-SecurityOfficer #erida
+  - Socks-SecurityOfficer #erida
   - SecurityHead
   - SecurityJumpsuit
   - SecurityBackpack
@@ -408,10 +522,15 @@
   - Trinkets
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
+  - SecurityServiceWeapon # Erida
 
 - type: roleLoadout
   id: JobDetective
   groups:
+  - Werx-Detective #erida
+  - Niz-Detective #erida
+  - Socks-Detective #erida
+  - GroupTankHarness
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
@@ -426,17 +545,134 @@
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
+  - Werx-Cadet #erida
+  - Niz-Cadet #erida
+  - Socks-Cadet #erida
   - SecurityCadetJumpsuit
   - SecurityBackpack
   - SurvivalSecurity
   - Trinkets
   #- SecurityCadetJobTrinkets
   - GroupSpeciesBreathToolSecurity
+  - SecurityServiceWeapon # Erida
+
+# Medical
+- type: roleLoadout
+  id: JobChiefMedicalOfficer
+  groups:
+  - Werx-CMO #erida
+  - Niz-CMO #erida
+  - Socks-CMO #erida
+  - GroupTankHarness
+  - ChiefMedicalOfficerHead
+  - MedicalMask
+  - ChiefMedicalOfficerJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - ChiefMedicalOfficerOuterClothing
+  - ChiefMedicalOfficerNeck
+  - ChiefMedicalOfficerShoes
+  - MedicalEyewear
+  - SurvivalMedical
+  - Trinkets
+  - ChiefMedicalOfficerJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobMedicalDoctor
+  groups:
+  - Werx-Doctor #erida
+  - Niz-Doctor #erida
+  - Socks-Doctor #erida
+  - GroupTankHarness
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - MedicalDoctorPDA
+  - MedicalEyewear
+  - SurvivalMedical
+  - Trinkets
+  - MedicalDoctorJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobMedicalIntern
+  groups:
+  - Werx-Intern #erida
+  - Niz-Intern #erida
+  - Socks-Intern #erida
+  - GroupTankHarness
+  - MedicalInternJumpsuit
+  - MedicalBackpack
+  - MedicalEyewear
+  - SurvivalMedical
+  - Trinkets
+  - MedicalInternJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobChemist
+  groups:
+  - Werx-Chemist #erida
+  - Niz-Chemist #erida
+  - Socks-Chemist #erida
+  - GroupTankHarness
+  - MedicalMask
+  - ChemistJumpsuit
+  - MedicalGloves
+  - ChemistBackpack
+  - ChemistOuterClothing
+  - MedicalShoes
+  - SurvivalMedical
+  - Trinkets
+  - ChemistJobTrinkets
+  - GroupSpeciesBreathToolMedical
+
+- type: roleLoadout
+  id: JobParamedic
+  groups:
+  - Werx-Paramedic #erida
+  - Niz-Paramedic #erida
+  - Socks-Paramedic #erida
+  - GroupTankHarness
+  - ParamedicHead
+  - MedicalMask
+  - ParamedicJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - ParamedicOuterClothing
+  - ParamedicShoes
+  - MedicalEyewear
+  - SurvivalMedical
+  - Trinkets
+  - ParamedicJobTrinkets
+  - GroupSpeciesBreathToolMedical
 
 # Wildcards
 - type: roleLoadout
+  id: JobZookeeper
+  groups:
+  - Werx-Zoo #erida
+  - Niz-Zoo #erida
+  - Socks-Zoo #erida
+  - GroupTankHarness
+  - CommonBackpack
+  - Glasses
+  - Survival
+  - Trinkets
+  - ZookeeperJobTrinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
   id: JobReporter
   groups:
+  - Werx-Reporter #erida
+  - Niz-Reporter #erida
+  - Socks-Reporter #erida
   - GroupTankHarness
   - ReporterJumpsuit
   - CommonBackpack
@@ -449,6 +685,10 @@
 - type: roleLoadout
   id: JobPsychologist
   groups:
+  - Werx-Psychologist #erida
+  - Niz-Psychologist #erida
+  - Socks-Psychologist #erida
+  - PsychologistJumpsuit #backmen
   - GroupTankHarness
   - PsychologistJumpsuit
   - MedicalBackpack
