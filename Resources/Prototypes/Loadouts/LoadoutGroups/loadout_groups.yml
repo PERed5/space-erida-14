@@ -139,6 +139,10 @@
   loadouts:
   - CaptainOuterClothing
   - CaptainWintercoat
+  # Erida start
+  - ClothingOuterArmorCaptainCarapaceWhite
+  - ClothingOuterArmorCaptainCarapaceSheriff
+  # Erida end
 
 #- type: loadoutGroup
 #  id: CaptainJobTrinkets

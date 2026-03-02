@@ -441,6 +441,41 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+  - type: LanguageSpeaker #backmen: languages
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge
+    speaks:
+    - Binary
+    - TauCetiBasic
+    - SolCommon
+    - RootSpeak
+    - Dwarven
+    - Garpy
+    - Moffic
+    - Nekomimetic
+    - Dragon
+    - Mar
+    - Slime
+    - Canilunzt
+    - Freespeak
+    - Spider
+    - Wawa
+    understands:
+    - Binary
+    - TauCetiBasic
+    - SolCommon
+    - RootSpeak
+    - Dwarven
+    - Garpy
+    - Moffic
+    - Nekomimetic
+    - Dragon
+    - Mar
+    - Slime
+    - Canilunzt
+    - Freespeak
+    - Spider
+    - Wawa
   - type: Tag
     tags:
     - HideContextMenu
