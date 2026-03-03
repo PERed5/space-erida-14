@@ -168,6 +168,7 @@
     - id: RubberStampCE
     - id: MetalFoamGrenade
     - id: SupermatterFlatpack #backmen
+    - id: ProfessionalRCD #Erida-Edit
     - id: PlushieLizardJobChiefengineer
       prob: 0.02
 
@@ -218,6 +219,8 @@
     - id: HandheldCrewMonitor
     - id: Hypospray
     - id: MedTekCartridge
+    - id: ClothingEyesHudMedChem #Erida-edit
+    - id: AdvancedDefibrillator #Erida-edit
     # Standard command gear
     - id: RubberStampCMO
     - id: ClothingHeadsetAltMedical

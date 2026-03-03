@@ -9,6 +9,25 @@
   access:
   - Service
   - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: LanguageOnSpawn
+      languages:
+      - TauCetiBasic
+      - Shark
+      - Dwarven
+      - Demonic
+      - Dragon
+      - Canilunzt
+      - RootSpeak
+      - Mar
+      - Moffic
+      - SolCommon
+      - Nekomimetic
+      - Spider
+      - Slime
+      - Freespeak
 
 - type: startingGear
   id: LibrarianGear

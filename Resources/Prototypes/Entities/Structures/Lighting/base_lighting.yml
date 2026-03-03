@@ -441,6 +441,14 @@
   parent: AlwaysPoweredWallLight
   suffix: ""
   components:
+ # Erida edit start
+  - type: AmbientSound
+    enabled: false
+    range: 4
+    volume: -15
+    sound:
+      path: /Audio/Machines/alarm.ogg
+ # Erida edit end
   - type: PointLight
     enabled: false
     radius: 5

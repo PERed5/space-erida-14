@@ -27,8 +27,9 @@
       layers:
         - shader: unshaded
           map: ["enum.EffectLayers.Unshaded"]
-          sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
-          state: impact_laser_blue
+          sprite: _Impstation/Objects/Weapons/Guns/Projectiles/impacts.rsi # Impstation
+          state: stun # Impstation
+          scale: 0.8,0.8
     - type: EffectVisuals
     - type: Tag
       tags:
@@ -45,9 +46,9 @@
     layers:
     - shader: unshaded
       map: ["enum.EffectLayers.Unshaded"]
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
-      state: impact_laser_greyscale
-      color: orangered
+      sprite: _Impstation/Objects/Weapons/Guns/Projectiles/impacts.rsi # Impstation
+      state: red # Impstation
+      scale: 0.8,0.8
   - type: EffectVisuals
   - type: Tag
     tags:
