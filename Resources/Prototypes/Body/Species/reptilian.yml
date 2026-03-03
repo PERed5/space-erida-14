@@ -99,6 +99,11 @@
           32:
             sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
             state: outerwear
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: shoes
   - type: InitialBody
     organs:
       Torso: OrganReptilianTorso

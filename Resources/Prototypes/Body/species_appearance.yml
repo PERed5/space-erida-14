@@ -21,9 +21,9 @@
     # Underwear & clothing
     - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
     - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
-    - map: [ "socks" ] # Backmen
     - map: [ "underpants" ] # Backmen
     - map: [ "undershirt" ] # Backmen
+    - map: [ "socks" ] # Backmen
     - map: ["jumpsuit"]
 
     # Extremities

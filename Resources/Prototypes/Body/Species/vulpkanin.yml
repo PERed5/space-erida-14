@@ -134,6 +134,11 @@
           32:
             sprite: Mobs/Species/Vulpkanin/displacement.rsi
             state: belt
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Corvax/Mobs/Species/Vulpkanin/displacement.rsi # Corvax vulpkanins
+            state: shoes
 
 - type: entity
   parent:
