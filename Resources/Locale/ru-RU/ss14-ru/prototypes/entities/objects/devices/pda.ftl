@@ -104,7 +104,7 @@ ent-VisitorPDA = { ent-ClearPDA }
     .desc = { ent-ClearPDA.desc }
 # Corvax-HiddenDesc-Start
 ent-SyndiPDA = кроваво-красный КПК
-    .desc = Смотря на этот КПК, ваше сердцебиение учащается... а, нет. Вы ведь теперь член Пакта.
+    .desc = Смотря на этот КПК, ваше сердцебиение учащается.
     .suffix = КПК Синдиката, Ядерный Оперативник
 # Corvax-HiddenDesc-End
 ent-ERTLeaderPDA = КПК ОБР

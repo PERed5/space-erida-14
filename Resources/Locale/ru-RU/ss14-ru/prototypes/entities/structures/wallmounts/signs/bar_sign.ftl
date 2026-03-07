@@ -52,4 +52,4 @@ ent-BarSignSpacebucks = Спейсбакс.
 ent-BarSignMaltroach = Пивная Моль
     .desc = Сквик!
 ent-BarSignWhiskeyEchoes = Виски Эхо
-    .desc = Элитный бар для элитных опер... Подождите, мы же теперь Пакт?
+    .desc = Элитный бар для элитных оперативников!

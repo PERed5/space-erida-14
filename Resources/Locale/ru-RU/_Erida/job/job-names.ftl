@@ -10,3 +10,4 @@ job-name-centcom-engineer = инженер Центком
 job-name-centcom-clerc = клерк Центком
 job-name-militia = ополчение
 JobMilitia = ополчение
+job-name-centcommoff = Официальный представитель Центком
