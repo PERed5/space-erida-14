@@ -33,7 +33,6 @@
 - type: marking
   id: AugmentsBishopTorso
   bodyPart: Chest
-  markingCategory: Chest
 #  speciesRestriction: [Human, Felinid, Shark, Dwarf, Moth, SlimePerson]
   sprites:
     - sprite: _DeadSpace/Mobs/Customization/augments/bishop.rsi
