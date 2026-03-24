@@ -142,9 +142,9 @@ def get_discord_body(content: str):
     return {
         "content": content,
         # Do not allow any mentions.
-        "allowed_mentions": {"parse": []},
+        # "allowed_mentions": {"parse": []},
         # SUPPRESS_EMBEDS
-        # "flags": 1 << 2,
+        "flags": 0,
     }
 
 def send_with_retry(webhook_url: str, body: dict, name: str):
