@@ -235,6 +235,7 @@ def entry_to_embed(entry: ChangelogEntry) -> dict:
         "title": entry["title"],
         "description": description,
         "color": 0xa06da8,
+        "fields": [],
         "footer": {
             "text": entry.get("author"),
             "icon_url": entry.get("avatar_url"),
@@ -253,9 +254,10 @@ def send_embed(embed: dict):
         return
 
     body = {
+        "content": "",
         "embeds": [embed],
-        "allowed_mentions": {"parse": []},
-        "flags": 1 << 2,
+        # "allowed_mentions": {"parse": []},
+        # "flags": 1 << 2,
     }
 
     send_with_retry(webhook_url, body, "Erida")
