@@ -79,3 +79,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/296
   avatar_url: https://avatars.githubusercontent.com/u/230472830?v=4
   title: '[Fix] Баг с стрельбой из лампы джина.'
+- author: Sidzaru
+  changes:
+    - type: Add
+      message: Портирована система эхо.
+  id: 7
+  time: '2026-03-25T17:04:34.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/297
+  avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
+  title: '[Port] Echo system from monolith'
