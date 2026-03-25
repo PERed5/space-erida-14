@@ -60,9 +60,9 @@
         - proto: RandomCargoCorpseSpawner
           cost: 2
           prob: 0.5
-        - proto: RandomCommandCorpseSpawner
-          cost: 5
-          prob: 0.5
+        # - proto: RandomCommandCorpseSpawner
+        #   cost: 5
+        #   prob: 0.5
         - proto: RandomEngineerCorpseSpawner
           cost: 2
           prob: 0.5

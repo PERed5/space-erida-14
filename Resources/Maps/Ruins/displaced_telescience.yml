@@ -4532,13 +4532,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,-4.5
       parent: 1
-- proto: RandomCommandCorpseSpawner
-  entities:
-  - uid: 369
-    components:
-    - type: Transform
-      pos: 9.5,-3.5
-      parent: 1
+# - proto: RandomCommandCorpseSpawner
+#   entities:
+#   - uid: 369
+#     components:
+#     - type: Transform
+#       pos: 9.5,-3.5
+#       parent: 1
 - proto: RandomEngineerCorpseSpawner
   entities:
   - uid: 370
