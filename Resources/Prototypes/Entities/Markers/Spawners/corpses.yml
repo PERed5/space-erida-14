@@ -89,15 +89,16 @@
     prototypes:
       - MobRandomSecurityCorpse
 
-- type: entity
-  name: Random Command Corpse Spawner
-  id: RandomCommandCorpseSpawner
-  parent: SalvageHumanCorpseSpawner
-  components:
-  - type: Sprite
-    layers:
-      - state: captain
-      - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomCommandCorpse
+# Erida edit
+# - type: entity
+#   name: Random Command Corpse Spawner
+#   id: RandomCommandCorpseSpawner
+#   parent: SalvageHumanCorpseSpawner
+#   components:
+#   - type: Sprite
+#     layers:
+#       - state: captain
+#       - state: green
+#   - type: ConditionalSpawner
+#     prototypes:
+#       - MobRandomCommandCorpse
