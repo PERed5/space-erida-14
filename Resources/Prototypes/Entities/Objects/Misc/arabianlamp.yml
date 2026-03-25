@@ -5,14 +5,20 @@
   description: Why the heck won't this piece of junk open!?
   components:
   - type: Appearance
-  - type: AccessReader
-    access: [ [ "CentralCommand" ] ]
-    breakOnAccessBreaker: false
+# - type: AccessReader # Erida lamp nerf
+  #  access: [ [ "CentralCommand" ] ]
+  #  breakOnAccessBreaker: false
   - type: Lock
     lockOnClick: false
     breakOnAccessBreaker: false
   - type: EntityStorage
-    capacity: 1 # Its smol.
+    # Erida-start
+    capacity: 1
+    airtight: false
+    whitelist:
+      tags:
+        - VimPilot
+    # Erida-end
   # - type: EntityTableContainerFill
     # containers:
       # entity_storage:
