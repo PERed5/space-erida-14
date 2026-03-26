@@ -131,7 +131,8 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Thump']
+    allowedEmotes: ['Thump', 'LizardyWEH', 'Rpurr']
+# Erida changed
   - type: TypingIndicator
     proto: lizard
   - type: Vocal

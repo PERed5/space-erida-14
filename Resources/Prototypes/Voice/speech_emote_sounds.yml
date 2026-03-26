@@ -88,6 +88,12 @@
   params:
     variation: 0.125
   sounds:
+# Erida changes
+    Rpurr:
+      path: /Audio/Voice/Reptilian/reptilian_purr.ogg
+    LizardyWEH:
+      path: /Audio/Voice/Reptilian/reptilian_weh.ogg
+# Erida changes
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Honk:
@@ -110,6 +116,12 @@
   params:
     variation: 0.125
   sounds:
+# Erida changes
+    Rpurr:
+      path: /Audio/Voice/Reptilian/reptilian_purr.ogg
+    LizardyWEH:
+      path: /Audio/Voice/Reptilian/reptilian_weh.ogg
+# Erida changes
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Honk:
@@ -588,6 +600,12 @@
 - type: emoteSounds
   id: ReptilianBodyEmotes
   sounds:
+# Erida changes
+    Rpurr:
+      path: /Audio/Voice/Reptilian/reptilian_purr.ogg
+    LizardyWEH:
+      path: /Audio/Voice/Reptilian/reptilian_weh.ogg
+# Erida changes
     Thump:
       path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
       params:
