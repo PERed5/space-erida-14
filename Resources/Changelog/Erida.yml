@@ -79,11 +79,20 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/296
   avatar_url: https://avatars.githubusercontent.com/u/230472830?v=4
   title: '[Fix] Баг с стрельбой из лампы джина.'
+- author: Агент плесень хайпует
+  changes:
+    - type: Add
+      message: Добавлены урчания и WEH для унатхов! VIVA LA UNATI!
+  id: 10
+  time: '2026-03-26T19:11:21.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/301
+  avatar_url: https://avatars.githubusercontent.com/u/145777900?v=4
+  title: 'Добавление урчания и веха для унатхов'
 - author: Sidzaru
   changes:
     - type: Add
       message: Портирована система эхо.
-  id: 7
+  id: 11
   time: '2026-03-25T17:04:34.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/297
   avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
@@ -92,7 +101,7 @@ Entries:
   changes:
     - type: Fix
       message: Спрайты наложения реагента на копья теперь более коректные.
-  id: 8
+  id: 12
   time: '2026-03-25T17:41:47.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/298
   avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
@@ -107,17 +116,8 @@ Entries:
       message: Хилиум теперь уменьшает кровотечение.
     - type: Fix
       message: Эффект дополнительной стамины от нитриума теперь работает.
-  id: 9
+  id: 13
   time: '2026-03-25T19:11:21.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/299
   avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
   title: '[Tweaks/Fix] Атмос'
-- author: Агент плесень хайпует
-  changes:
-    - type: Add
-      message: Добавлены урчания и WEH для унатхов! VIVA LA UNATI!
-  id: 10
-  time: '2026-03-26T19:11:21.0000000+00:00'
-  url: https://github.com/dead-space-server/space-erida-14/pull/301
-  avatar_url: https://avatars.githubusercontent.com/u/145777900?v=4
-  title: 'Добавление урчания и веха для унатхов'
