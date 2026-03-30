@@ -1,0 +1,2006 @@
+#Шлюзы
+
+- type: entity
+  id: AirlockRealWare
+  parent: BaseStructure
+  name: Шлюз
+  description: Оно открывается, закрывается. Открывается и закрывается. Кажется без нужных доступов вам не стоит заходить сюда...
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: StationAiWhitelist
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/smash.ogg"
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/basic.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+      visible: false
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: bolted_unlit
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+    - state: panel_open
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: Interface/Misc/ai_hud.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.HUD"]
+    - state: electrified
+      sprite: Effects/electricity.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.Sparks"]
+  - type: AnimationPlayer
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: LayerChangeOnWeld
+    unWeldedLayer: AirlockLayer
+    weldedLayer: WallLayer
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: AccessReader
+    containerAccessProvider: board
+  - type: Door
+    crushDamage:
+      types:
+        Blunt: 15
+    openSound:
+      path: RealWare/AirLock/AirLockSounds/AirLockOpen.ogg
+    closeSound:
+      path: RealWare/AirLock/AirLockSounds/AirLockClose.ogg
+    denySound:
+      path: RealWare/AirLock/AirLockSounds/AirLockDeny.ogg
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: Weldable
+    fuel: 5
+    time: 3
+  - type: Airlock
+    openUnlitVisible: true # Corvax-Resprite-Airlocks
+  - type: NavMapDoor
+  - type: DoorBolt
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ElectrifiedVisuals.ShowSparks:
+        enum.ElectrifiedLayers.Sparks:
+          True: { visible: True }
+          False: { visible: False }
+  - type: WiresVisuals
+  - type: ElectrocutionHUDVisuals
+  - type: ApcPowerReceiver
+    powerLoad: 20
+  - type: ExtensionCableReceiver
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: WiresPanel
+  - type: WiresPanelSecurity
+  - type: Wires
+    boardName: wires-board-name-airlock
+    layoutId: Airlock
+  - type: DoorSignalControl
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Open
+      - Close
+      - Toggle
+      - AutoClose
+      - DoorBolt
+  - type: DeviceLinkSource
+    ports:
+      - DoorStatus
+    lastSignals:
+      DoorStatus: false
+  - type: SoundOnOverload
+  - type: SpawnOnOverload
+  - type: UserInterface
+    interfaces:
+      enum.AiUi.Key:
+        type: StationAiBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: RadiationBlocker
+    resistance: 3
+  - type: Occluder
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      # TODO this should go to the broken node first
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: Construction
+    graph: Airlock
+    node: airlock
+    containers:
+    - board
+  - type: PlacementReplacement
+    key: walls
+  - type: Paintable
+    group: AirlockStandard
+  - type: StaticPrice
+    price: 150
+  - type: LightningTarget
+    priority: 1
+  - type: Tag
+    tags:
+      - Airlock
+      # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+  - type: PryUnpowered
+  - type: BlockWeather
+  - type: GuideHelp
+    guides:
+    - Airlocks
+    - WirePanels
+    - Networking
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockSecurityRealWare
+  suffix: (Прото) Безопастность
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockSecurityRealWare.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockMedicalRealWare
+  suffix: (Прото) Медицинский
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockMedicalRealWare.rsi
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockCargoRealWare
+  suffix: (Прото) Снабжение
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockCargoRealWare.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockEngineeringRealWare
+  suffix: (Прото) Инженеры
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockEngiRealWare.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockServiceRealWare
+  suffix: (Прото) Сервис
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockServiceRealWare.rsi
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: AirlockRealWare
+  id: AirlockCommandRealWare
+  suffix: (Прото) Командование
+  components:
+  - type: Sprite
+    sprite: RealWare/AirLock/AirLockCommandRealWare.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: Wires
+    layoutId: AirlockCommand
+
+
+#Вендоматы
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineRealWareMedicalBase
+  name: NanoMed Civilian
+  description: Это вендомат медицинских препаратов. В нём содержатся продвинутые медицинские препараты и лекарства.
+  components:
+  - type: VendingMachine
+    pack: NanoMedCivilianInventory
+    offState: off-civilian
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 0.6
+  - type: DatasetVocalizer
+    dataset: NanoMedAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: RealWare/VendMachine/VendomatRealWare.rsi
+    layers:
+    - state: "off-civilian"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off-civilian"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#9dc5c9"
+  - type: GuideHelp
+    guides:
+    - MedicalDoctor
+
+- type: entity
+  parent: VendingMachineRealWareMedicalBase
+  id: VendingMachineRealWareMedical
+  name: RealМед Медицинский
+  description: Это медицинский раздатчик медицинских препаратов. В нём содержится продвинутые медицинские препараты для оказания врачебной помощи.
+  components:
+  - type: VendingMachine
+    pack: RealMedMedical
+    offState: off
+  - type: Sprite
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: vendingMachineInventory
+  id: RealMedMedical
+  startingInventory:
+    HandheldHealthAnalyzer: 3
+    MedicatedSuture: 4
+    RegenerativeMesh: 4
+    Bloodpack: 6
+    BoxSyringe: 2
+    Tourniquet: 4
+    ChemistryBottleEpinephrine: 3
+    ChemistryBottleBicaridine: 3
+    ChemistryBottleDermaline: 3
+    ChemistryBottleSigynate: 1
+    PillCanisterTricordrazine: 2
+    PillCanisterCopper: 2
+    PillCanisterPotassiumIodide: 2
+    SyringeIpecac: 1
+    ClothingEyesHudMedical: 2
+    ClothingEyesEyepatchHudMedical: 2
+    ClothingOuterCoatAMG: 2
+    ClothingMaskBreathMedicalSecurity: 2
+  contrabandInventory:
+    PillCanisterRandom: 3
+    PillSpaceDrugs: 3
+    FoodApple: 1
+
+- type: entity
+  parent: VendingMachineRealWareMedicalBase
+  id: VendingMachineRealWareMedicalCiwillian
+  name: RealМед Гражданский
+  description: Это медицинский раздатчик медицинских препаратов. В нём содержится всё чтобы оказать срочную доврачебную и первую медицинскую помощь.
+  components:
+  - type: VendingMachine
+    pack: RealMedCiwillian
+    offState: off
+  - type: Sprite
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: vendingMachineInventory
+  id: RealMedCiwillian
+  startingInventory:
+    HandheldHealthAnalyzer: 2
+    Tourniquet: 2
+    Bloodpack: 4
+    Ointment: 3
+    Gauze: 3
+    Brutepack: 3
+  contrabandInventory:
+    PillCanisterRandom: 1
+    PowerCellSmall: 2
+
+#Компьютеры, машины, станки, авто/протолаты
+
+- type: entity
+  parent: ComputerComms
+  id: RealWareComputerComms
+  name: консоль оповещения линкора "ТМС Магнум"
+  description: А что тут за кнопочки... Тут еще микрофон рядом...
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm_syndie
+    - map: ["computerLayerKeys"]
+      state: syndie_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [[ "NuclearOperative" ]]
+  - type: CommunicationsConsole
+    title: HIS "Magnum"
+    color: "#353acc"
+    canShuttle: false
+    global: true #announce to everyone they're about to fuck shit up
+    announceSentBy: false # The title already says who they are.
+    sound: RealWare/Sounds/Anounsment1.ogg
+  - type: Computer
+    board: SyndicateCommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#f71713"
+
+#Вещи
+
+#Декальки
+
+- type: decal
+  id: MagnumLogo1
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo1
+
+- type: decal
+  id: MagnumLogo2
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo2
+
+- type: decal
+  id: MagnumLogo3
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo3
+
+- type: decal
+  id: MagnumLogo4
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo4
+
+- type: decal
+  id: MagnumLogo5
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo5
+
+- type: decal
+  id: MagnumLogo6
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/MagnumLogo.rsi
+    state: MagnumLogo6
+
+- type: decal
+  id: RealWareLogoBridge2
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge2
+
+- type: decal
+  id: RealWareLogoBridge3
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge3
+
+- type: decal
+  id: RealWareLogoBridge4
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge4
+
+- type: decal
+  id: RealWareLogoBridge5
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge5
+
+- type: decal
+  id: RealWareLogoBridge10
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge10
+
+- type: decal
+  id: RealWareLogoBridge11
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge11
+
+- type: decal
+  id: RealWareLogoBridge12
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge12
+
+- type: decal
+  id: RealWareLogoBridge15
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge15
+
+- type: decal
+  id: RealWareLogoBridge16
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge16
+
+- type: decal
+  id: RealWareLogoBridge17
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge17
+
+- type: decal
+  id: RealWareLogoBridge18
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge18
+
+- type: decal
+  id: RealWareLogoBridge19
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge19
+
+- type: decal
+  id: RealWareLogoBridge20
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge20
+
+- type: decal
+  id: RealWareLogoBridge21
+  tags: ["crayon"]
+  sprite:
+    sprite: RealWare/Decal/RealWareLogoBridge.rsi
+    state: RealWareLogoBridge21
+
+- type: Tag
+  id: VendingMachineMedicalRealWare
+
+- type: Tag
+  id: VendingMachineCiwillianRealWare
+
+- type: entity
+  name: BaseGhostOfMantis
+  parent: BaseItem
+  id: BaseWeaponSubMachineGunGhostMantis
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,1
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    minAngle: 2
+    maxAngle: 16
+    fireRate: 8
+    burstFireRate: 8
+    angleIncrease: 3
+    angleDecay: 16
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/shotSMG.ogg
+    defaultDirection: 1, 0
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: RealWare/SoundsGun/сhokSMG.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGunGhostMantis
+        insertSound: RealWare/SoundsGun/insertmagSMG.ogg
+        ejectSound: RealWare/SoundsGun/ejectmagSMG.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGunGhostMantis
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: Пистолет Пулемёт модели "Богомол"
+  parent: [BaseWeaponSubMachineGunGhostMantis, BaseSyndicateContraband]
+  id: WeaponSubMachineGunGhostOfMantis
+  description:
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/GhostMantis.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: RealWare/Weapon/GhostMantis.rsi
+  - type: Gun
+    minAngle: 2
+    maxAngle: 16
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/shotSMG.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  id: BaseMagazinePistolSubMachineGunGhostMantis  # Yeah it's weird but it's pistol caliber
+  name: Барабаный магазин для Пистолета-Пулетёта "Призрак Богомол"
+  parent: [ BaseItem, BaseSecurityContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSubMachineGunGhostMantis
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 50
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: RealWare/Mag/GhostMantisMag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  # DS14-start
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  # DS14-end
+
+- type: entity
+  id: MagazinePistolSubMachineGunGhostMantis
+  name: Барабаный магазин для Пистолета-Пулетёта "Призрак Богомол"
+  parent: BaseMagazinePistolSubMachineGunGhostMantis
+  description: 30-round double-stack magazine for submachine guns. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol
+    whitelist: # Redundant
+      tags:
+        - CartridgePistol
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: Tag
+  id: MagazinePistolSubMachineGunGhostMantis
+
+- type: entity
+  name: BasePistolSharvar
+  parent: BaseItem
+  id: BaseWeaponPistolSharvar
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+    storedOffset: 0,-4
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    fireRate: 6
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: RealWare/SoundsGun/PistolSharvarReload.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSharvar
+        insertSound: RealWare/SoundsGun/PistolSharvarInsertMag.ogg
+        ejectSound: RealWare/SoundsGun/PistolSharvarEjectMag.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSharvar
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: AmmoCounter
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: Пистолет модели "Шарвар"
+  parent: [BaseWeaponPistolSharvar, BaseSecurityContraband]
+  id: WeaponPistolSharvar
+  description:
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/Sharvar.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: RealWare/Weapon/Sharvar.rsi
+  - type: Item
+    storedOffset: 0,-2
+  - type: Gun
+    fireRate: 5 # DS14
+    availableModes:
+    - SemiAuto
+    - Burst
+    soundGunshot:
+      path: RealWare/SoundsGun/PistolSharvarShot.ogg
+  - type: StealTarget
+    stealGroup: OfficerHandgun
+
+- type: entity
+  id: BaseMagazinePistolSharvar
+  name: Магазин для пистолета "Шарвар"
+  parent: [ BaseItem, BaseSecurityContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolSharvar
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgePistol
+    capacity: 18 # DS14
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: RealWare/Mag/SharvarMag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  # DS14-start
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  # DS14-end
+
+- type: entity
+  id: MagazinePistolSharvar
+  name: Магазин для пистолета "Шарвар"
+  parent: BaseMagazinePistolSharvar
+  description: 10-round single-stack magazine for pistols. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: Tag
+  id: MagazinePistolSharvar
+
+- type: entity
+  name: BaseWeaponRifleRebelion
+  parent: [BaseItem, BaseGunWieldable]
+  id: BaseWeaponRifleRebelion
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,2
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/shotAuto.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: RealWare/SoundsGun/chokAuto.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleRebelion
+        insertSound: RealWare/SoundsGun/insertmagAuto.ogg
+        ejectSound: RealWare/SoundsGun/ejectmagAuto.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleRebelion
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: Автоматическая винтовка модели "Бунтарь"
+  parent: [BaseWeaponRifleRebelion, BaseSecurityContraband]
+  id: WeaponRifleRebelion
+  description: Самый массовый в производстве автомат ЧВК корпорации "RealWare" и часто продаваемый на рынке, надежный, удобный, стабильный и самое главное - убойный.
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/Rebelion.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: RealWare/Weapon/Rebelion.rsi
+  - type: Gun
+    soundGunshot:
+      path: RealWare/SoundsGun/shotAuto.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleRebelion
+        insertSound: RealWare/SoundsGun/insertmagAuto.ogg
+        ejectSound: RealWare/SoundsGun/ejectmagAuto.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleRebelion
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  # - type: MagazineVisuals
+  #   magState: mag
+  #   steps: 5
+  #   zeroVisible: true
+  # - type: Appearance
+
+- type: entity
+  id: BaseMagazineRifleRebelion
+  name: "magazine (.20 rifle)"
+  parent: [ BaseItem, BaseSecurityContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineRifleRebelion
+  - type: Item
+    size: Small
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeRifle
+    capacity: 30
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: RealWare/Mag/RebelionMag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineRifleRebelion
+  name: "magazine (.20 rifle)"
+  parent: BaseMagazineRifleRebelion
+  description: 25-round double stack magazine for combat rifles. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeRifle
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: Tag
+  id: MagazineRifleRebelion
+
+- type: entity
+  name: BaseWeaponLightMachineGunCarnage
+  parent: BaseItem
+  id: BaseWeaponLightMachineGunCarnage
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,3
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/LMGs/l6.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -20
+    maxAngle: -20
+  - type: Gun
+    minAngle: 20
+    maxAngle: 25
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 9
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/MachinegunShot.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/lmg_cock.ogg
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifleBoxCarnage
+        insertSound: RealWare/SoundsGun/MachinegunMagOn.ogg
+        ejectSound: RealWare/SoundsGun/MachinegunMagOff.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifleBoxCarnage
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+  - type: UseDelay
+    delay: 1
+  - type: GunRequiresWield
+
+- type: entity
+  name: Пулемёт модели "Резня"
+  id: WeaponLightMachineGunCarnage
+  parent: [BaseWeaponLightMachineGunCarnage, BaseSyndicateContraband]
+  description:
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/Pulemet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-3
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  id: BaseMagazineLightRifleCarnage
+  name: "magazine (.30 rifle)"
+  parent: [ BaseItem, BaseSecurityContraband ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifleBoxCarnage
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeLightRifle
+    proto: CartridgeLightRifle
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineLightRifleBoxCarnage
+  name: Магазин пулемёта "Резня"
+  parent: BaseMagazineLightRifleCarnage
+  description: Box containing a 100-round belt of linked .30 rifle rounds, used by light machine guns such as the L6. Intended to hold general-purpose kinetic ammunition.
+  components:
+  - type: Tag
+    tags:
+      - MagazineLightRifleBoxCarnage
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 100
+  - type: Item
+  - type: Sprite
+    sprite: RealWare/Mag/CarnageMagBox.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: MagazineLightRifleBoxCarnage
+
+- type: entity
+  name: Пистолет модели "Закон"
+  parent: [BaseWeaponPistol, BaseSecurityContraband]
+  id: WeaponPistolOrder
+  description:
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/Order.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: RealWare/Weapon/Order.rsi
+  - type: Gun
+    minAngle: 1
+    maxAngle: 20
+    angleIncrease: 8
+    angleDecay: 9
+    fireRate: 4
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/PistolRevolverShot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMagnum
+        insertSound: RealWare/SoundsGun/PistolSharvarInsertMag.ogg
+        ejectSound: RealWare/SoundsGun/PistolSharvarEjectMag.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMagnum
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeMagnum
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeMagnum
+
+- type: entity
+  name: BaseWeaponRifleTempest
+  parent: [BaseItem, BaseGunWieldable]
+  id: BaseWeaponRifleTempest
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,2
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/ak.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 5
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+      - SemiAuto
+    soundGunshot:
+      path: RealWare/SoundsGun/AutomatShotVer2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: Автомат модели "Буря"
+  parent: [BaseWeaponRifleTempest, BaseSecurityContraband]
+  id: WeaponRifleTempest
+  description:
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/Tempest.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    soundGunshot:
+      path: RealWare/SoundsGun/AutomatShotVer2.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: RealWare/SoundsGun/chokAuto.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: RealWare/SoundsGun/insertmagAuto.ogg
+        ejectSound: RealWare/SoundsGun/ejectmagAuto.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Гранатомёт модели "GL-9"
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseSyndicateContraband]
+  id: WeaponLauncherGL9
+  description: PLOOP.
+  components:
+  - type: Sprite
+    sprite: RealWare/Weapon/GL9.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: RealWare/Weapon/GL9.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    capacity: 5
+    proto: GrenadeFrag
+    soundInsert:
+      path: RealWare/SoundsGun/GL9Reload.ogg
+  - type: GunRequiresWield
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  parent: IDCardStandard
+  id: LegatusIDCardRealWare
+  name: ID карта-доступа Легатуса Безопастности
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: legatussecurity
+  - type: IdCard
+    jobTitle: Легат Безопастности
+    jobIcon: JobIconLegatusSecurity
+  - type: Access
+    tags:
+    - NuclearOperative
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLegatusSecurity
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: legatusrealware
+
+- type: entity
+  parent: IDCardStandard
+  id: RegentIDCardRealWare
+  name: ID карта-доступа Регента
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: regent
+  - type: IdCard
+    jobTitle: Регент
+    jobIcon: JobIconRegentSecurity
+  - type: Access
+    tags:
+    - NuclearOperative
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconRegentSecurity
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: legatusrealware
+
+- type: entity
+  parent: IDCardStandard
+  id: SecurityIDCardRealWare
+  name: ID карта-доступа Оперативника Безопастности
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: security
+  - type: IdCard
+    jobTitle: Оперативник безопастности
+    jobIcon: JobIconSecurityOperator
+  - type: Access
+    tags:
+    - NuclearOperative
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSecurityOperator
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: securityrealware
+
+- type: entity
+  parent: IDCardStandard
+  id: EnginerIDCardRealWare
+  name: ID карта-доступа Инженера
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: enginer
+  - type: IdCard
+    jobTitle: Инженер
+    jobIcon: JobIconEnginer
+  - type: Access
+    tags:
+    - NuclearOperative
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconEnginer
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: engirealware
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMedic
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: medicrealware
+
+- type: entity
+  parent: IDCardStandard
+  id: ServiceIDCardRealWare
+  name: ID карта-доступа Сервисного Сотрудника
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: service
+  - type: IdCard
+    jobTitle: Сервисный сотрудник
+    jobIcon: JobIconService
+  - type: Access
+    tags:
+    - NuclearOperative
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconService
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: servicerealware
+
+- type: entity
+  parent: IDCardStandard
+  id: CargoIDCardRealWare
+  name: ID карта-доступа Сотрудника снабжения
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: cargo
+  - type: IdCard
+    jobTitle: Сотрудник снабжения
+    jobIcon: JobIconCargoRealWare
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCargoRealWare
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: cargorealware
+
+- type: entity
+  parent: IDCardStandard
+  id: VisitorIDCardRealWare
+  name: ID карта-доступа Посетителя
+  description: Карточка, необходимая для доступа в различные помещения. На корпусе карты имеется буква "R", а так же написано "Собственноть корпорации RealWare. В случае обнаружения немедленно сообщить и вернуть владельцу."
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/pda/id.rsi
+    layers:
+    - state: blackrealware
+    - state: visitormagnum
+  - type: IdCard
+    jobTitle: Посетитель линкора
+    jobIcon: JobIconVisitorRealWare
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconVisitorRealWare
+  icon:
+    sprite: RealWare/Objects/pda/icon.rsi
+    state: visitorrealware
+
+# Ящики, контейнеры и прочее
+
+- type: entity
+  parent: [ClothingBackpack, BaseSyndicateContraband]
+  id: ClothingBackpackSecurityRealWare
+  name: Рюкзак Оперативника Безопастности Mk.1
+  description: Стандартный рюкзак оперативника безопастности Корпорации RealWare. Состоит из прочных материалов, а так же имеет несколько карманов для хранения вещей.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Gear/securitybackpack.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,7,3
+    - 8,1,8,3
+  - type: StaticPrice
+    price: 1000
+
+- type: entity
+  parent: [ ClothingBackpack, BaseCentcommContraband ]
+  id: ClothingBackpackSecurityRealWareExtended
+  name: Рюкзак Оперативника Безопастности Mk.2
+  description: Просторный рюкзак с множеством карманов, отлично подходит для переноса вещей или похода в длительный рейд.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Gear/securitybackpackextended.rsi
+  - type: Storage
+    grid:
+    - 0,0,9,5
+  - type: ExplosionResistance # DS14
+    damageCoefficient: 0.1
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateSecureRealWare
+  name: Защищённый ящик
+  components:
+  - type: Icon
+    sprite: RealWare/Objects/Crates/ArmoredCrate.rsi
+  - type: Sprite
+    sprite: RealWare/Objects/Crates/ArmoredCrate.rsi
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateSecureWeaponRealWare
+  name: Защищённый оружейный ящик
+  components:
+  - type: Icon
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate.rsi
+  - type: Sprite
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate.rsi
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateSecureWeaponRealWare2
+  name: Защищённый оружейный ящик
+  components:
+  - type: Icon
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate2.rsi
+  - type: Sprite
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate2.rsi
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  parent: CrateBaseSecure
+  id: CrateSecureWeaponRealWare3
+  name: Защищённый оружейный ящик
+  components:
+  - type: Icon
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate3.rsi
+  - type: Sprite
+    sprite: RealWare/Objects/Crates/ArmoredWeaponCrate3.rsi
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  name: Аптечка
+  description: It's an emergency medical kit for those serious boo-boos.
+  parent: BaseStorageItem
+  id: MedkitRealWare
+  components:
+  - type: Sprite
+    sprite: RealWare/Objects/Crates/firstaidkits.rsi
+    state: firstaid
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,3,1
+  - type: Item
+    size: Large
+    sprite: RealWare/Objects/Crates/firstaidkits.rsi
+    heldPrefix: firstaid
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 150
+  - type: Tag
+    tags:
+    - Medkit
+
+- type: entity
+  name: Аптечка для лечения физических травм
+  description: "A specialized medical kit for when the toxins lab spontaneously burns down."
+  parent: MedkitRealWare
+  id: MedkitBurnRealWare
+  components:
+  - type: Sprite
+    state: burnkit
+  - type: Item
+    heldPrefix: burnkit
+
+- type: entity
+  name:  Аптечка для лечения яда
+  description: "Used to treat toxic blood content."
+  parent: MedkitRealWare
+  id: MedkitToxinRealWare
+  components:
+  - type: Sprite
+    state: toxinkit
+  - type: Item
+    heldPrefix: toxinkit
+
+- type: entity
+  name:  Аптечка для лечения кислородного голодания
+  description: "A box full of oxygen goodies."
+  parent: MedkitRealWare
+  id: MedkitO2RealWare
+  components:
+  - type: Sprite
+    state: o2kit
+  - type: Item
+    heldPrefix: o2kit
+
+- type: entity
+  name:  Аптечка для лечения механических травм
+  description: "A first aid kit for when you get toolboxed."
+  parent: MedkitRealWare
+  id: MedkitBruteRealWare
+  components:
+  - type: Sprite
+    state: brutekit
+  - type: Item
+    heldPrefix: brutekit
+
+- type: entity
+  name: Продвинутая Аптечка
+  description: "An advanced kit to help deal with advanced wounds."
+  parent: MedkitRealWare
+  id: MedkitAdvancedRealWare
+  components:
+  - type: Sprite
+    state: advkit
+  - type: Item
+    heldPrefix: advkit
+
+- type: entity
+  name: Аптечка для лечения радиации
+  description: "If you took your Rad-X you wouldn't need this."
+  parent: MedkitRealWare
+  id: MedkitRadiationRealWare
+  components:
+  - type: Sprite
+    state: radkit
+  - type: Item
+    heldPrefix: radkit
+
+- type: entity
+  name: Боевая аптечка
+  description: Сумка для хранения медицинских принадлежностей и препаратов. Внутри имеется всё чтобы оказать себе первую медицинскую помощь в условиях боевого соприкосновения.
+  parent: MedkitRealWare
+  id: MedkitCombatRealWare
+  components:
+  - type: Sprite
+    state: blackkit
+  - type: Item
+    heldPrefix: blackkit
+    size: Normal
+  - type: ExplosionResistance # DS14
+    damageCoefficient: 0
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformHeadRealWare
+  name: блузка с короткой юбкой Легата Безопастности "RealWare"
+  description: Довольно мягкая, белоснежная чистая блузка. Идеально подходит для того, чтобы вести переговоры, а так же для повседневного ношения.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/LegatUniformRealWare.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingNeckCloakHeadRealWare
+  name: Плащ Легата Безопастности Корпорации "RealWare"
+  description: Тёмно-красный плащ с мехом на плечах, золотыми пуговицами и медалями, а так же логотип корпорации на спине подтверждающий, что вы - абсолютная власть.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/LegatNeckRealWare.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitCargoRealWare
+  name: комбинезон сотрудника снабжения
+  description: Прочный спортивный комбинезон,с укороченными рукавами и шортами, выдаваемый сотрудникам снабжения копрорации "RealWare"
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/CargoJumpsuitRealWare.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitMedicRealWare1
+  name: комбинезон сотрудника медицинского сотрудника
+  description: Изготовлен из материалов обеспечивающий небольшую биологическую защиту.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/MedicJumpsuitRealWare.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitEngiRealWare
+  name: комбинезон технического оперативника
+  description: Прочный комбинезон, сшитый из прочных материалов обеспечивающий защиту.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/EngiJumpsuitRealWare.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitSecurityAltRealWare
+  name: комбинезон оперативника безопастности, с закатаными рукавами
+  description: Прочный комбинезон, сшитый из прочных материалов обеспечивающий защиту.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/SecurityJumpsuitAltRealWare.rsi
+
+- type: entity
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase]
+  id: ClothingUniformJumpsuitSecurityRealWare
+  name: комбинезон оперативника безопастности
+  description: Прочный комбинезон, сшитый из прочных материалов обеспечивающий защиту.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Clothing/SecurityJumpsuitRealWare.rsi
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseSecurityContraband]
+  id: ClothingOuterArmorBaseRealWare
+  name: Бронежилет Mk.1 версии
+  description: Стардартный бронежилет Mk.1 версии, обеспечивая владельца защитой от мелкокалиберного оружия.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Armor/vest.rsi
+  - type: Clothing
+    sprite: RealWare/Clothing/Armor/vest.rsi
+  - type: Armor #Based on /tg/ but slightly compensated to fit the fact that armor stacks in SS14.
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
+        Heat: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+
+- type: entity
+  parent: [ BaseSecurityBartenderContraband, ClothingOuterArmorBaseRealWare]
+  id: ClothingOuterArmorBasicRealWare
+  components:
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseSyndicateContraband]
+  id: ClothingShoesBootsRealWare
+  name: магнитные сапоги
+  description: Созданные по технологии реверс-инжиниринга магнитные сапоги с встроенными ускорителями.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Gear/MagbootsRealWare.rsi
+    state: icon
+  - type: Clothing
+    sprite: RealWare/Clothing/Gear/MagbootsRealWare.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 2 minutes of thrust
+      volume: 0.75
+      temperature: 293.15
+      moles:
+        Oxygen: 0.153853429 # oxygen
+        Nitrogen: 0.153853429 # nitrogen
+  - type: Item
+    sprite: null
+    size: Normal
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: ClothingOuterArmorBasic # DS14
+  id: ClothingOuterCoatAMGRealWare
+  name: плащ врача
+  description: Вариант медицинского халата с элементами бронежилета выглядит странно, но ваше сердце защищено.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Armor/trenchmedic.rsi
+  - type: Clothing
+    sprite: RealWare/Clothing/Armor/trenchmedic.rsi
+
+- type: entity
+  parent: ClothingShoesBootsJack
+  id: ClothingShoesBootsJackSecRealWare
+  components:
+    - type: Sprite
+      sprite: RealWare/Clothing/Gear/JackbootsSec.rsi
+    - type: Clothing
+      sprite: RealWare/Clothing/Gear/JackbootsSec.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretRealWare
+  name: черно-красный берет
+  description: Берет с эмблемой безопасности. Для сотрудников, которые больше ценят стиль и брутальность.
+  components:
+    - type: Sprite
+      sprite: RealWare/Clothing/Gear/beret_security.rsi
+    - type: Clothing
+      sprite: RealWare/Clothing/Gear/beret_security.rsi
+
+- type: entity
+  parent: ClothingBeltSecurity
+  id: ClothingBeltSecurityWebbingRealWare
+  name: РПС Оперативника безопастнисти
+  description: Уникальное и универсальное нагрудное приспособление, предназначенное для хранения защитного снаряжения.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Gear/securitywebbing.rsi
+  - type: Clothing
+    sprite: RealWare/Clothing/Gear/securitywebbing.rsi
+
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineSecDrobeRealWare
+  name: ОперШкаф
+  description: Автомат для выдачи снаряжения оперативников безопастности ЧВК "RealWare". Защищайте Линкор стильно и брутально!
+  components:
+  - type: VendingMachine
+    pack: SecDrobeInventoryRealWare
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: DatasetVocalizer
+    dataset: SecDrobeAds
+  - type: SpeakOnUIClosed
+    pack: GenericVendGoodbyes
+  - type: Sprite
+    sprite: RealWare/VendMachine/SecVendomat.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#294ba3"
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+  - type: TTS
+    voice: Glowtron
+
+- type: vendingMachineInventory
+  id: SecDrobeInventoryRealWare
+  startingInventory:
+    ClothingBackpackSecurityRealWare: 5
+    ClothingUniformJumpsuitSecurityRealWare: 5
+    ClothingUniformJumpsuitSecurityAltRealWare: 5
+    ClothingHandsGlovesCombat: 5
+    ClothingShoesBootsJackSecRealWare: 5
+    ClothingNeckScarfStripedSyndieRed: 3
+    ClothingNeckScarfStripedRed: 3
+    ClothingHeadHatBeretRealWare: 5
+    ClothingBeltSecurityWebbingRealWare: 5
+
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterSuitCarapaseArmorRealWare
+  name: Карапасная броня
+  description: Состоит из больших жёстких пластин армапласа, специального материала разработанный ЧВК "RealWare", который имеет небольшие эластичные свойства для адаптивности к телу.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Armor/ArmorSecRealWare.rsi
+  - type: Clothing
+    sprite: RealWare/Clothing/Armor/ArmorSecRealWare.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.75
+    coolingCoefficient: 0.5
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetCarapasArmorRealWareHelmet
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.3
+        Heat: 0.5
+        Radiation: 0.25
+        Caustic: 0.4
+
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHelmetCarapasArmorRealWareHelmet
+  name: карапасный шлем
+  description: апмапластовый шлем для карапасной брони. Имеет возможность подачи воздуха через балон, однако лишен возможности включение фонарика.
+  components:
+  - type: Sprite
+    sprite: RealWare/Clothing/Armor/ArmorSecRealWareHelmet.rsi
+  - type: Clothing
+    sprite: RealWare/Clothing/Armor/ArmorSecRealWareHelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+        Radiation: 0.25
+        Caustic: 0.9

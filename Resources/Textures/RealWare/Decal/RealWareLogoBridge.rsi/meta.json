@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "created by reimupmc (discord tearrain112",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "RealWareLogoBridge2"
+      },
+      {
+        "name": "RealWareLogoBridge3"
+      },
+      {
+        "name": "RealWareLogoBridge4"
+      },
+      {
+        "name": "RealWareLogoBridge5"
+      },
+      {
+        "name": "RealWareLogoBridge10"
+      },
+      {
+        "name": "RealWareLogoBridge11"
+      },
+      {
+        "name": "RealWareLogoBridge12"
+      },
+      {
+        "name": "RealWareLogoBridge15"
+      },
+      {
+        "name": "RealWareLogoBridge16"
+      },
+      {
+        "name": "RealWareLogoBridge17"
+      },
+      {
+        "name": "RealWareLogoBridge18"
+      },
+      {
+        "name": "RealWareLogoBridge19"
+      },
+      {
+        "name": "RealWareLogoBridge20"
+      },
+      {
+        "name": "RealWareLogoBridge21"
+      }
+    ]
+  }
+  

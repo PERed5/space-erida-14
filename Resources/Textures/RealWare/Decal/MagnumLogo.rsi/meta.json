@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "created by reimupmc (discord tearrain112",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "MagnumLogo1"
+      },
+      {
+        "name": "MagnumLogo2"
+      },
+      {
+        "name": "MagnumLogo3"
+      },
+      {
+        "name": "MagnumLogo4"
+      },
+      {
+        "name": "MagnumLogo5"
+      },
+      {
+        "name": "MagnumLogo6"
+      }
+    ]
+  }
+  
