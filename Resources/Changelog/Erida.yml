@@ -87,7 +87,7 @@ Entries:
   time: '2026-03-26T19:11:21.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/301
   avatar_url: https://avatars.githubusercontent.com/u/145777900?v=4
-  title: 'Добавление урчания и веха для унатхов'
+  title: Добавление урчания и веха для унатхов
 - author: Sidzaru
   changes:
     - type: Add
@@ -121,3 +121,26 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/299
   avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
   title: '[Tweaks/Fix] Атмос'
+- author: Anilori
+  changes:
+    - type: Add
+      message: Новый GPS
+    - type: Add
+      message: Варп-Кубы, что можно получить из сундука некрополиса
+    - type: Tweak
+      message: GPS были удалены из шкафов утилизаторов
+    - type: Tweak
+      message: в каталог шахтерМага были добавлены GPS и шахтерский выбор оружия.
+    - type: Tweak
+      message: >-
+        теперь при выпадении брони аколита из сундука некрополиса так же падают
+        ботинки и шлем культа.
+    - type: Tweak
+      message: >-
+        Теперь explorer Suit замедляет взависимости от тира улучшения его
+        пластинами голиафа: 10% 20% 30% 35% 
+  id: 14
+  time: '2026-03-30T16:12:30.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/302
+  avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
+  title: Lavaland tweaks
