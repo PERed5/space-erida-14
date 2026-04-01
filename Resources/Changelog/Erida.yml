@@ -144,3 +144,22 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/302
   avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
   title: Lavaland tweaks
+- author: Lytheriia
+  changes:
+    - type: Add
+      message: Еда и жидкости в мензурках изменяют свой цвет относительно своей теплоты
+    - type: Add
+      message: >-
+        ИИ получил возможность уйти в криосон через взаимодействие со своим
+        ядром
+    - type: Tweak
+      message: ИИ теперь может читать документы
+    - type: Fix
+      message: Иерофант прекращает бой при смерти напавшего
+    - type: Fix
+      message: Термальные очки больше не влияют на UI мониторинга камер
+  id: 15
+  time: '2026-04-01T10:22:41.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/303
+  avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
+  title: Minor updates from goobstation
