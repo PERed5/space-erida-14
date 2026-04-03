@@ -138,7 +138,7 @@ Entries:
     - type: Tweak
       message: >-
         Теперь explorer Suit замедляет взависимости от тира улучшения его
-        пластинами голиафа: 10% 20% 30% 35% 
+        пластинами голиафа: 10% 20% 30% 35%
   id: 14
   time: '2026-03-30T16:12:30.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/302
@@ -183,6 +183,23 @@ Entries:
         Автолаты отображают время производства предметов под списком необходимых
         ресурсов
   id: 17
+  time: '2026-04-03T11:37:19.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/304
+  avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
+  title: Port machine parts system
+- author: Lytheriia & Агент плесень хайпует
+  changes:
+    - type: Add
+      message: Добавлена новая система улучшений латов
+    - type: Add
+      message: 'Добавлены т1-т5 детали и rped '
+    - type: Add
+      message: В сборку добавлены новые гироскопы и ракетные двигатели
+    - type: Tweak
+      message: >-
+        Автолаты отображают время производства предметов под списком необходимых
+        ресурсов
+  id: 18
   time: '2026-04-03T11:37:19.0000000+00:00'
   url: https://github.com/dead-space-server/space-erida-14/pull/304
   avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
