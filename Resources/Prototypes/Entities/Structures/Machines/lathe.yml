@@ -195,6 +195,7 @@
     - SurgeryStatic
     # dynamicPacks: # Backmen-EDIT
     # Erida start
+    - RPED
     - PartsT2
     - PartsT3
     # Erida stop
@@ -396,7 +397,6 @@
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
-    - RPED
     # dynamicPacks: # Backmen-EDIT
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
