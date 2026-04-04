@@ -204,3 +204,22 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/304
   avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
   title: Port machine parts system
+- author: Anilori
+  changes:
+    - type: Add
+      message: Локализация лавы.
+    - type: Tweak
+      message: 'Стоимость алмазной руды уменьшена: 1000 -> 400'
+    - type: Tweak
+      message: Теперь с вотчеров падает правильный тип алмазной руды.
+    - type: Tweak
+      message: Теперь с вотчеров падают их крылья.
+    - type: Tweak
+      message: В медипен шахтера было добавлено 10 юнитов дермалина.
+    - type: Tweak
+      message: Тендрилы голиафов теперь спавнят красивых голиафов.
+  id: 19
+  time: '2026-04-04T00:20:54.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/305
+  avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
+  title: Lavatweaks
