@@ -80,7 +80,7 @@
     mobsToDefeat: 6
     spawnDelay: 15.0
     spawns:
-    - MobGoliath
+    - MobLavalandGoliath
 
 - type: entity
   id: LavalandTendrilLegion
