@@ -274,3 +274,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/309
   avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
   title: Add energy shotgun in warden locker
+- author: Lytheriia
+  changes:
+    - type: Add
+      message: Добавлено окно с напоминанием правил в конце раунда
+  id: 23
+  time: '2026-04-05T03:53:17.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/310
+  avatar_url: https://avatars.githubusercontent.com/u/271650867?v=4
+  title: EORG Round end
