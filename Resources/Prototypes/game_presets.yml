@@ -79,7 +79,7 @@
   showInVote: true
   description: extended-description
   rules:
-  - BasicStationEventScheduler
+  - BasicCalmStationEventScheduler # Erida edit
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
@@ -90,7 +90,7 @@
   - greenshift
   - shittersafarideluxeedition
   name: greenshift-title
-  showInVote: true
+  showInVote: false
   description: greenshift-description
   rules:
   - BasicRoundstartVariation
