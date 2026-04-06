@@ -307,3 +307,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/312
   avatar_url: https://avatars.githubusercontent.com/u/183598448?v=4
   title: PlasmaCutter + fixes
+- author: vanomorodellefake
+  changes:
+    - type: Tweak
+      message: Зажигательные патроны меньше поджигают
+  id: 26
+  time: '2026-04-06T21:01:12.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/313
+  avatar_url: https://avatars.githubusercontent.com/u/53963119?v=4
+  title: 'just fireStacks: 0.05 # Erida-edit 0.25 -> 0.05'
