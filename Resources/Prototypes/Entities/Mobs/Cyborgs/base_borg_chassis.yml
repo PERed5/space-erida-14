@@ -63,6 +63,8 @@
     locPrefix: silicon
   - type: UserInterface
     interfaces:
+      enum.AiUi.Key:
+        type: StationAiBoundUserInterface
       enum.SiliconLawsUiKey.Key:
         type: SiliconLawBoundUserInterface
         requireInputValidation: false
@@ -329,6 +331,7 @@
   - type: RandomMetadata
     nameSegments:
     - NamesBorg
+  - type: StationAiWhitelist
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -344,6 +347,7 @@
   - type: InteractionPopup
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: BorgControl
 
 - type: entity
   id: BaseBorgChassisSyndicate
