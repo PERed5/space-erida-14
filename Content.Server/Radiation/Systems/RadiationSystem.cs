@@ -144,6 +144,7 @@ public sealed partial class RadiationSystem : EntitySystem
         if (_accumulator < GridcastUpdateRate)
             return;
 
+
         UpdateGridcast();
         UpdateResistanceDebugOverlay();
         _accumulator = 0f;
