@@ -451,3 +451,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/336
   avatar_url: https://avatars.githubusercontent.com/u/110557981?v=4
   title: Bug fix leash and collars
+- author: Sidzaru
+  changes:
+    - type: Fix
+      message: Исправлены улучшения протокинетиков
+  id: 40
+  time: '2026-04-22T20:08:52.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/337
+  avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
+  title: Pka upgrade fix
