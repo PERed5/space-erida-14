@@ -460,3 +460,20 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/337
   avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
   title: Pka upgrade fix
+- author: Tiwulovoe
+  changes:
+    - type: Tweak
+      message: Скорострельность бульдога 2 -> 2.5
+    - type: Tweak
+      message: Разброс C20-r сильно снижен
+    - type: Tweak
+      message: Эсток получил автоматический режим стрельбы и скорострельность 5->6
+    - type: Fix
+      message: >-
+        Убрал лишние резисты у визора синего щита, а так же понизил шинель до
+        уровня жилета. 
+  id: 41
+  time: '2026-04-23T15:39:31.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/338
+  avatar_url: https://avatars.githubusercontent.com/u/250869396?v=4
+  title: Мейк антаг грейт эгейн
