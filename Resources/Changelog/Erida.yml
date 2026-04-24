@@ -477,3 +477,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/338
   avatar_url: https://avatars.githubusercontent.com/u/250869396?v=4
   title: Мейк антаг грейт эгейн
+- author: Tiwulovoe
+  changes:
+    - type: Tweak
+      message: Добавлено требование по расе для черты VulpJumpAbility
+  id: 42
+  time: '2026-04-24T19:25:07.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/340
+  avatar_url: https://avatars.githubusercontent.com/u/250869396?v=4
+  title: VulpJump species condition
