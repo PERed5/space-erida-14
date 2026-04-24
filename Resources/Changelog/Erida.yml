@@ -486,3 +486,12 @@ Entries:
   url: https://github.com/dead-space-server/space-erida-14/pull/340
   avatar_url: https://avatars.githubusercontent.com/u/250869396?v=4
   title: VulpJump species condition
+- author: Маперы
+  changes:
+    - type: Add
+      message: Ремап трейна и его возращение в голосование карт
+  id: 43
+  time: '2026-04-24T19:25:28.0000000+00:00'
+  url: https://github.com/dead-space-server/space-erida-14/pull/341
+  avatar_url: https://avatars.githubusercontent.com/u/110207359?v=4
+  title: train
