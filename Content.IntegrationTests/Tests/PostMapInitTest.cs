@@ -116,7 +116,6 @@ namespace Content.IntegrationTests.Tests
               "Loop_Erida",
               "Omega_Erida",
               "Packed_Erida",
-              "Train",
               "CentComm",      // CentComm
               "Dev",            // Dev map
               "Lavatest"       //Dev map
